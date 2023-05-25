@@ -1,8 +1,9 @@
 ﻿namespace DefaultNamespace
 {
-    public interface IEntity
+    public abstract class Entity
     {
-        public void Die();
-        public void TakeDamage(int damage);
+        public int Health;
+        public abstract void Die();
+        public abstract void TakeDamage(int damage);
     }
 }
