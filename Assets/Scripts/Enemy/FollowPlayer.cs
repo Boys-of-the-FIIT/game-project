@@ -15,8 +15,10 @@ namespace DefaultNamespace
 
         private void FixedUpdate()
         {
-            var directionVector = _player.transform.position - transform.position;
-            transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, Time.deltaTime);
+            var playerPosition = _player.transform.position;
+            var transformPosition = transform.position;
+            var target = new Vector3(playerPosition.x, playerPosition.y, transformPosition.z);
+            transform.position = Vector3.MoveTowards(transformPosition, target, Time.deltaTime);
         }
     }
 }
