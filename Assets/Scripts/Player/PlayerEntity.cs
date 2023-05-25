@@ -5,7 +5,7 @@ using Utils;
 
 namespace Player
 {
-    public class PlayerGameEntity : MonoBehaviour, GameEntity
+    public class PlayerGameEntity : MonoBehaviour
     {
         [SerializeField] private float health;
 
