@@ -17,7 +17,6 @@ namespace DefaultNamespace
         {
             var directionVector = _player.transform.position - transform.position;
             transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, Time.deltaTime);
-            // transform.rotation = Quaternion.LookRotation(directionVector);
         }
     }
 }

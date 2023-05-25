@@ -5,12 +5,13 @@ using Utils;
 
 namespace Player
 {
-    public class PlayerGameEntity : MonoBehaviour
+    public class PlayerEntity : MonoBehaviour, IEntity
     {
         [SerializeField] private float health;
 
         public void Die()
         {
+            // Show game over screen
             Destroy(gameObject);
         }
 
@@ -26,7 +27,6 @@ namespace Player
         {
             if (col.gameObject.tag == Tags.Bullet)
             {
-                Debug.Log("Bullet!");
                 TakeDamage(col.gameObject.GetComponent<Bullet.Bullet>().damage);
             }
         }

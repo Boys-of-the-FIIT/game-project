@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float runSpeed = 10f;
     
     private float currentSpeed;
-
     private PlayerInput playerInput;
     private InputAction movement;
     private InputAction run;

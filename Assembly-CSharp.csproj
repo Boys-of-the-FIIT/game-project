@@ -42,7 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerGameEntity.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerEntity.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Enemy\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
@@ -52,7 +52,7 @@
      <Compile Include="Assets\Utils\Tags.cs" />
      <Compile Include="Assets\InputSystem\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\Bullet\BulletType.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyTrunk.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyRotation.cs" />
      <Compile Include="Assets\Scripts\IEntity.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />

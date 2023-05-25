@@ -1,4 +1,5 @@
 ﻿using System;
+using Player;
 using UnityEngine;
 using Utils;
 
@@ -7,8 +8,12 @@ namespace DefaultNamespace
     public class EnemyAttack : MonoBehaviour
     {
         [SerializeField] private float attackRange;
-        [SerializeField] private Player.PlayerEntity playerEntity;
         [SerializeField] private GameObject bulletPrefab;
+        private PlayerEntity playerEntity;
+        private void Start()
+        {
+            playerEntity = GameObject.FindWithTag(Tags.Player).GetComponent<PlayerEntity>();
+        }
 
         private void Update()
         {
@@ -17,7 +22,7 @@ namespace DefaultNamespace
                 Attack();
             }
         }
-
+        
         private void Attack()
         {
             Instantiate(bulletPrefab, transform.position, transform.rotation);
