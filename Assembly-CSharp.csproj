@@ -41,23 +41,26 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Bullet\BulletType.cs" />
+     <Compile Include="Assets\UI\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerEntity.cs" />
+     <Compile Include="Assets\Scripts\IEntity.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyRotation.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Behaviours\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Player\Shooting.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Bullet\Bullet.cs" />
      <Compile Include="Assets\Utils\Tags.cs" />
      <Compile Include="Assets\InputSystem\PlayerInput.cs" />
-     <Compile Include="Assets\Scripts\Bullet\BulletType.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyRotation.cs" />
-     <Compile Include="Assets\Scripts\IEntity.cs" />
-     <Compile Include="Assets\Scripts\Spawner.cs" />
-     <Compile Include="Assets\UI\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Abilities\Pacifier.cs" />
      <Compile Include="Assets\Scripts\Abilities\Ability.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Freeze.cs" />
+     <Compile Include="Assets\UI\Scripts\EnemyHealthBar.cs" />
+     <Compile Include="Assets\Scripts\Behaviours\FreezeRotation.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Scripts\Enemy" />
@@ -68,7 +71,6 @@
      <Folder Include="Assets\Settings\Scenes" />
      <Folder Include="Assets\Scripts\Bullet" />
      <Folder Include="Assets\Utils" />
-     <Folder Include="Assets\Scripts\Upgrades" />
      <Folder Include="Assets\Sounds" />
      <Folder Include="Assets\UI" />
      <Folder Include="Assets\Materials" />
@@ -339,6 +341,21 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:\Users\Xoka74\Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Zenject-usage">
+     <HintPath>C:\Users\Xoka74\Game\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
+     </Reference>
+     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+     <HintPath>C:\Users\Xoka74\Game\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+     </Reference>
+     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+     <HintPath>C:\Users\Xoka74\Game\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+     </Reference>
+     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+     <HintPath>C:\Users\Xoka74\Game\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+     </Reference>
+     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+     <HintPath>C:\Users\Xoka74\Game\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -867,6 +884,22 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Zenject-Editor.csproj">
+      <Project>{3bbebf3f-201b-1f01-aa26-d7f4757b8b94}</Project>
+      <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
+      <Project>{f23da344-79bd-582c-ac5d-ef4a9955c6c2}</Project>
+      <Name>Zenject-PoolMonitor-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
+      <Project>{b5b91a6f-85e3-d511-31b9-2297ac5b9183}</Project>
+      <Name>Zenject-ReflectionBaking-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject.csproj">
+      <Project>{4574c7cb-2710-3cfc-3bf0-7bbf1ee58d8b}</Project>
+      <Name>Zenject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

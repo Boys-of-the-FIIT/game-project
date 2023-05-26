@@ -20,7 +20,7 @@ namespace DefaultNamespace
         private void Start()
         {
             playerEntity = GameObject.FindWithTag(Tags.Player).GetComponent<PlayerEntity>();
-            bulletPrefab.GetComponent<Bullet.Bullet>().SetType(BulletType.EnemyBullet);
+            bulletPrefab.GetComponent<Bullet.Bullet>().Type = BulletType.EnemyBullet;
         }
 
         private void Update()

@@ -8,6 +8,7 @@ namespace DefaultNamespace.Abilities
     {
         private Transform player;
         [SerializeField] private protected float radius;
+        [SerializeField] private protected KeyCode activationButton;
         [SerializeField] private float coolDown;
         private bool canInvoke = true;
         
@@ -19,7 +20,7 @@ namespace DefaultNamespace.Abilities
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1) && canInvoke)
+            if (Input.GetKeyDown(activationButton) && canInvoke)
                 StartCoroutine(InvokeCoroutine());
         }
 

@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 50
+  activationButton: 49
   coolDown: 5
 --- !u!1 &4757744400145137305
 GameObject:

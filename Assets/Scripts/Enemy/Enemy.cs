@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using Utils;
 
 namespace DefaultNamespace
@@ -9,7 +10,6 @@ namespace DefaultNamespace
     {
         [SerializeField] private float health;
         [SerializeField] private float maxHealth;
-        [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private Spawner parentSpawner;
         private SpriteRenderer spriteRenderer;
         private Color originalColor;
@@ -32,6 +32,8 @@ namespace DefaultNamespace
             originalColor = spriteRenderer.color;
             damageColor = Color.red;
         }
+        
+        public UnityEvent healthBarChanged = new ();
 
         public void Die()
         {
@@ -42,6 +44,7 @@ namespace DefaultNamespace
 
         public void TakeDamage(int damage)
         {
+            healthBarChanged?.Invoke();
             StartCoroutine(DamageAnimation());
             Health -= damage;
             if (Health <= 0)
