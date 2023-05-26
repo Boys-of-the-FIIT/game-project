@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using Bullet;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Player
 {
@@ -26,7 +23,13 @@ namespace Player
 
         private IEnumerator Shoot()
         {
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            var currentTransform = transform;
+            Instantiate(
+                bulletPrefab,
+                currentTransform.position, 
+                currentTransform.rotation * Quaternion.Euler(0, 0, 90)
+            );
+
             canShoot = false;
             yield return new WaitForSeconds(reloadTime);
             canShoot = true;
