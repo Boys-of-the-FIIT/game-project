@@ -61,11 +61,13 @@
      <Compile Include="Assets\Scripts\Abilities\Freeze.cs" />
      <Compile Include="Assets\UI\Scripts\EnemyHealthBar.cs" />
      <Compile Include="Assets\Scripts\Behaviours\FreezeRotation.cs" />
+     <Compile Include="Assets\Scripts\Bullet\BulletTrailScriptableObject.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Scripts\Enemy" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Settings" />
+     <Folder Include="Assets\Prefabs\Trails" />
      <Folder Include="Assets\Prefabs\Enemies" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Settings\Scenes" />
@@ -80,6 +82,7 @@
      <Folder Include="Assets\Scripts\Abilities" />
      <Folder Include="Assets\UI\Scripts" />
      <Folder Include="Assets\Scripts\Behaviours" />
+     <Folder Include="Assets\Prefabs\Spawners" />
      <Folder Include="Assets\Prefabs\Bullets" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

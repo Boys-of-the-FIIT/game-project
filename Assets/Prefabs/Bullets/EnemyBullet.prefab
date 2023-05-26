@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   maxDistance: 10
-  damage: 10
+  damage: 1
   type: 0
   trailConfig: {fileID: 11400000, guid: 947f1d2579b29b542bf5f4f1dfaafc79, type: 2}
   renderer: {fileID: 4448480565170212177}

@@ -12,7 +12,7 @@ namespace Bullet
         [SerializeField] private float maxDistance;
         [SerializeField] public int damage;
         [SerializeField] private BulletType type;
-        
+
         [SerializeField] private BulletTrailScriptableObject trailConfig;
         private TrailRenderer trail;
 
@@ -22,7 +22,7 @@ namespace Bullet
 
         private const string DISABLE_METHOD_NAME = "Disable";
         private const string DO_DISABLE_METHOD_NAME = "DoDisable";
-        
+
 
         public BulletType Type
         {
@@ -72,8 +72,6 @@ namespace Bullet
         {
             if (col.gameObject.CompareTag(Tags.Enemy) && Type == BulletType.PlayerBullet)
             {
-            if (col.gameObject.tag == Tags.Enemy && type == BulletType.PlayerBullet)
-            {
                 var enemy = col.gameObject.GetComponent<Enemy>();
                 enemy.TakeDamage(damage);
             }
@@ -110,7 +108,7 @@ namespace Bullet
             {
                 trail.Clear();
             }
-            
+
             gameObject.SetActive(false);
         }
     }
