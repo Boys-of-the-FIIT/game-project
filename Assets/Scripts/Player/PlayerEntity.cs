@@ -7,43 +7,34 @@ using Utils;
 
 namespace Player
 {
-    public class PlayerEntity : MonoBehaviour, IEntity
+    public class PlayerEntity : Entity
     {
         [SerializeField] private float maxHealth;
         [SerializeField] private float health;
         
-        public float MaxHealth
-        {
-            get => maxHealth;
-            private set => maxHealth = value;
-        }
-        
-        public float Health
-        {
-            get => health;
-            private set => health = value;
-        }
-        
+        public override float MaxHealth => maxHealth;
+        public override float Health => health;
+
         public UnityEvent healthBarChanged;
         
-        public void Die()
+        public override void Die()
         {
             // Show game over screen
             Destroy(gameObject);
         }
 
-        public void TakeDamage(int damage)
+        public override void TakeDamage(int damage)
         {
             healthBarChanged?.Invoke();
-            Health -= damage;
+            health -= damage;
             if (health <= 0)
                 Die();
         }
 
-        public void Heal(int points)
+        public override void Heal(int points)
         {
             healthBarChanged?.Invoke();
-            Health += points;
+            health += points;
         }
     }
 }

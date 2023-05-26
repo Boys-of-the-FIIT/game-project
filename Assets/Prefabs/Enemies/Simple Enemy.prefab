@@ -125,9 +125,9 @@ GameObject:
   - component: {fileID: 4599382779304495011}
   - component: {fileID: 2147749019592560703}
   - component: {fileID: 2969233010408484475}
-  - component: {fileID: 302779717928089899}
   - component: {fileID: 7405942324347417289}
   - component: {fileID: -2751962496839553944}
+  - component: {fileID: 1049044304182573528}
   m_Layer: 0
   m_Name: Simple Enemy
   m_TagString: Enemy
@@ -243,19 +243,6 @@ MonoBehaviour:
   healthBarChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &302779717928089899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2566160941939959288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7959dd974adc4d2b80bcde347ab78b03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
 --- !u!58 &7405942324347417289
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -284,6 +271,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55085dc40e542e3897a75b018aa353d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1049044304182573528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2566160941939959288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267caf620f6e47058c7791aba9ddf73b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceBetweenObjects: 10
+  speed: 2
 --- !u!1 &4788045066782827282
 GameObject:
   m_ObjectHideFlags: 0

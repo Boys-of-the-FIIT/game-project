@@ -9,42 +9,40 @@ namespace DefaultNamespace
 {
     public class Spawner : MonoBehaviour
     {
-        [SerializeField] private Enemy enemyPrefab;
+        [SerializeField] private Enemy[] enemyPrefabs;
         [SerializeField] private int maxObjectCount;
         [SerializeField] private float radius;
         private int currentObjectCount;
         private bool canSpawn = true;
         private Transform player;
-
+        private System.Random random;
+        
         private void Start()
         {
             player = GameObject.FindWithTag(Tags.Player).transform;
-            enemyPrefab.GetComponent<Enemy>().AttachToSpawner(this);
+            foreach (var enemyPrefab in enemyPrefabs)
+                enemyPrefab.GetComponent<Enemy>().AttachToSpawner(this);
+            random = new System.Random();
         }
 
         private void Update()
         {
             if (canSpawn && currentObjectCount < maxObjectCount)
-                StartCoroutine(SpawnObject(enemyPrefab));
+                StartCoroutine(SpawnObject(enemyPrefabs[random.Next(0, enemyPrefabs.Length)]));
         }
 
         public void NotifyDead(Enemy enemy)
         {
             currentObjectCount--;
         }
-        
 
         public IEnumerator SpawnObject(Enemy enemyPrefab)
         {
             var randomPos = Random.insideUnitSphere * radius + transform.position;
-            var nearbyPlayer = Vector3.Distance(randomPos, player.transform.position) < 10;
-            if (!nearbyPlayer)
-            {
-                currentObjectCount++;
-                Instantiate(enemyPrefab, randomPos, transform.rotation);
-                canSpawn = false;
-                yield return new WaitForSeconds(2);
-            }
+            currentObjectCount++;
+            Instantiate(enemyPrefab, randomPos, transform.rotation);
+            canSpawn = false;
+            yield return new WaitForSeconds(2);
             canSpawn = true;
         }
     }

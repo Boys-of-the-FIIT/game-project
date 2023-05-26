@@ -15,13 +15,18 @@ namespace UI
         private void Start()
         {
             player = GameObject.FindWithTag(Tags.Player).GetComponent<PlayerEntity>();
-            player.healthBarChanged.AddListener(ChangeHealthBar);
+            player.healthBarChanged?.AddListener(ChangeHealthBar);
         }
 
         private void ChangeHealthBar()
         {
             healthBar.value = player.Health / player.MaxHealth;
             Debug.Log(player.Health / player.MaxHealth);
+        }
+
+        private void OnDisable()
+        {
+            player.healthBarChanged?.RemoveListener(ChangeHealthBar);
         }
     }
 }

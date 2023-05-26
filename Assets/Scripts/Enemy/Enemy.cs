@@ -6,7 +6,7 @@ using Utils;
 
 namespace DefaultNamespace
 {
-    public class Enemy : MonoBehaviour, IEntity
+    public class Enemy : Entity
     {
         [SerializeField] private float health;
         [SerializeField] private float maxHealth;
@@ -15,16 +15,9 @@ namespace DefaultNamespace
         private Color originalColor;
         private Color damageColor;
 
-        public float MaxHealth
-        {
-            get => maxHealth;
-            private set => maxHealth = value;
-        }
-        public float Health
-        {
-            get => health;
-            private set => health = value;
-        }
+        public override float MaxHealth => maxHealth;
+        public override float Health => health;
+        
 
         private void Start()
         {
@@ -35,25 +28,26 @@ namespace DefaultNamespace
         
         public UnityEvent healthBarChanged = new ();
 
-        public void Die()
+        public override void Die()
         {
             // Play kill animation
             parentSpawner?.NotifyDead(this);
             Destroy(gameObject);
         }
 
-        public void TakeDamage(int damage)
+        public override void TakeDamage(int damage)
         {
             healthBarChanged?.Invoke();
             StartCoroutine(DamageAnimation());
-            Health -= damage;
+            health -= damage;
             if (Health <= 0)
                 Die();
         }
 
-        public void Heal(int points)
+        public override void Heal(int points)
         {
-            throw new NotImplementedException();
+            healthBarChanged?.Invoke();
+            health += points;
         }
 
         public void AttachToSpawner(Spawner spawner)

@@ -1,4 +1,5 @@
-﻿using DefaultNamespace;
+﻿using System;
+using DefaultNamespace;
 using Player;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +22,11 @@ namespace UI
         {
             healthBar.value = enemy.Health / enemy.MaxHealth;
             Debug.Log(enemy.Health / enemy.MaxHealth);
+        }
+
+        private void OnDisable()
+        {
+            enemy.healthBarChanged?.RemoveListener(ChangeHealthBar);
         }
     }
 }

@@ -97,6 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bcef4fc7bc047e4be9f66f9acaea788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2969233010408484475, guid: 59d2e83a85f7b4644a1353a0b18cd37a, type: 3}
+  enemyPrefabs:
+  - {fileID: 2969233010408484475, guid: 59d2e83a85f7b4644a1353a0b18cd37a, type: 3}
+  - {fileID: 7564600610040490440, guid: ddb58cdfb9d92744e85a9c8de885846f, type: 3}
+  - {fileID: 2969233010408484475, guid: 11598528f4ed7564f8fc488b06d96fbf, type: 3}
   maxObjectCount: 3
   radius: 5
