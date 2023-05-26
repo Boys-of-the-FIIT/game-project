@@ -14,16 +14,21 @@ public class PlayerController : MonoBehaviour
     private InputAction movement;
     private InputAction run;
     private Vector2 moveVector = Vector2.zero;
-    private Rigidbody2D rb;
 
     private void Awake()
     {
         playerInput = new PlayerInput();
     }
+    
+    private void FixedUpdate()
+    {
+
+        var newPos = Time.deltaTime * currentSpeed * moveVector;
+        transform.position = transform.position + new Vector3(newPos.x, newPos.y, 0);
+    }  
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         currentSpeed = walkSpeed;
     }
 
@@ -59,12 +64,6 @@ public class PlayerController : MonoBehaviour
         // set walk animation
         moveVector = movement.ReadValue<Vector2>();
     }
-
-    private void FixedUpdate()
-    {
-        rb.velocity = currentSpeed * moveVector;
-    }
-
 
     private void OnDisable()
     {

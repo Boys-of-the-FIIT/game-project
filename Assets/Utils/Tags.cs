@@ -6,5 +6,6 @@
         public const string MainCamera = "MainCamera";
         public const string Enemy = "Enemy";
         public const string Bullet = "Bullet";
+        public const string Spawner = "Spawner";
     }
 }

@@ -1,14 +1,31 @@
 ﻿using System;
+using Bullet;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.Events;
 using Utils;
 
 namespace Player
 {
     public class PlayerEntity : MonoBehaviour, IEntity
     {
+        [SerializeField] private float maxHealth;
         [SerializeField] private float health;
-
+        
+        public float MaxHealth
+        {
+            get => maxHealth;
+            private set => maxHealth = value;
+        }
+        
+        public float Health
+        {
+            get => health;
+            private set => health = value;
+        }
+        
+        public UnityEvent healthBarChanged;
+        
         public void Die()
         {
             // Show game over screen
@@ -17,18 +34,16 @@ namespace Player
 
         public void TakeDamage(int damage)
         {
-            // Make sprite red
-            health -= damage;
+            healthBarChanged?.Invoke();
+            Health -= damage;
             if (health <= 0)
                 Die();
         }
 
-        private void OnTriggerEnter2D(Collider2D col)
+        public void Heal(int points)
         {
-            if (col.gameObject.tag == Tags.Bullet)
-            {
-                TakeDamage(col.gameObject.GetComponent<Bullet.Bullet>().damage);
-            }
+            healthBarChanged?.Invoke();
+            Health += points;
         }
     }
 }

@@ -1,32 +1,68 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 using Utils;
 
 namespace DefaultNamespace
 {
     public class Enemy : MonoBehaviour, IEntity
     {
-        [SerializeField] private int health;
+        [SerializeField] private float health;
+        [SerializeField] private float maxHealth;
         [SerializeField] private GameObject bulletPrefab;
+        [SerializeField] private Spawner parentSpawner;
+        private SpriteRenderer spriteRenderer;
+        private Color originalColor;
+        private Color damageColor;
+
+        public float MaxHealth
+        {
+            get => maxHealth;
+            private set => maxHealth = value;
+        }
+        public float Health
+        {
+            get => health;
+            private set => health = value;
+        }
+
+        private void Start()
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            originalColor = spriteRenderer.color;
+            damageColor = Color.red;
+        }
+
         public void Die()
         {
             // Play kill animation
+            parentSpawner?.NotifyDead(this);
             Destroy(gameObject);
         }
 
         public void TakeDamage(int damage)
         {
-            // Make sprite red
-            health -= damage;
-            if (health <= 0)
+            StartCoroutine(DamageAnimation());
+            Health -= damage;
+            if (Health <= 0)
                 Die();
         }
-        
-        private void OnTriggerEnter2D(Collider2D col)
+
+        public void Heal(int points)
         {
-            if (col.gameObject.tag == Tags.Bullet)
-            {
-                TakeDamage(col.gameObject.GetComponent<Bullet.Bullet>().damage);
-            }
+            throw new NotImplementedException();
+        }
+
+        public void AttachToSpawner(Spawner spawner)
+        {
+            parentSpawner = spawner;
+        }
+
+        private IEnumerator DamageAnimation()
+        {
+            spriteRenderer.color = damageColor;
+            yield return new WaitForSeconds(0.1f);
+            spriteRenderer.color = originalColor;
         }
     }
 }

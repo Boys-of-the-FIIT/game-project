@@ -44,7 +44,7 @@
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerEntity.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
-     <Compile Include="Assets\Scripts\Enemy\FollowPlayer.cs" />
+     <Compile Include="Assets\Scripts\Behaviours\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player\Shooting.cs" />
@@ -54,6 +54,10 @@
      <Compile Include="Assets\Scripts\Bullet\BulletType.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyRotation.cs" />
      <Compile Include="Assets\Scripts\IEntity.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\UI\Scripts\HealthBar.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Pacifier.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Ability.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Scripts\Enemy" />
@@ -64,8 +68,16 @@
      <Folder Include="Assets\Settings\Scenes" />
      <Folder Include="Assets\Scripts\Bullet" />
      <Folder Include="Assets\Utils" />
+     <Folder Include="Assets\Scripts\Upgrades" />
+     <Folder Include="Assets\Sounds" />
+     <Folder Include="Assets\UI" />
+     <Folder Include="Assets\Materials" />
      <Folder Include="Assets\InputSystem" />
      <Folder Include="Assets\Scripts\Player" />
+     <Folder Include="Assets\Prefabs\Player" />
+     <Folder Include="Assets\Scripts\Abilities" />
+     <Folder Include="Assets\UI\Scripts" />
+     <Folder Include="Assets\Scripts\Behaviours" />
      <Folder Include="Assets\Prefabs\Bullets" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
