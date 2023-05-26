@@ -1,5 +1,4 @@
 ﻿using System;
-using Bullet;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,31 +9,35 @@ namespace Player
     public class PlayerEntity : Entity
     {
         [SerializeField] private float maxHealth;
-        [SerializeField] private float health;
-        
         public override float MaxHealth => maxHealth;
-        public override float Health => health;
-
-        public UnityEvent healthBarChanged;
+        public override float Health => currentHealth;
         
+        private float currentHealth;
+        public UnityEvent healthBarChanged;
+
+        private void Start()
+        {
+            currentHealth = maxHealth;
+        }
+
         public override void Die()
         {
             // Show game over screen
             Destroy(gameObject);
         }
 
-        public override void TakeDamage(int damage)
+        public override void TakeDamage(float damage)
         {
             healthBarChanged?.Invoke();
-            health -= damage;
-            if (health <= 0)
+            currentHealth -= damage;
+            if (currentHealth <= 0)
                 Die();
         }
 
-        public override void Heal(int points)
+        public override void Heal(float points)
         {
             healthBarChanged?.Invoke();
-            health += points;
+            currentHealth += points;
         }
     }
 }

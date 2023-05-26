@@ -8,12 +8,13 @@ namespace DefaultNamespace
 {
     public class Enemy : Entity
     {
-        [SerializeField] private float health;
         [SerializeField] private float maxHealth;
         [SerializeField] private Spawner parentSpawner;
+        
         private SpriteRenderer spriteRenderer;
         private Color originalColor;
         private Color damageColor;
+        private float health;
 
         public override float MaxHealth => maxHealth;
         public override float Health => health;
@@ -24,6 +25,7 @@ namespace DefaultNamespace
             spriteRenderer = GetComponent<SpriteRenderer>();
             originalColor = spriteRenderer.color;
             damageColor = Color.red;
+            health = maxHealth;
         }
         
         public UnityEvent healthBarChanged = new ();
@@ -35,7 +37,7 @@ namespace DefaultNamespace
             Destroy(gameObject);
         }
 
-        public override void TakeDamage(int damage)
+        public override void TakeDamage(float damage)
         {
             healthBarChanged?.Invoke();
             StartCoroutine(DamageAnimation());
@@ -44,7 +46,7 @@ namespace DefaultNamespace
                 Die();
         }
 
-        public override void Heal(int points)
+        public override void Heal(float points)
         {
             healthBarChanged?.Invoke();
             health += points;

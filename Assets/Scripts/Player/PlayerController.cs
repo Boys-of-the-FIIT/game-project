@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     private InputAction run;
     private Vector2 moveVector = Vector2.zero;
 
+    public float CurrentSpeed => currentSpeed;
+    
     private void Awake()
     {
         playerInput = new PlayerInput();

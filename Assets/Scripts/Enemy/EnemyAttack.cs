@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Bullet;
+using Bullets;
 using Player;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -20,7 +20,7 @@ namespace DefaultNamespace
         private void Start()
         {
             playerEntity = GameObject.FindWithTag(Tags.Player).GetComponent<PlayerEntity>();
-            bulletPrefab.GetComponent<Bullet.Bullet>().Type = BulletType.EnemyBullet;
+            bulletPrefab.GetComponent<Bullet>().Type = BulletType.EnemyBullet;
         }
 
         private void Update()

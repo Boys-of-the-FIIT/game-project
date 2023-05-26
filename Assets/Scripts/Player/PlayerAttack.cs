@@ -1,21 +1,22 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Bullet;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Bullets;
+using Utils;
 
 namespace Player
 {
     public class PlayerAttack : MonoBehaviour
     {
-        [SerializeField] private GameObject bulletPrefab;
+        [SerializeField] private Bullet bulletPrefab;
         [SerializeField] private float reloadTime;
         private bool canShoot = true;
-
+        
         private void Start()
         {
-            bulletPrefab.GetComponent<Bullet.Bullet>().Type = BulletType.PlayerBullet;
+            bulletPrefab.Type = BulletType.PlayerBullet;
         }
 
         private void Update()

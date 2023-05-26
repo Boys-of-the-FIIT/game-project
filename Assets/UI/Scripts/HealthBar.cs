@@ -1,4 +1,5 @@
 ﻿using System;
+using DefaultNamespace;
 using Player;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -10,23 +11,16 @@ namespace UI
     public class HealthBar : MonoBehaviour
     {
         [SerializeField] private Slider healthBar;
-        private PlayerEntity player;
+        private Entity entity;
         
         private void Start()
         {
-            player = GameObject.FindWithTag(Tags.Player).GetComponent<PlayerEntity>();
-            player.healthBarChanged?.AddListener(ChangeHealthBar);
+            entity = GetComponentInParent<Entity>();
         }
 
-        private void ChangeHealthBar()
+        private void Update()
         {
-            healthBar.value = player.Health / player.MaxHealth;
-            Debug.Log(player.Health / player.MaxHealth);
-        }
-
-        private void OnDisable()
-        {
-            player.healthBarChanged?.RemoveListener(ChangeHealthBar);
+            healthBar.value = entity.Health / entity.MaxHealth;
         }
     }
 }

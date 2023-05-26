@@ -1,30 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="To show">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviours/IdleIfClose.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviours/IdleIfClose.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviours/KeepingDistanceFromPlayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviours/KeepingDistanceFromPlayer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entity.cs.meta" afterDir="false" />
+    <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletTrail.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletTrail.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Camera.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollowPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollowPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/EntityUIElement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/EnemyBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/EnemyBullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/EnemyBullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/EnemyBullet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/PlayerBullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/PlayerBullet.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Melee Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Melee Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Melee Enemy.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Melee Enemy.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Simple Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Simple Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Sniper Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Sniper Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spawners/Spawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spawners/Spawner.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Default Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Default Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviours/FollowPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviours/FollowPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Freeze.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/Freeze.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Pacifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/ShockWave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Pacifier.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/ShockWave.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviours/FreezeRotation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviours/FreezeRotation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/EntityUIElement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/Bullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/Bullet.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletTrailScriptableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletTrailScriptableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletTrailScriptableObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletTrailScriptableObject.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletType.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IEntity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/EnemyHealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/EnemyHealthBar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/HealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/HealthBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Game.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-IntegrationTests-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-IntegrationTests-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-IntegrationTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-IntegrationTests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-PoolMonitor-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-PoolMonitor-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-ReflectionBaking-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-ReflectionBaking-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-TestFramework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-TestFramework.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-UnitTests-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-UnitTests-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +61,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/4d/385e6247/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/a8/12515774/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f5b293c74049457cabc28437c5a763925a00/04/32199cd9/InjectAttribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Xoka74/Game/Assets/Prefabs/Bullets/EnemyBullet.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Xoka74/Game/Assets/Prefabs/Bullets/EnemyBullet.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviours/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Bullet/Bullet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Bullet/Bullet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullet/BulletTrailScriptableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullets/BulletTrailScriptableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Core/Utilities/UnityObjectUtility.cs" root0="SKIP_HIGHLIGHTING" />
@@ -113,6 +131,7 @@
       <workItem from="1684945367004" duration="10557000" />
       <workItem from="1685029560044" duration="24621000" />
       <workItem from="1685097348117" duration="3044000" />
+      <workItem from="1685122175496" duration="6976000" />
     </task>
     <task id="LOCAL-00001" summary="To show">
       <created>1685104573558</created>
@@ -121,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685104573558</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="123">
+      <created>1685114199785</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685114199785</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +170,26 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="To show" />
-    <option name="LAST_COMMIT_MESSAGE" value="To show" />
+    <MESSAGE value="123" />
+    <option name="LAST_COMMIT_MESSAGE" value="123" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs</url>
+          <line>19</line>
+          <properties documentPath="C:\Users\Xoka74\Game\Assets\Scripts\Enemy\Enemy.cs" initialLine="18" containingFunctionPresentation="property 'Health'">
+            <startOffsets>
+              <option value="525" />
+            </startOffsets>
+            <endOffsets>
+              <option value="531" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
