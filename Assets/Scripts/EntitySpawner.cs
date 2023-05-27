@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Player;
-using Unity.VisualScripting;
 using UnityEngine;
-using Utils;
 using Zenject;
 using Random = UnityEngine.Random;
 
@@ -12,10 +9,13 @@ namespace DefaultNamespace
     public class EntitySpawner : MonoBehaviour
     {
         [SerializeField] private Entity[] prefabs;
-        [SerializeField] private int maxObjectCount;
-        [SerializeField] private float radius;
+        [SerializeField] private int maxObjectCount = 3;
+        [SerializeField] private float radius = 5;
+        [SerializeField] private float spawnDelay = 2;
+
         private int currentObjectCount;
         private bool canSpawn = true;
+
         private Transform player;
         private Transform parentTransform;
         private System.Random random;
@@ -56,13 +56,27 @@ namespace DefaultNamespace
         public IEnumerator SpawnEntity(Entity enemyPrefab)
         {
             var offset = GetSpawnCenterOffset(enemyPrefab.transform, parentTransform.transform);
-            var randomPos = Random.insideUnitSphere * (radius + offset) + transform.position;
+            var positionToSpawn = GetRandomPositionToSpawn(offset);
+
+            var obj = diContainer.InstantiatePrefabForComponent<Entity>(
+                enemyPrefab,
+                positionToSpawn,
+                transform.rotation,
+                null
+            );
+
             currentObjectCount++;
-            var obj = diContainer.InstantiatePrefabForComponent<Entity>(enemyPrefab, randomPos, transform.rotation, null);
             obj.Spawner = this;
+
             canSpawn = false;
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(spawnDelay);
             canSpawn = true;
+        }
+
+        private Vector3 GetRandomPositionToSpawn(float offset)
+        {
+            var randomPositionAroundSpawner = Random.insideUnitSphere * (radius + offset) + transform.position;
+            return new Vector3(randomPositionAroundSpawner.x, randomPositionAroundSpawner.y, 0);
         }
     }
 }
