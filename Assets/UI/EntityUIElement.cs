@@ -1,24 +1,26 @@
 ﻿using System;
 using UnityEngine;
 using Utils;
+using Zenject;
 
-namespace DefaultNamespace.Behaviours
+namespace Behaviours
 {
     public class EntityUIElement : MonoBehaviour
     {
         [SerializeField] private Transform target;
         [SerializeField] private Vector3 offset;
         
-        private Transform camera;
+        private Camera camera;
 
-        private void Start()
+        [Inject]
+        private void Construct(Camera camera)
         {
-            camera = GameObject.FindWithTag(Tags.MainCamera).transform;
+            this.camera = camera;
         }
-
+        
         private void Update()
         {
-            transform.rotation = camera.rotation;
+            transform.rotation = camera.transform.rotation;
             transform.position = target.position + offset;
         }   
     }

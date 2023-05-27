@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using Player;
+using UnityEngine;
 using Utils;
+using Zenject;
 
 namespace Behaviours
 {
@@ -10,9 +12,10 @@ namespace Behaviours
         
         private Transform player;
         
-        private void Start()
+        [Inject]
+        private void Construct(PlayerEntity player)
         {
-            player = GameObject.FindWithTag(Tags.Player).transform;
+            this.player = player.transform;
         }
 
         private void Update()

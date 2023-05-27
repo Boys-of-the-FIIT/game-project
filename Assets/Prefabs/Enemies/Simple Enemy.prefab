@@ -200,9 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa14b3df78774144813fd4c060da90d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   maxHealth: 30
-  parentSpawner: {fileID: 0}
   healthBarChanged:
     m_PersistentCalls:
       m_Calls: []

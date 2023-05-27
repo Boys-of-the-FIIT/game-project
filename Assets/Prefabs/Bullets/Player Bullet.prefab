@@ -142,6 +142,7 @@ MonoBehaviour:
   maxDistance: 10
   damage: 10
   type: 1
+  spreadingAngle: 50
 --- !u!96 &8561864504753681815
 TrailRenderer:
   serializedVersion: 2

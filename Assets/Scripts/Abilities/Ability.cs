@@ -1,21 +1,23 @@
 ﻿using System.Collections;
+using Player;
 using UnityEngine;
 using Utils;
+using Zenject;
 
 namespace DefaultNamespace.Abilities
 {
-    public class Ability : MonoBehaviour
+    public abstract class Ability : MonoBehaviour
     {
         private Transform player;
         [SerializeField] private protected float radius;
         [SerializeField] private protected KeyCode activationButton;
         [SerializeField] private float coolDown;
         private bool canInvoke = true;
-        
-        
-        private void Start()
+    
+        [Inject]
+        private void Construct(PlayerEntity player)
         {
-            player = GameObject.FindWithTag(Tags.Player).transform;
+            this.player = player.transform;
         }
 
         private void Update()
@@ -32,6 +34,6 @@ namespace DefaultNamespace.Abilities
             canInvoke = true;
         }
 
-        public virtual void Invoke() { }
+        public abstract void Invoke();
     }
 }

@@ -12,10 +12,11 @@ namespace DefaultNamespace
     {
         [SerializeField] private float speed;
         private Transform player;
-
-        private void Start()
+        
+        [Inject]
+        private void Construct(PlayerEntity player)
         {
-            player = GameObject.FindWithTag(Tags.Player).transform;
+            this.player = player.transform;
         }
 
         private void FixedUpdate()
