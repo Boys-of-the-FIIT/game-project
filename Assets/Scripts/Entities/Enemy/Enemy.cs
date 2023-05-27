@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 using Utils;
@@ -8,32 +9,24 @@ namespace DefaultNamespace
 {
     public class Enemy : Entity
     {
-        [SerializeField] private float maxHealth;
-        [SerializeField] private Spawner parentSpawner;
-        
         private SpriteRenderer spriteRenderer;
         private Color originalColor;
         private Color damageColor;
-        private float health;
-
-        public override float MaxHealth => maxHealth;
-        public override float Health => health;
-        
 
         private void Start()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             originalColor = spriteRenderer.color;
             damageColor = Color.red;
-            health = maxHealth;
+            CurrentHealth = MaxHealth;
         }
         
-        public UnityEvent healthBarChanged = new ();
+        public UnityEvent healthBarChanged;
 
         public override void Die()
         {
             // Play kill animation
-            parentSpawner?.NotifyDead(this);
+            Spawner?.NotifyDead();
             Destroy(gameObject);
         }
 
@@ -41,20 +34,15 @@ namespace DefaultNamespace
         {
             healthBarChanged?.Invoke();
             StartCoroutine(DamageAnimation());
-            health -= damage;
-            if (Health <= 0)
+            CurrentHealth -= damage;
+            if (CurrentHealth <= 0)
                 Die();
         }
 
         public override void Heal(float points)
         {
             healthBarChanged?.Invoke();
-            health += points;
-        }
-
-        public void AttachToSpawner(Spawner spawner)
-        {
-            parentSpawner = spawner;
+            CurrentHealth += points;
         }
 
         private IEnumerator DamageAnimation()

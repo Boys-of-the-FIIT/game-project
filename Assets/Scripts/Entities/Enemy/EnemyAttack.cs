@@ -6,6 +6,7 @@ using Player;
 using Unity.VisualScripting;
 using UnityEngine;
 using Utils;
+using Zenject;
 
 namespace DefaultNamespace
 {
@@ -14,29 +15,35 @@ namespace DefaultNamespace
         [SerializeField] private float attackRange;
         [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private float reloadTime;
-        private PlayerEntity playerEntity;
+
+        private Transform player;
         private bool canShoot = true;
+        private Enemy enemy;
+        
+        [Inject]
+        private void Construct(PlayerEntity player)
+        {
+            this.player = player.transform;
+        }
         
         private void Start()
         {
-            playerEntity = GameObject.FindWithTag(Tags.Player).GetComponent<PlayerEntity>();
+            enemy = GetComponentInParent<Enemy>();
             bulletPrefab.GetComponent<Bullet>().Type = BulletType.EnemyBullet;
         }
 
         private void Update()
         {
-            if (!playerEntity.IsDestroyed())
+            if (Vector3.Distance(enemy.transform.position, player.position) < attackRange)
             {
-                if (Vector3.Distance(gameObject.transform.position, playerEntity.transform.position) < attackRange)
-                {
-                    if (canShoot) StartCoroutine(Shoot());
-                }
+                if (canShoot) StartCoroutine(Shoot());
             }
         }
         
         private IEnumerator Shoot()
         {
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            var resultRotation = transform.rotation * Quaternion.Euler(0, 0, 90);
+            Instantiate(bulletPrefab, transform.position, resultRotation);
             canShoot = false;
             yield return new WaitForSeconds(reloadTime);
             canShoot = true;

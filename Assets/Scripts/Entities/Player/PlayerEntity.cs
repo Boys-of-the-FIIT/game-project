@@ -1,5 +1,6 @@
 ﻿using System;
 using DefaultNamespace;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 using Utils;
@@ -8,16 +9,11 @@ namespace Player
 {
     public class PlayerEntity : Entity
     {
-        [SerializeField] private float maxHealth;
-        public override float MaxHealth => maxHealth;
-        public override float Health => currentHealth;
-        
-        private float currentHealth;
         public UnityEvent healthBarChanged;
 
         private void Start()
         {
-            currentHealth = maxHealth;
+            CurrentHealth = MaxHealth;
         }
 
         public override void Die()
@@ -29,15 +25,15 @@ namespace Player
         public override void TakeDamage(float damage)
         {
             healthBarChanged?.Invoke();
-            currentHealth -= damage;
-            if (currentHealth <= 0)
+            CurrentHealth -= damage;
+            if (CurrentHealth <= 0)
                 Die();
         }
 
         public override void Heal(float points)
         {
             healthBarChanged?.Invoke();
-            currentHealth += points;
+            CurrentHealth += points;
         }
     }
 }

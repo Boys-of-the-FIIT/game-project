@@ -2,16 +2,18 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using Utils;
+using Zenject;
 
 namespace Player
 {
     public class EnemyRotation : MonoBehaviour
     {
         private Transform player;
-
-        private void Awake()
+        
+        [Inject]
+        private void Construct(PlayerEntity player)
         {
-            player = GameObject.FindWithTag(Tags.Player).transform;
+            this.player = player.transform;
         }
 
         private void FixedUpdate()

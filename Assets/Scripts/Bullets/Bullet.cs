@@ -21,7 +21,6 @@ namespace Bullets
 
         private Rigidbody2D rb;
         private Vector3 startPosition;
-        
 
         private void Start()
         {
@@ -42,14 +41,14 @@ namespace Bullets
             {
                 var enemy = col.gameObject.GetComponent<Enemy>();
                 enemy.TakeDamage(damage);
+                Destroy(gameObject);
             }
             else if (col.gameObject.CompareTag(Tags.Player) && Type == BulletType.EnemyBullet)
             {
                 var player = col.gameObject.GetComponent<PlayerEntity>();
                 player.TakeDamage(damage);
+                Destroy(gameObject);
             }
-
-            Destroy(gameObject);
         }
     }
 }

@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
-
         var newPos = Time.deltaTime * currentSpeed * moveVector;
         transform.position = transform.position + new Vector3(newPos.x, newPos.y, 0);
     }  
@@ -34,6 +33,26 @@ public class PlayerController : MonoBehaviour
         currentSpeed = walkSpeed;
     }
 
+    private void OnRunPerformed(InputAction.CallbackContext obj)
+    {
+        currentSpeed = runSpeed;
+    }
+
+    private void OnRunCancelled(InputAction.CallbackContext obj)
+    {
+        currentSpeed = walkSpeed;
+    }
+    
+    private void OnMoveCancel(InputAction.CallbackContext obj)
+    {
+        moveVector = Vector2.zero;
+    }
+    
+    private void OnMovePerformed(InputAction.CallbackContext obj)
+    {
+        moveVector = movement.ReadValue<Vector2>();
+    }
+    
     private void OnEnable()
     {
         movement = playerInput.Player.Movement;
@@ -42,31 +61,7 @@ public class PlayerController : MonoBehaviour
         run.Enable();
         SubscribeAll();
     }
-
-    private void OnRunPerformed(InputAction.CallbackContext obj)
-    {
-        // set run animation
-        currentSpeed = runSpeed;
-    }
-
-    private void OnRunCancelled(InputAction.CallbackContext obj)
-    {
-        // disable run animation
-        currentSpeed = walkSpeed;
-    }
     
-    private void OnMoveCancel(InputAction.CallbackContext obj)
-    {
-        // disable walk animation
-        moveVector = Vector2.zero;
-    }
-    
-    private void OnMovePerformed(InputAction.CallbackContext obj)
-    {
-        // set walk animation
-        moveVector = movement.ReadValue<Vector2>();
-    }
-
     private void OnDisable()
     {
         movement.Disable();

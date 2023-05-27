@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Bullets;
 using Utils;
+using Zenject;
 
 namespace Player
 {
@@ -10,11 +11,15 @@ namespace Player
     {
         [SerializeField] private Bullet bulletPrefab;
         [SerializeField] private float reloadTime;
+        [Range(0, 180)] [SerializeField] private float spreadAngle;
+        
         private bool canShoot = true;
+        private System.Random random;
         
         private void Start()
         {
             bulletPrefab.Type = BulletType.PlayerBullet;
+            random = new System.Random();
         }
 
         private void Update()
@@ -25,13 +30,14 @@ namespace Player
 
         private IEnumerator Shoot()
         {
-            var currentTransform = transform;
-            Instantiate(
+            var randomAngle = spreadAngle * ((float)random.NextDouble() - 0.5f);
+            var resultRotation = transform.rotation * Quaternion.Euler(0, 0, 90 + randomAngle);
+            var bullet = Instantiate(
                 bulletPrefab,
-                currentTransform.position, 
-                currentTransform.rotation * Quaternion.Euler(0, 0, 90)
+                transform.position,
+                resultRotation
             );
-
+            var recoilVector = -0.1f * bullet.transform.right;
             canShoot = false;
             yield return new WaitForSeconds(reloadTime);
             canShoot = true;
