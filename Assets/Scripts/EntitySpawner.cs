@@ -14,19 +14,14 @@ namespace DefaultNamespace
         [SerializeField] private Entity[] prefabs;
         [SerializeField] private int maxObjectCount;
         [SerializeField] private float radius;
+        
+        [Inject] private DiContainer diContainer;
+        [Inject] private PlayerEntity player;
+        
         private int currentObjectCount;
         private bool canSpawn = true;
-        private Transform player;
         private Transform parentTransform;
         private System.Random random;
-
-        [Inject] private DiContainer diContainer;
-
-        [Inject]
-        private void Construct(PlayerEntity player)
-        {
-            this.player = player.transform;
-        }
 
         private void Start()
         {

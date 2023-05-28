@@ -8,13 +8,7 @@ namespace Player
 {
     public class EnemyRotation : MonoBehaviour
     {
-        private Transform player;
-        
-        [Inject]
-        private void Construct(PlayerEntity player)
-        {
-            this.player = player.transform;
-        }
+        [Inject] private PlayerEntity player;
 
         private void FixedUpdate()
         {

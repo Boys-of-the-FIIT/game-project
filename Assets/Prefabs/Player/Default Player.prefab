@@ -166,7 +166,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5574947533009778271}
   - component: {fileID: 1267239770134523338}
-  - component: {fileID: 455772826853002349}
   m_Layer: 0
   m_Name: Abilities
   m_TagString: Untagged
@@ -205,22 +204,6 @@ MonoBehaviour:
   activationButton: 49
   coolDown: 5
   damage: 10
---- !u!114 &455772826853002349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4727987116858636321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf03a772cf4940b2b6d14d5e221d5994, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 50
-  activationButton: 50
-  coolDown: 5
-  freezeTime: 3
 --- !u!1 &4757744400145137305
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0899325f6434fd09b667c79454966a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 25
   healthBarChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -392,7 +375,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 5
-  runSpeed: 10
 --- !u!58 &5366387733754049889
 CircleCollider2D:
   m_ObjectHideFlags: 0

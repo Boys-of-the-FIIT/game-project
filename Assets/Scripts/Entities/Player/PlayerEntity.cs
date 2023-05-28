@@ -1,16 +1,20 @@
 ﻿using System;
 using DefaultNamespace;
 using JetBrains.Annotations;
+using States.Game_States;
 using UnityEngine;
 using UnityEngine.Events;
 using Utils;
+using Zenject;
 
 namespace Player
 {
     public class PlayerEntity : Entity
     {
         public UnityEvent healthBarChanged;
-
+        [Inject] private SceneStateManager manager;
+        [Inject] private GameOverState _gameOverState;
+        
         private void Start()
         {
             CurrentHealth = MaxHealth;
@@ -18,8 +22,8 @@ namespace Player
 
         public override void Die()
         {
-            // Show game over screen
             Destroy(gameObject);
+            manager.SwitchState(_gameOverState);
         }
 
         public override void TakeDamage(float damage)

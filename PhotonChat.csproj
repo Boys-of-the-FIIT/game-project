@@ -41,19 +41,19 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatOperationCode.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatAppSettings.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatChannel.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatDisconnectCause.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Code\ChatParameterCode.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Code\ChannelWellKnownProperties.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Code\ChatClient.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatUserStatus.cs" />
+     <Compile Include="Assets\Photon\PhotonChat\Code\IChatClientListener.cs" />
+     <Compile Include="Assets\Photon\PhotonChat\Code\ChatOperationCode.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Code\ChatPeer.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatEventCode.cs" />
+     <Compile Include="Assets\Photon\PhotonChat\Code\ChatAppSettings.cs" />
+     <Compile Include="Assets\Photon\PhotonChat\Code\ChatDisconnectCause.cs" />
+     <Compile Include="Assets\Photon\PhotonChat\Code\ChatUserStatus.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Code\ChatState.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Code\ChannelCreationOptions.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\IChatClientListener.cs" />
+     <Compile Include="Assets\Photon\PhotonChat\Code\ChatEventCode.cs" />
+     <Compile Include="Assets\Photon\PhotonChat\Code\ChatChannel.cs" />
      <None Include="Assets\Photon\PhotonChat\Code\changes-chat.txt" />
      <None Include="Assets\Photon\PhotonChat\Code\PhotonChat.asmdef" />
      <Folder Include="Assets\Photon\PhotonChat\Code" />
@@ -324,6 +324,12 @@
      <Reference Include="Unity.VisualScripting.YamlDotNet">
      <HintPath>C:\Users\Xoka74\Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
+     <Reference Include="websocket-sharp">
+     <HintPath>C:\Users\Xoka74\Game\Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+     </Reference>
+     <Reference Include="Photon3Unity3D">
+     <HintPath>C:\Users\Xoka74\Game\Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
      <HintPath>C:\Users\Xoka74\Game\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
@@ -359,12 +365,6 @@
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
      <HintPath>C:\Users\Xoka74\Game\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
-     </Reference>
-     <Reference Include="websocket-sharp">
-     <HintPath>C:\Users\Xoka74\Game\Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
-     </Reference>
-     <Reference Include="Photon3Unity3D">
-     <HintPath>C:\Users\Xoka74\Game\Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

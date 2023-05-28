@@ -1,4 +1,5 @@
 ﻿using Player;
+using Unity.VisualScripting;
 using UnityEngine;
 using Utils;
 using Zenject;
@@ -10,20 +11,17 @@ namespace Behaviours
         [SerializeField] private float distanceBetweenObjects;
         [SerializeField] private float speed;
         
-        private Transform player;
-        
-        [Inject]
-        private void Construct(PlayerEntity player)
-        {
-            this.player = player.transform;
-        }
+        [Inject] private PlayerEntity player;
 
         private void Update()
         {
-            var currentDistance = Vector3.Distance(transform.position, player.position);
-            var direction = player.position - transform.position;
-            var newPosition = transform.position + Time.deltaTime * speed * direction.normalized;
-            transform.position = newPosition;
+            if (!player.IsDestroyed())
+            {
+                var currentDistance = Vector3.Distance(transform.position, player.transform.position);
+                var direction = player.transform.position - transform.position;
+                var newPosition = transform.position + Time.deltaTime * speed * direction.normalized;
+                transform.position = newPosition;
+            }
         }
     }
 }

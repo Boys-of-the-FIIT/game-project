@@ -8,18 +8,11 @@ namespace DefaultNamespace.Camera
 {
     public class CameraFollowPlayer : MonoBehaviour
     {
-        private Transform player;
-    
-        [Inject]
-        private void Construct(PlayerEntity player)
-        {
-            this.player = player.transform;
-        }
+        [Inject] private PlayerEntity player;
 
         private void FixedUpdate()
         {
-
-            var playerPosition = player.position;
+            var playerPosition = player.transform.position;
             var transformPosition = transform.position;
             var target = new Vector3(playerPosition.x, playerPosition.y, transformPosition.z);
             transform.position =

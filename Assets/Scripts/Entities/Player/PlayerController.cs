@@ -7,12 +7,10 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float walkSpeed = 5f;
-    [SerializeField] private float runSpeed = 10f;
-    
+
     private float currentSpeed;
     private PlayerInput playerInput;
     private InputAction movement;
-    private InputAction run;
     private Vector2 moveVector = Vector2.zero;
 
     public float CurrentSpeed => currentSpeed;
@@ -33,16 +31,6 @@ public class PlayerController : MonoBehaviour
         currentSpeed = walkSpeed;
     }
 
-    private void OnRunPerformed(InputAction.CallbackContext obj)
-    {
-        currentSpeed = runSpeed;
-    }
-
-    private void OnRunCancelled(InputAction.CallbackContext obj)
-    {
-        currentSpeed = walkSpeed;
-    }
-    
     private void OnMoveCancel(InputAction.CallbackContext obj)
     {
         moveVector = Vector2.zero;
@@ -56,16 +44,13 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         movement = playerInput.Player.Movement;
-        run = playerInput.Player.Run;
         movement.Enable();
-        run.Enable();
         SubscribeAll();
     }
     
     private void OnDisable()
     {
         movement.Disable();
-        run.Disable();
         UnsubscribeAll();
     }
 
@@ -73,15 +58,11 @@ public class PlayerController : MonoBehaviour
     {
         movement.performed += OnMovePerformed;
         movement.canceled += OnMoveCancel;
-        run.performed += OnRunPerformed;
-        run.canceled += OnRunCancelled;
     }
 
     private void UnsubscribeAll()
     {
         movement.performed -= OnMovePerformed;
         movement.canceled -= OnMoveCancel;
-        run.performed -= OnRunPerformed;
-        run.canceled -= OnRunCancelled;
     }
 }

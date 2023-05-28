@@ -11,18 +11,13 @@ namespace Behaviours
         [SerializeField] private float distanceBetweenObjects;
         [SerializeField] private float speed;
         
-        private Transform player;
+        [Inject]private PlayerEntity player;
 
-        [Inject]
-        private void Construct(PlayerEntity player)
-        {
-            this.player = player.transform;
-        }
 
         private void Update()
         {
-            var currentDistance = Vector3.Distance(transform.position, player.position);
-            var direction = player.position - transform.position;
+            var currentDistance = Vector3.Distance(transform.position, player.transform.position);
+            var direction = player.transform.position - transform.position;
             if(currentDistance <= distanceBetweenObjects) 
                 direction = -1 * direction; 
             var newPosition = transform.position + Time.deltaTime * speed * direction.normalized;

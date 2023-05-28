@@ -8,17 +8,13 @@ namespace DefaultNamespace.Abilities
 {
     public abstract class Ability : MonoBehaviour
     {
-        private Transform player;
         [SerializeField] private protected float radius;
         [SerializeField] private protected KeyCode activationButton;
-        [SerializeField] private float coolDown;
-        private bool canInvoke = true;
-    
-        [Inject]
-        private void Construct(PlayerEntity player)
-        {
-            this.player = player.transform;
-        }
+        [SerializeField] private protected float coolDown;
+        
+        [Inject] private protected PlayerEntity player;
+        
+        private protected bool canInvoke = true;
 
         private void Update()
         {
@@ -26,7 +22,7 @@ namespace DefaultNamespace.Abilities
                 StartCoroutine(InvokeCoroutine());
         }
 
-        public IEnumerator InvokeCoroutine()
+        public virtual IEnumerator InvokeCoroutine()
         {
             Invoke();
             canInvoke = false;
