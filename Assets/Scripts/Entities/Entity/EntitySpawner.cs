@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
-using Random = UnityEngine.Random;
+
 
 namespace DefaultNamespace
 {
@@ -12,13 +12,14 @@ namespace DefaultNamespace
         [SerializeField] private Entity[] prefabs;
         [SerializeField] private int maxObjectCount;
         [SerializeField] private float radius;
-        
-        [Inject] private DiContainer diContainer;
+        [SerializeField] private float spawnDelay = 2;
 
         private int currentObjectCount;
         private bool canSpawn = true;
         private Transform parentTransform;
         private System.Random random;
+
+        [Inject] private DiContainer diContainer;
 
         private void Start()
         {
@@ -48,12 +49,20 @@ namespace DefaultNamespace
         public IEnumerator SpawnEntity(Entity enemyPrefab)
         {
             var offset = GetSpawnCenterOffset(enemyPrefab.transform, parentTransform.transform);
-            var randomPos = Random.insideUnitSphere * (radius + offset) + transform.position;
+            var positionToSpawn = RandomExtensions.GetRandomPositionInCircle(transform.position, offset, radius);
+
+            var obj = diContainer.InstantiatePrefabForComponent<Entity>(
+                enemyPrefab,
+                positionToSpawn,
+                transform.rotation,
+                null
+            );
+
             currentObjectCount++;
-            var obj = diContainer.InstantiatePrefabForComponent<Entity>(enemyPrefab, randomPos, transform.rotation, null);
             obj.Spawner = this;
+
             canSpawn = false;
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(spawnDelay);
             canSpawn = true;
         }
     }
