@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: -2751962496839553944}
   - component: {fileID: 1049044304182573528}
   - component: {fileID: 3008095847785912216}
+  - component: {fileID: 8893958104685692850}
   m_Layer: 0
   m_Name: Spike Enemy
   m_TagString: Enemy
@@ -248,7 +249,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2566160941939959288}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 267caf620f6e47058c7791aba9ddf73b, type: 3}
   m_Name: 
@@ -268,6 +269,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+--- !u!114 &8893958104685692850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2566160941939959288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f830767103444ce47b2ff20efcbb9ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  beginSurroundDistance: 10
+  noSurroundDistance: 4
+  angularSpeed: 0
 --- !u!1 &3343671056644780992
 GameObject:
   m_ObjectHideFlags: 0

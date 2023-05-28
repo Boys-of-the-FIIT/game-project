@@ -1,6 +1,7 @@
 ﻿using System;
 using Player;
 using UnityEngine;
+using Utils;
 using Zenject;
 using Random = UnityEngine.Random;
 
@@ -54,7 +55,7 @@ namespace Behaviours
 
         private void ChasePlayer(Vector3 directionTowardsPlayer)
         {
-            var newPosition = transform.position + GetDirectionWithSpeed(directionTowardsPlayer);
+            var newPosition = transform.position + directionTowardsPlayer.GetDirectionWithSpeed(speed);
             var newDistance = Vector3.Distance(player.position, newPosition);
 
             if (newDistance > minDistanceToPlayer)
@@ -89,7 +90,7 @@ namespace Behaviours
         private void GoToDistanceToKeep(float distancesDifference, Vector3 directionTowardsPlayer)
         {
             var sign = Math.Sign(distancesDifference);
-            var playerDirection = sign * GetDirectionWithSpeed(directionTowardsPlayer);
+            var playerDirection = sign * directionTowardsPlayer.GetDirectionWithSpeed(speed);
             var newPositionToPlayerDistance = Vector3.Distance(transform.position + playerDirection, player.position);
 
             if (newPositionToPlayerDistance < minDistanceToPlayer
@@ -107,17 +108,12 @@ namespace Behaviours
             var playerToEnemy = transform.position - player.position;
             var orthogonal = Vector3.Cross(playerToEnemy, Vector3.forward);
 
-            transform.position += GetDirectionWithSpeed(orthogonal);
+            transform.position += orthogonal.GetDirectionWithSpeed(speed);
         }
 
         private void RunFromPlayer(Vector3 directionTowardsPlayer)
         {
-            transform.position += GetDirectionWithSpeed(-directionTowardsPlayer);
-        }
-
-        private Vector3 GetDirectionWithSpeed(Vector3 direction)
-        {
-            return Time.deltaTime * speed * direction.normalized;
+            transform.position += -directionTowardsPlayer.GetDirectionWithSpeed(speed);
         }
     }
 }

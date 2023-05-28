@@ -8,5 +8,10 @@ namespace Utils
         {
             return new Vector3(vector.x, vector.y, 0);
         }
+        
+        public static Vector3 GetDirectionWithSpeed(this Vector3 direction, float speed)
+        {
+            return Time.deltaTime * speed * direction.normalized;
+        }
     }
 }
