@@ -2,7 +2,7 @@
 using Player;
 using UnityEngine;
 using Zenject;
-using Random = UnityEngine.Random;
+
 
 namespace DefaultNamespace
 {
@@ -56,7 +56,7 @@ namespace DefaultNamespace
         public IEnumerator SpawnEntity(Entity enemyPrefab)
         {
             var offset = GetSpawnCenterOffset(enemyPrefab.transform, parentTransform.transform);
-            var positionToSpawn = GetRandomPositionToSpawn(offset);
+            var positionToSpawn = RandomExtensions.GetRandomPositionInCircle(transform.position, offset, radius);
 
             var obj = diContainer.InstantiatePrefabForComponent<Entity>(
                 enemyPrefab,
@@ -71,12 +71,6 @@ namespace DefaultNamespace
             canSpawn = false;
             yield return new WaitForSeconds(spawnDelay);
             canSpawn = true;
-        }
-
-        private Vector3 GetRandomPositionToSpawn(float offset)
-        {
-            var randomPositionAroundSpawner = Random.insideUnitSphere * (radius + offset) + transform.position;
-            return new Vector3(randomPositionAroundSpawner.x, randomPositionAroundSpawner.y, 0);
         }
     }
 }

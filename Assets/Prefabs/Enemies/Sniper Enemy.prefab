@@ -556,8 +556,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d105bf9a2342198f998a468a70567d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceBetweenObjects: 6
+  minDistanceToPlayer: 5
+  maxDistanceToPlayer: 10
   speed: 2
+  randomDistanceBetweenMinAndMax: 0
 --- !u!1001 &2934450117833188142
 PrefabInstance:
   m_ObjectHideFlags: 0
