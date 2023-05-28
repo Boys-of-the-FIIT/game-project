@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using Bullets;
 using Player;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
-using Utils;
+using UnityEngine.XR;
 using Zenject;
 
 namespace DefaultNamespace
@@ -29,12 +30,9 @@ namespace DefaultNamespace
 
         private void Update()
         {
-            if (!player.IsDestroyed())
+            if (Vector3.Distance(enemy.transform.position, player.transform.position) < attackRange)
             {
-                if (Vector3.Distance(enemy.transform.position, player.transform.position) < attackRange)
-                {
-                    if (canShoot) StartCoroutine(Shoot());
-                }
+                if (canShoot) StartCoroutine(Shoot());
             }
         }
         

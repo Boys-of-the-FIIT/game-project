@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using Player;
 using UnityEngine;
-using Utils;
 using Zenject;
 
 namespace DefaultNamespace.Abilities

@@ -97,6 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb7a957365c4fdb93b63d625d168687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 5
+  attackRange: 10
   bulletPrefab: {fileID: 4448480565170212176, guid: ba88383505583bc40b2ce7bc110b4824, type: 3}
   reloadTime: 2

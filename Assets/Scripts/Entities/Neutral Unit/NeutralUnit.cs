@@ -10,7 +10,7 @@ namespace DefaultNamespace.Entities.Neutral_Unit
             Destroy(gameObject);
         }
 
-        public override void TakeDamage(float damage)
+        public override void ApplyDamage(float damage)
         {
             CurrentHealth -= damage;
             if (CurrentHealth <= 0) Die();

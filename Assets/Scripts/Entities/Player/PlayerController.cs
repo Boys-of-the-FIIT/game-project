@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         movement = playerInput.Player.Movement;
+        // movement = playerInput.Player.Movement;
         movement.Enable();
         SubscribeAll();
     }

@@ -1,6 +1,4 @@
 ﻿using System;
-using DefaultNamespace;
-using Player;
 using UnityEngine;
 using Utils;
 
@@ -33,22 +31,6 @@ namespace Bullets
         {
             if (Vector3.Distance(startPosition, transform.position) > maxDistance)
                 Destroy(gameObject);
-        }
-
-        private void OnTriggerEnter2D(Collider2D col)
-        {
-            if (col.gameObject.CompareTag(Tags.Enemy) && Type == BulletType.PlayerBullet)
-            {
-                var enemy = col.gameObject.GetComponent<Enemy>();
-                enemy.TakeDamage(damage);
-                Destroy(gameObject);
-            }
-            else if (col.gameObject.CompareTag(Tags.Player) && Type == BulletType.EnemyBullet)
-            {
-                var player = col.gameObject.GetComponent<PlayerEntity>();
-                player.TakeDamage(damage);
-                Destroy(gameObject);
-            }
         }
     }
 }

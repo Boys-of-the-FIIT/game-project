@@ -1,4 +1,5 @@
 ﻿using System;
+using Bullets;
 using DefaultNamespace;
 using JetBrains.Annotations;
 using States.Game_States;
@@ -26,7 +27,7 @@ namespace Player
             manager.SwitchState(_gameOverState);
         }
 
-        public override void TakeDamage(float damage)
+        public override void ApplyDamage(float damage)
         {
             healthBarChanged?.Invoke();
             CurrentHealth -= damage;
@@ -38,6 +39,17 @@ namespace Player
         {
             healthBarChanged?.Invoke();
             CurrentHealth += points;
+        }
+
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.gameObject.CompareTag(Tags.Bullet))
+            {
+                var bullet = col.gameObject.GetComponent<Bullet>();
+                if (bullet.Type is BulletType.EnemyBullet) 
+                    ApplyDamage(bullet.damage);
+                Destroy(col.gameObject);
+            }
         }
     }
 }

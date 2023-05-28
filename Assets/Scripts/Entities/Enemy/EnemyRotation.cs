@@ -1,7 +1,6 @@
 ﻿using System;
 using Unity.VisualScripting;
 using UnityEngine;
-using Utils;
 using Zenject;
 
 namespace Player

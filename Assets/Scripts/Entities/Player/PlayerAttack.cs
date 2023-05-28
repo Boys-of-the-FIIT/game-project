@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Bullets;
-using Utils;
 using Zenject;
 
 namespace Player

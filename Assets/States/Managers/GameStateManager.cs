@@ -21,7 +21,7 @@ namespace DefaultNamespace
 
         private void Update()
         {
-            Debug.Log($"Game state: {currentState.GetType().Name}");
+            // Debug.Log($"Game state: {currentState.GetType().Name}");
             currentState.UpdateState(this);
         }
 

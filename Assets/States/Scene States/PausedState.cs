@@ -1,5 +1,4 @@
 ﻿using DefaultNamespace;
-using UI.Scripts;
 using UnityEngine;
 using Zenject;
 

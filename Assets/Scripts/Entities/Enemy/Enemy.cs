@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Bullets;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,7 +13,6 @@ namespace DefaultNamespace
         private SpriteRenderer spriteRenderer;
         private Color originalColor;
         private Color damageColor;
-
         private void Start()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -20,19 +20,15 @@ namespace DefaultNamespace
             damageColor = Color.red;
             CurrentHealth = MaxHealth;
         }
-        
-        public UnityEvent healthBarChanged;
 
         public override void Die()
         {
-            // Play kill animation
             Spawner?.NotifyDead();
             Destroy(gameObject);
         }
 
-        public override void TakeDamage(float damage)
+        public override void ApplyDamage(float damage)
         {
-            healthBarChanged?.Invoke();
             StartCoroutine(DamageAnimation());
             CurrentHealth -= damage;
             if (CurrentHealth <= 0)
@@ -41,8 +37,18 @@ namespace DefaultNamespace
 
         public override void Heal(float points)
         {
-            healthBarChanged?.Invoke();
             CurrentHealth += points;
+        }
+
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.gameObject.CompareTag(Tags.Bullet))
+            {
+                var bullet = col.gameObject.GetComponent<Bullet>();
+                if (bullet.Type is BulletType.PlayerBullet) 
+                    ApplyDamage(bullet.damage);
+            }
+            Destroy(col.gameObject);
         }
 
         private IEnumerator DamageAnimation()

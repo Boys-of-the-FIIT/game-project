@@ -41,25 +41,25 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\ObjectGraphVisualizer.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\UnityInspectorListEditor.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\EditorWindow\ZenjectEditorWindow.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\Editors\ContextEditor.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\SceneParentLoading\SceneParentAutomaticLoader.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\ZenUnityEditorUtil.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\Editors\GameObjectContextEditor.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\Editors\RunnableContextEditor.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\ZenMenuItems.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\Editors\ProjectContextEditor.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\SceneParentLoading\DefaultSceneContractConfig.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\Editors\SceneDecoratorContextEditor.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\EditorStaticInstaller.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Editor\Editors\SceneContextEditor.cs" />
-     <Folder Include="Assets\Plugins\Zenject\Source\Editor" />
-     <None Include="Assets\Plugins\Zenject\Source\Editor\Zenject-Editor.asmdef" />
-     <Folder Include="Assets\Plugins\Zenject\Source\Editor\SceneParentLoading" />
-     <Folder Include="Assets\Plugins\Zenject\Source\Editor\Editors" />
-     <Folder Include="Assets\Plugins\Zenject\Source\Editor\EditorWindow" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\ObjectGraphVisualizer.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\UnityInspectorListEditor.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\EditorWindow\ZenjectEditorWindow.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\Editors\ContextEditor.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\SceneParentLoading\SceneParentAutomaticLoader.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\ZenUnityEditorUtil.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\Editors\GameObjectContextEditor.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\Editors\RunnableContextEditor.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\ZenMenuItems.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\Editors\ProjectContextEditor.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\SceneParentLoading\DefaultSceneContractConfig.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\Editors\SceneDecoratorContextEditor.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\EditorStaticInstaller.cs" />
+     <Compile Include="Assets\Project\External\Plugins\Zenject\Source\Editor\Editors\SceneContextEditor.cs" />
+     <Folder Include="Assets\Project\External\Plugins\Zenject\Source\Editor" />
+     <None Include="Assets\Project\External\Plugins\Zenject\Source\Editor\Zenject-Editor.asmdef" />
+     <Folder Include="Assets\Project\External\Plugins\Zenject\Source\Editor\SceneParentLoading" />
+     <Folder Include="Assets\Project\External\Plugins\Zenject\Source\Editor\Editors" />
+     <Folder Include="Assets\Project\External\Plugins\Zenject\Source\Editor\EditorWindow" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -316,25 +316,19 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
      <Reference Include="Zenject-usage">
-     <HintPath>C:\Users\Xoka74\Game\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
+     <HintPath>C:\Users\Xoka74\Game\Assets\Project\External\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
      <HintPath>C:\Users\Xoka74\Game\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
-     <HintPath>C:\Users\Xoka74\Game\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+     <HintPath>C:\Users\Xoka74\Game\Assets\Project\External\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
      <HintPath>C:\Users\Xoka74\Game\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.YamlDotNet">
      <HintPath>C:\Users\Xoka74\Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
-     </Reference>
-     <Reference Include="websocket-sharp">
-     <HintPath>C:\Users\Xoka74\Game\Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
-     </Reference>
-     <Reference Include="Photon3Unity3D">
-     <HintPath>C:\Users\Xoka74\Game\Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
      <HintPath>C:\Users\Xoka74\Game\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
@@ -346,7 +340,7 @@
      <HintPath>C:\Users\Xoka74\Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
-     <HintPath>C:\Users\Xoka74\Game\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+     <HintPath>C:\Users\Xoka74\Game\Assets\Project\External\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>C:\Users\Xoka74\Game\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
@@ -367,10 +361,10 @@
      <HintPath>C:\Users\Xoka74\Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
-     <HintPath>C:\Users\Xoka74\Game\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+     <HintPath>C:\Users\Xoka74\Game\Assets\Project\External\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
-     <HintPath>C:\Users\Xoka74\Game\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
+     <HintPath>C:\Users\Xoka74\Game\Assets\Project\External\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>C:\Users\Xoka74\Game\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

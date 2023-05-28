@@ -1,7 +1,6 @@
 ﻿using System;
 using Player;
 using UnityEngine;
-using Utils;
 using Zenject;
 
 namespace Behaviours

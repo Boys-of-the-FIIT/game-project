@@ -1,0 +1,21 @@
+{
+    "name": "Scripts.Entities.Player",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f014812839cd3d542aca816c4bec85f2",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:dc821f82a0329534fbe0206ab9c52f61",
+        "GUID:9230e10b40ae40a46bc1480b4dfea956",
+        "GUID:eee5e9e79dfcfbe42adb96ff7161bef8",
+        "GUID:72c8350722f111342a0769d58c7fbd2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

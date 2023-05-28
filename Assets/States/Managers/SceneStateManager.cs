@@ -20,7 +20,7 @@ namespace DefaultNamespace
 
         private void Update()
         {
-            Debug.Log($"Scene state: {currentState.GetType().Name}");
+            // Debug.Log($"Scene state: {currentState.GetType().Name}");
             currentState.UpdateState(this);
         }
 

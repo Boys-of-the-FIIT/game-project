@@ -3,7 +3,6 @@ using System.Collections;
 using Player;
 using Unity.VisualScripting;
 using UnityEngine;
-using Utils;
 using Zenject;
 
 namespace DefaultNamespace
@@ -15,13 +14,10 @@ namespace DefaultNamespace
 
         private void FixedUpdate()
         {
-            if (!player.IsDestroyed())
-            {
-                var playerPosition = player.transform.position;
-                var transformPosition = transform.position;
-                var target = new Vector3(playerPosition.x, playerPosition.y, transformPosition.z);
-                transform.position = Vector3.MoveTowards(transformPosition, target, Time.deltaTime * speed);
-            }
+            var playerPosition = player.transform.position;
+            var transformPosition = transform.position;
+            var target = new Vector3(playerPosition.x, playerPosition.y, transformPosition.z);
+            transform.position = Vector3.MoveTowards(transformPosition, target, Time.deltaTime * speed);
         }
     }
 }
