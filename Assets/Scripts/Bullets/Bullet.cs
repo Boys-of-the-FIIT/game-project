@@ -23,7 +23,7 @@ namespace Bullets
         public BulletType Type
         {
             get => type;
-            private set => type = value;
+            set => type = value;
         }
         
         public int Damage

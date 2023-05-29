@@ -47,13 +47,11 @@ namespace Player
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.gameObject.CompareTag(Tags.Bullet))
-            {
-                var bullet = col.gameObject.GetComponent<Bullet>();
-                if (bullet.Type is BulletType.EnemyBullet) 
-                    ApplyDamage(bullet.Damage);
-                Destroy(col.gameObject);
-            }
+            if (!col.gameObject.CompareTag(Tags.Bullet)) return;
+            if (!col.gameObject.TryGetComponent<Bullet>(out var bullet)) return;
+            if (!(bullet.Type is BulletType.EnemyBullet)) return;
+            ApplyDamage(bullet.Damage);
+            Destroy(col.gameObject);
         }
     }
 }

@@ -6,7 +6,7 @@ using Zenject;
 
 namespace UI.Scripts
 {
-    public class GameOverScreen : MonoBehaviour
+    public class GameOverMenu : MonoBehaviour
     {
         private GameStateManager gameStateManager;
         private SceneStateManager sceneStateManager;

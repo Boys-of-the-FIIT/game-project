@@ -6,17 +6,17 @@ namespace DI
 {
     public class GameOverScreenInstaller : MonoInstaller
     {
-        [SerializeField] private GameOverScreen gameOverScreen;
+        [SerializeField] private GameOverMenu gameOverMenu;
         public override void InstallBindings()
         {
             var pauseMenuInstance = Container
-                .InstantiatePrefabForComponent<GameOverScreen>(gameOverScreen);
+                .InstantiatePrefabForComponent<GameOverMenu>(gameOverMenu);
             Container
-                .Bind<GameOverScreen>()
+                .Bind<GameOverMenu>()
                 .FromInstance(pauseMenuInstance)
                 .AsSingle()
                 .NonLazy();
-            Container.QueueForInject(gameOverScreen);
+            Container.QueueForInject(gameOverMenu);
         }
     }
 }

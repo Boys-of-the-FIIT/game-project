@@ -17,27 +17,27 @@ namespace DefaultNamespace
         
         private void Start()
         {
-            currentState = new MainMenuState();
-            SwitchState(currentState);
+            CurrentState = new MainMenuState();
+            SwitchState(CurrentState);
         }
         
         private void Update()
         {
-            currentState.UpdateState(this);
+            CurrentState.UpdateState(this);
         }
 
         public override void SwitchState(State state)
         {
-            currentState.ExitState(this);
-            currentState = state;
-            currentState.EnterState(this);
+            CurrentState.ExitState(this);
+            CurrentState = state;
+            CurrentState.EnterState(this);
             onStateChanged?.Invoke();
         }
 
         public override void ShutDown()
         {
-            currentState.ExitState(this);
-            currentState = null;
+            CurrentState.ExitState(this);
+            CurrentState = null;
         }
     }
 }

@@ -297,7 +297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2167969003204828203, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: m_Name
-      value: Spike Enemy Variant
+      value: Spike Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2170459265466427309, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: m_Color.b
@@ -422,18 +422,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2167969003204828203, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
   m_PrefabInstance: {fileID: 2843263060325527467}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1505193895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4135255407065412480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e55085dc40e542e3897a75b018aa353d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1505193898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,7 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8093934be14f27b7651f7501e030f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 100
 --- !u!1001 &3133720520385067700
 PrefabInstance:
   m_ObjectHideFlags: 0

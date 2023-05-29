@@ -15,28 +15,28 @@ namespace DefaultNamespace
         
         private void Start()
         {
-            currentState = new PlayingState();
-            SwitchState(currentState);
+            CurrentState = new PlayingState();
+            SwitchState(CurrentState);
             onStateChanged?.Invoke();
         }
 
         private void Update()
         {
-            currentState?.UpdateState(this);
+            CurrentState?.UpdateState(this);
         }
         
         public override void SwitchState(State state)
         {
-            currentState?.ExitState(this);
-            currentState = state;
-            currentState?.EnterState(this);
+            CurrentState?.ExitState(this);
+            CurrentState = state;
+            CurrentState?.EnterState(this);
             onStateChanged?.Invoke();
         }
 
         public override void ShutDown()
         {
-            currentState?.ExitState(this);
-            currentState = null;
+            CurrentState?.ExitState(this);
+            CurrentState = null;
         }
     }
 }

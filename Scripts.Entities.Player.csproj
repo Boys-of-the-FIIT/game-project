@@ -747,6 +747,10 @@
       <Project>{2a875482-6628-3e0a-abf0-cdfec33b706f}</Project>
       <Name>Utils</Name>
     </ProjectReference>
+    <ProjectReference Include="States.Common.csproj">
+      <Project>{d1395ddb-098c-88cb-7df6-8daace3fba47}</Project>
+      <Name>States.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

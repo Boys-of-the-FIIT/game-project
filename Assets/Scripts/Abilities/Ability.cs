@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Player;
 using UnityEngine;
 using Zenject;
@@ -10,16 +11,30 @@ namespace DefaultNamespace.Abilities
         [SerializeField] private protected float radius;
         [SerializeField] private protected KeyCode activationButton;
         [SerializeField] private protected float coolDown;
-        
+
         private protected PlayerEntity player;
         private protected bool canInvoke = true;
+        private float currentCooldownTime;
+
+        public float CurrentCooldownTimes
+        {
+            get => currentCooldownTime;
+            set => currentCooldownTime = value;
+        }
+
+        public float CoolDown => coolDown;
 
         [Inject]
         private void Construct(PlayerEntity player)
         {
             this.player = player;
         }
-        
+
+        private void Start()
+        {
+            currentCooldownTime = 0;
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(activationButton) && canInvoke)
@@ -30,7 +45,14 @@ namespace DefaultNamespace.Abilities
         {
             Invoke();
             canInvoke = false;
-            yield return new WaitForSeconds(coolDown);
+            
+            while (currentCooldownTime < CoolDown)
+            {
+                currentCooldownTime += Time.deltaTime;
+                yield return null;
+            }
+
+            currentCooldownTime = 0;
             canInvoke = true;
         }
 

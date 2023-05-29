@@ -8,14 +8,24 @@ namespace DefaultNamespace.Abilities
 {
     public class ShockWave : Ability
     {
-        [SerializeField] private float damage;
+        [SerializeField] private int damage;
+
+        public int Damage
+        {
+            get => damage;
+            set => damage = value;
+        }
+
         public override void Invoke()
         {
             var colliders = Physics2D.OverlapCircleAll(transform.position, radius);
             foreach(var collider in colliders)
             {
-                // if (collider.gameObject.CompareTag(Tags.Enemy))
-                //     collider.gameObject.GetComponent<Enemy>().TakeDamage(damage);
+                if (!collider.gameObject.CompareTag(Tags.Enemy)) return;
+                if (!collider.gameObject.TryGetComponent<Enemy>(out var enemy)) return;
+                if (!collider.gameObject.TryGetComponent<Rigidbody2D>(out var enemyRb)) return;
+                enemy.ApplyDamage(damage);
+                
             }
         }
     }

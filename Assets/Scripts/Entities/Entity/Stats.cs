@@ -68,5 +68,13 @@ namespace DefaultNamespace
             get => attackDistance;
             set => attackDistance = value;
         }
+        
+        [SerializeField] private int upgradePoints;
+        
+        public int UpgradePoints
+        {
+            get => upgradePoints;
+            set => upgradePoints = value;
+        }
     }
 }

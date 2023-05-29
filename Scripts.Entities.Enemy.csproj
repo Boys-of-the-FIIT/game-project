@@ -45,6 +45,8 @@
      <Compile Include="Assets\Scripts\Entities\Enemy\EnemyRotation.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemy\KamikazeEnemy.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemy\AssassinEnemy.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemy\HealerEnemy.cs" />
      <Folder Include="Assets\Scripts\Entities\Enemy" />
      <None Include="Assets\Scripts\Entities\Enemy\Scripts.Entities.Enemy.asmdef" />
      <Reference Include="UnityEngine">

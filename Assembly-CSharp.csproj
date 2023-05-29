@@ -43,23 +43,25 @@
   <ItemGroup>
      <Compile Include="Assets\UI\Scripts\Entity\HealthBar.cs" />
      <Compile Include="Assets\UI\Scripts\Entity\EntityUIElement.cs" />
-     <Compile Include="Assets\UI\Scripts\GameOverScreen.cs" />
+     <Compile Include="Assets\UI\Scripts\Menus\GameOverMenu.cs" />
      <Compile Include="Assets\DI\Project Context\GameStatesInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\UI\PauseMenuInstaller.cs" />
-     <Compile Include="Assets\UI\Scripts\PauseMenu.cs" />
-     <Compile Include="Assets\UI\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\UI\Scripts\Menus\PauseMenu.cs" />
+     <Compile Include="Assets\UI\Scripts\Menus\MainMenu.cs" />
      <Compile Include="Assets\DI\Scene Context\SceneStatesInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\UI\GameOverScreenInstaller.cs" />
      <Compile Include="Assets\DI\Project Context\GameStateManagerInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\SceneStateManagerInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\MainCameraInstaller.cs" />
-     <Compile Include="Assets\UI\Scripts\MenuButton.cs" />
+     <Compile Include="Assets\UI\Scripts\Button\MenuButton.cs" />
      <Compile Include="Assets\DI\Scene Context\PlayerInstaller.cs" />
+     <Compile Include="Assets\UI\Scripts\Abilities\AbilityIcon.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Prefabs\Neutral Unit" />
      <None Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion_small\spritesheet\spritesheet.txt" />
      <None Include="Assets\Animations\wills_pixel_explosions_sample\round_explosion\spritesheet\spritesheet.txt" />
+     <Folder Include="Assets\UI\Scripts\Abilities" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\X_plosion\spritesheet" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion_small\spritesheet" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\X_plosion\PNG" />
@@ -67,6 +69,7 @@
      <Folder Include="Assets\Settings" />
      <Folder Include="Assets\Prefabs\Trails" />
      <Folder Include="Assets\UI\Scripts\Entity" />
+     <Folder Include="Assets\UI\Prefabs\Buttons" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\X_plosion" />
      <Folder Include="Assets\DI\Project Context" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\round_vortex" />
@@ -74,6 +77,7 @@
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\round_vortex\PNG" />
      <Folder Include="Assets\Prefabs\Enemies" />
      <Folder Include="Assets\Prefabs\Trunks" />
+     <Folder Include="Assets\UI\Scripts\Menus" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion_small\PNG" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Prefabs\Upgrades" />
@@ -81,20 +85,25 @@
      <Folder Include="Assets\Settings\Scenes" />
      <Folder Include="Assets\DI" />
      <Folder Include="Assets\Prefabs\Outline" />
+     <Folder Include="Assets\UI\Prefabs\Menu" />
      <Folder Include="Assets\Resources" />
+     <Folder Include="Assets\Sprites" />
      <Folder Include="Assets\Sounds" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion_small" />
      <None Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion\spritesheet\spritesheet.txt" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\round_explosion\PNG" />
+     <Folder Include="Assets\Prefabs\Shields" />
      <None Include="Assets\Animations\wills_pixel_explosions_sample\round_vortex\spritesheet\spritesheet.txt" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample" />
      <Folder Include="Assets\UI" />
      <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion\spritesheet" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion" />
+     <Folder Include="Assets\UI\Scripts\Button" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\round_explosion\spritesheet" />
      <Folder Include="Assets\Prefabs\Player" />
      <None Include="Assets\Animations\wills_pixel_explosions_sample\X_plosion\spritesheet\spritesheet.txt" />
+     <Folder Include="Assets\UI\Prefabs\Abilities" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\round_explosion" />
      <Folder Include="Assets\Animations" />
      <Folder Include="Assets\UI\Scripts" />
@@ -104,6 +113,7 @@
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion\PNG" />
      <Folder Include="Assets\Prefabs\Spawners" />
      <Folder Include="Assets\Prefabs\Bullets" />
+     <Folder Include="Assets\Sprites\Explosion" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -962,6 +972,14 @@
     <ProjectReference Include="Scripts.Entities.Player.csproj">
       <Project>{44833ff8-f6b2-3200-0867-89985516293f}</Project>
       <Name>Scripts.Entities.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scripts.Shield.csproj">
+      <Project>{38e08a1b-c403-69d5-d401-c5b0cc1141c2}</Project>
+      <Name>Scripts.Shield</Name>
+    </ProjectReference>
+    <ProjectReference Include="States.Common.csproj">
+      <Project>{d1395ddb-098c-88cb-7df6-8daace3fba47}</Project>
+      <Name>States.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

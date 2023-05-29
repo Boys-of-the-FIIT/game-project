@@ -1,6 +1,4 @@
-﻿using DefaultNamespace;
-
-namespace States.Game_States
+﻿namespace States.Game_States
 {
     public abstract class State
     {

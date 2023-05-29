@@ -43,17 +43,11 @@ namespace DefaultNamespace
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.gameObject.CompareTag(Tags.Bullet))
-            {
-                if (col.gameObject.TryGetComponent<Bullet>(out var bullet))
-                {
-                    if (bullet.Type is BulletType.PlayerBullet)
-                    {
-                        ApplyDamage(bullet.Damage);
-                        Destroy(col.gameObject);
-                    }
-                }
-            }
+            if (!col.gameObject.CompareTag(Tags.Bullet)) return;
+            if (!col.gameObject.TryGetComponent<Bullet>(out var bullet)) return;
+            if (!(bullet.Type is BulletType.PlayerBullet)) return;
+            ApplyDamage(bullet.Damage);
+            Destroy(col.gameObject);
         }
 
         private IEnumerator DamageAnimation()
