@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using Bullets;
 using Player;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.XR;
 using Zenject;
 
 namespace DefaultNamespace
@@ -15,10 +10,10 @@ namespace DefaultNamespace
     {
         [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private Enemy enemy;
-        
+
         private bool canShoot = true;
         private PlayerEntity player;
-        
+
         [Inject]
         private void Construct(PlayerEntity player)
         {
@@ -43,13 +38,14 @@ namespace DefaultNamespace
         private IEnumerator Shoot()
         {
             var resultRotation = transform.rotation * Quaternion.Euler(0, 0, 90);
+
             var bullet = Instantiate(bulletPrefab, transform.position, resultRotation).GetComponent<Bullet>()
                 .Construct(
                     BulletType.EnemyBullet,
-                    enemy.Stats.Damage, 
+                    enemy.Stats.Damage,
                     enemy.Stats.AttackDistance,
                     enemy.Stats.BulletSpeed
-                    );
+                );
 
             canShoot = false;
             yield return new WaitForSeconds(enemy.Stats.ReloadTime);
