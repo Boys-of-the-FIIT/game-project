@@ -1,4 +1,6 @@
-﻿using States.Game_States;
+﻿using System;
+using System.Collections.Generic;
+using States.Game_States;
 using Zenject;
 
 namespace DI.Scene_Context
@@ -7,17 +9,16 @@ namespace DI.Scene_Context
     {
         public override void InstallBindings()
         {
-            var gameOverState = new GameOverState();
-            var playingState = new PlayingState();
-            var pausedState = new PausedState();
-
-            Container.Bind<GameOverState>().FromInstance(gameOverState).AsSingle();
-            Container.Bind<PlayingState>().FromInstance(playingState).AsSingle();
-            Container.Bind<PausedState>().FromInstance(pausedState).AsSingle();
-            
-            Container.QueueForInject(gameOverState);
-            Container.QueueForInject(playingState);        
-            Container.QueueForInject(pausedState);
+            new List<State>()
+            {
+                new GameOverState(),
+                new PlayingState(),
+                new PausedState(),
+            }.ForEach(state =>
+            {
+                Container.Bind(state.GetType()).FromInstance(state).AsSingle();
+                Container.QueueForInject(state);
+            });
         }
     }
 }

@@ -30,6 +30,7 @@ namespace DefaultNamespace
 
         private void Update()
         {
+            if (!player) return;
             if (Vector3.Distance(enemy.transform.position, player.transform.position) < attackRange)
             {
                 if (canShoot) StartCoroutine(Shoot());

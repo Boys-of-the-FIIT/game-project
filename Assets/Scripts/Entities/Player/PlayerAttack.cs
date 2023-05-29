@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,9 +13,14 @@ namespace Player
         [SerializeField] private float reloadTime;
         [Range(0, 180)] [SerializeField] private float spreadAngle;
         
-        private bool canShoot = true;
+        private bool canShoot;
         private System.Random random;
-        
+
+        private void Awake()
+        {
+            canShoot = true;
+        }
+
         private void Start()
         {
             bulletPrefab.Type = BulletType.PlayerBullet;
@@ -23,7 +29,7 @@ namespace Player
 
         private void Update()
         {
-            if (Input.GetKey(KeyCode.Mouse0) && canShoot)
+            if (canShoot && Input.GetKey(KeyCode.Mouse0))
                 StartCoroutine(Shoot());
         }
 

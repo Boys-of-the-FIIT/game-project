@@ -8,20 +8,21 @@ namespace DefaultNamespace
 {
     public class GameStateManager : StateManager
     {
-        private State currentState;
-        public UnityEvent onStateChanged = new();
-        
-        public override State CurrentState => currentState;
+        public UnityEvent onStateChanged;
+
+        private void Awake()
+        {
+            onStateChanged = new UnityEvent();
+        }
         
         private void Start()
         {
             currentState = new MainMenuState();
             SwitchState(currentState);
         }
-
+        
         private void Update()
         {
-            // Debug.Log($"Game state: {currentState.GetType().Name}");
             currentState.UpdateState(this);
         }
 
@@ -31,6 +32,12 @@ namespace DefaultNamespace
             currentState = state;
             currentState.EnterState(this);
             onStateChanged?.Invoke();
+        }
+
+        public override void ShutDown()
+        {
+            currentState.ExitState(this);
+            currentState = null;
         }
     }
 }

@@ -9,11 +9,11 @@ namespace Behaviours
     {
         [SerializeField] private Transform target;
         [SerializeField] private Vector3 offset;
-        [Inject] private Camera camera;
+        [Inject] private Camera mainCamera;
 
         private void Update()
         {
-            transform.rotation = camera.transform.rotation;
+            transform.rotation = mainCamera.transform.rotation;
             transform.position = target.position + offset;
         }   
     }

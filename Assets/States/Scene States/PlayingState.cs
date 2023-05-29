@@ -6,7 +6,7 @@ namespace States.Game_States
     {
         public override void EnterState(StateManager manager)
         {
-            
+
         }
 
         public override void UpdateState(StateManager manager)

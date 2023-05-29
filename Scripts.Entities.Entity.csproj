@@ -726,6 +726,10 @@
       <Project>{4574c7cb-2710-3cfc-3bf0-7bbf1ee58d8b}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
+    <ProjectReference Include="Utils.csproj">
+      <Project>{2a875482-6628-3e0a-abf0-cdfec33b706f}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

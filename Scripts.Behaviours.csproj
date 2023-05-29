@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\Behaviours\KeepingDistanceFromPlayer.cs" />
      <Compile Include="Assets\Scripts\Behaviours\RotateAround.cs" />
      <Compile Include="Assets\Scripts\Behaviours\FollowPlayer.cs" />
+     <Compile Include="Assets\Scripts\Behaviours\SurroundPlayer.cs" />
      <None Include="Assets\Scripts\Behaviours\Scripts.Behaviours.asmdef" />
      <Folder Include="Assets\Scripts\Behaviours" />
      <Reference Include="UnityEngine">
@@ -731,6 +732,10 @@
     <ProjectReference Include="Scripts.Entities.Entity.csproj">
       <Project>{f4aab106-5235-d264-a5e3-c3364cbac5af}</Project>
       <Name>Scripts.Entities.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="Utils.csproj">
+      <Project>{2a875482-6628-3e0a-abf0-cdfec33b706f}</Project>
+      <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

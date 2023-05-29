@@ -42,6 +42,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Utils\Tags.cs" />
+     <Compile Include="Assets\Utils\RandomExtensions.cs" />
+     <Compile Include="Assets\Utils\VectorExtensions.cs" />
      <None Include="Assets\Utils\Utils.asmdef" />
      <Folder Include="Assets\Utils" />
      <Reference Include="UnityEngine">
@@ -721,6 +723,10 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="States.csproj">
+      <Project>{0164910c-1f70-9a07-b552-a9533a65c455}</Project>
+      <Name>States</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

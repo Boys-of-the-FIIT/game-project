@@ -1,4 +1,5 @@
-﻿using DefaultNamespace;
+﻿using System;
+using DefaultNamespace;
 using States.Game_States;
 using UnityEngine;
 using Zenject;
@@ -8,7 +9,7 @@ namespace UI.Scripts
     public class GameOverScreen : MonoBehaviour
     {
         [Inject] private GameStateManager gameStateManager;
-        [Inject] private PlayingState playingState;
+        [Inject] private SceneStateManager sceneStateManager;
         [Inject] private MainMenuState mainMenuState;
         [Inject] private MainLevelState mainLevelState;
 
@@ -16,24 +17,25 @@ namespace UI.Scripts
         
         private void Start()
         {
-            canvas.gameObject.SetActive(false);
-            gameStateManager.onStateChanged.AddListener(HandleStateChange);
+            canvas.gameObject.SetActive(true);
+            sceneStateManager?.onStateChanged.AddListener(HandleStateChange);
         }
         
         public void Retry()
         {
+            sceneStateManager.ShutDown();
             gameStateManager.SwitchState(mainLevelState);
         }
 
         public void EnterMainMenu()
         {
+            sceneStateManager.ShutDown();
             gameStateManager.SwitchState(mainMenuState);
         }
 
         private void HandleStateChange()
         {
-            Debug.Log("Handle State Change Invoked");
-            if (gameStateManager.CurrentState is GameOverState)
+            if (sceneStateManager.CurrentState is GameOverState)
                 canvas.gameObject.SetActive(true);
             else
                 canvas.gameObject.SetActive(false);

@@ -14,6 +14,7 @@ namespace Behaviours
 
         private void Update()
         {
+            if (!player) return;
             var currentDistance = Vector3.Distance(transform.position, player.transform.position);
             var direction = player.transform.position - transform.position;
             var newPosition = transform.position + Time.deltaTime * speed * direction.normalized;

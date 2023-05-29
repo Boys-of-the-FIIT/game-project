@@ -3,6 +3,7 @@ using Player;
 using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
+using Utils;
 
 namespace Behaviours
 {
@@ -16,11 +17,9 @@ namespace Behaviours
 
         private float angleToKeep;
         private float distanceToKeep;
-
         private float distanceToPlayer;
 
-        [Inject]
-        private void Construct(PlayerEntity player)
+        private void Start()
         {
             angleToKeep = Random.Range(-180f, 180f);
             distanceToKeep =
@@ -29,6 +28,7 @@ namespace Behaviours
 
         private void Update()
         {
+            if (!player) return;
             distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
             var directionTowardsPlayer = player.transform.position - transform.position;
@@ -102,7 +102,7 @@ namespace Behaviours
 
         private void GoAroundPlayer()
         {
-            var playerToEnemy = transform.position - player.position;
+            var playerToEnemy = transform.position - player.transform.position;
             var orthogonal = Vector3.Cross(playerToEnemy, Vector3.forward);
 
             transform.position += orthogonal.GetDirectionWithSpeed(speed);
@@ -110,7 +110,7 @@ namespace Behaviours
 
         private void RunFromPlayer(Vector3 directionTowardsPlayer)
         {
-            transform.position += -directionTowardsPlayer.GetDirectionWithSpeed(speed);
+            transform.position -= directionTowardsPlayer.GetDirectionWithSpeed(speed);
         }
     }
 }

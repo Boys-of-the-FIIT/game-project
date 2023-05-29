@@ -14,7 +14,7 @@ namespace Player
     {
         public UnityEvent healthBarChanged;
         [Inject] private SceneStateManager manager;
-        [Inject] private GameOverState _gameOverState;
+        [Inject] private GameOverState gameOverState;
         
         private void Start()
         {
@@ -23,8 +23,8 @@ namespace Player
 
         public override void Die()
         {
+            manager.SwitchState(new GameOverState());
             Destroy(gameObject);
-            manager.SwitchState(_gameOverState);
         }
 
         public override void ApplyDamage(float damage)

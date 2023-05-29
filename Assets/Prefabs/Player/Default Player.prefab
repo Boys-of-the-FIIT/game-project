@@ -88,7 +88,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.002
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -0.7899933, y: 0}
-  m_SizeDelta: {x: -8.26, y: 0}
+  m_AnchoredPosition: {x: -0.71250916, y: 0}
+  m_SizeDelta: {x: 1.425, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4727987116858636321
 GameObject:
@@ -802,8 +802,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.83000183, y: 0}
-  m_SizeDelta: {x: 8.25, y: 0}
+  m_AnchoredPosition: {x: 0.85998535, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2467568787292174814
 CanvasRenderer:
@@ -1000,21 +1000,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4757744400145137305, guid: 6242803aa17e9cc4eba08a9717a64db0, type: 3}
   m_PrefabInstance: {fileID: 6486372255129296316}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6066945756409153878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730189711385781029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a844ddef1944f0aad0cb9d35f92e725, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 2405465332396616619, guid: 969078bda2cc1524e90cd1ba3782ad04, type: 3}
-  reloadTime: 0.25
-  spreadAngle: 7
 --- !u!82 &2149191476154461532
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1111,3 +1096,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6066945756409153878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730189711385781029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a844ddef1944f0aad0cb9d35f92e725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2405465332396616619, guid: 969078bda2cc1524e90cd1ba3782ad04, type: 3}
+  reloadTime: 0.25
+  spreadAngle: 7

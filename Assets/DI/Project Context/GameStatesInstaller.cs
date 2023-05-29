@@ -10,17 +10,16 @@ namespace DI
     {
         public override void InstallBindings()
         {
-            var mainLevelState = new MainLevelState();
-            var quitState = new QuitGameState();
-            var mainMenuState = new MainMenuState(); 
-
-            Container.Bind<QuitGameState>().FromInstance(quitState).AsSingle();
-            Container.Bind<MainLevelState>().FromInstance(mainLevelState).AsSingle();
-            Container.Bind<MainMenuState>().FromInstance(mainMenuState).AsSingle();
-            
-            Container.QueueForInject(quitState);
-            Container.QueueForInject(mainLevelState);
-            Container.QueueForInject(mainMenuState);
+            new List<State>()
+            {
+                new MainLevelState(),
+                new QuitGameState(),
+                new MainMenuState(),
+            }.ForEach(state =>
+            {
+                Container.Bind(state.GetType()).FromInstance(state).AsSingle();
+                Container.QueueForInject(state);
+            });
         }
     }
 }

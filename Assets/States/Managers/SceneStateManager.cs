@@ -6,11 +6,13 @@ namespace DefaultNamespace
 {
     public class SceneStateManager : StateManager
     {
-        private State currentState;
-        public UnityEvent onStateChanged = new();
+        public UnityEvent onStateChanged;
 
-        public override State CurrentState => currentState;
-
+        private void Awake()
+        {
+            onStateChanged = new UnityEvent();
+        }
+        
         private void Start()
         {
             currentState = new PlayingState();
@@ -20,16 +22,21 @@ namespace DefaultNamespace
 
         private void Update()
         {
-            // Debug.Log($"Scene state: {currentState.GetType().Name}");
             currentState.UpdateState(this);
         }
-
+        
         public override void SwitchState(State state)
         {
             currentState.ExitState(this);
             currentState = state;
             currentState.EnterState(this);
             onStateChanged?.Invoke();
+        }
+
+        public override void ShutDown()
+        {
+            currentState.ExitState(this);
+            currentState = null;
         }
     }
 }

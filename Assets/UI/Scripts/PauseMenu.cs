@@ -22,6 +22,7 @@ namespace UI.Scripts
 
         public void EnterMainMenu()
         {
+            sceneStateManager.ShutDown();
             gameStateManager.SwitchState(mainMenuState);
         }
         

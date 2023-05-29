@@ -9,26 +9,24 @@ using Random = UnityEngine.Random;
 
 public class SurroundPlayer : MonoBehaviour
 {
-    private Transform player;
-
     [SerializeField] private float speed;
-    [SerializeField] private float beginSurroundDistance = 10;
-    [SerializeField] private float noSurroundDistance = 4;
+    [SerializeField] private float beginSurroundDistance;
+    [SerializeField] private float noSurroundDistance;
     [SerializeField] private float angularSpeed;
+    
+    [Inject] private PlayerEntity player;
 
     private float angularDirection;
 
-    [Inject]
-    private void Construct(PlayerEntity player)
+    private void Start()
     {
-        this.player = player.transform;
         angularSpeed = Random.Range(0, speed);
         angularDirection = Math.Sign(Random.Range(-1, 1));
     }
 
-    void Update()
+    private void Update()
     {
-        var directionTowardsPlayer = player.position - transform.position;
+        var directionTowardsPlayer = player.transform.position - transform.position;
         ChasePlayer(directionTowardsPlayer);
         GoAroundPlayer();
     }
@@ -40,7 +38,7 @@ public class SurroundPlayer : MonoBehaviour
 
     private void GoAroundPlayer()
     {
-        var playerToEnemy = transform.position - player.position;
+        var playerToEnemy = transform.position - player.transform.position;
         var orthogonal = Vector3.Cross(playerToEnemy, Vector3.forward);
         var playerToEnemyDistance = playerToEnemy.magnitude;
 
