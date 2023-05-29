@@ -1,64 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/AssassinEnemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/AssassinEnemy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/HealerEnemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/HealerEnemy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity/Upgrade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity/Upgrade.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shield.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shield/ReverseBulletShield.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shield/ReverseBulletShield.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shield/Shield.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shield/Shield.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shield/States.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/States/Common.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/Button.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/Button/MenuButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/Menus.meta" afterDir="false" />
+    <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="Added ability icon and shield enemy">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DI/Scene Context/UI/GameOverScreenInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DI/Scene Context/UI/GameOverScreenInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Simple Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Simple Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Spike Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Spike Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Default Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Default Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Ability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/Ability.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/ShockWave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/ShockWave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullets/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity/Stats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/Scripts.Entities.Player.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/Scripts.Entities.Player.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/States/Managers/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/Managers/GameStateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/States/Managers/SceneStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/Managers/SceneStateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/States/Managers/StateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/Common/StateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/States/Managers/StateManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/Common/StateManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/States/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/Common/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/States/State.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/Common/State.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/States/States.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/States.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/Game Over Screen.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/Game Over Screen.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/Menu Button.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/Menu Button.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/Pause Menu.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/Pause Menu.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/Entity/EntityUIElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/Entity/EntityUIElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/GameOverScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/Menus/GameOverMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/GameOverScreen.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/Menus/GameOverMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/Menus/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/MainMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/Menus/MainMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/MenuButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/MenuButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/Button/MenuButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/Menus/PauseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/PauseMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/Menus/PauseMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Game.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts.Entities.Enemy.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Entities.Enemy.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts.Entities.Entity.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Entities.Entity.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts.Entities.Player.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Entities.Player.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/States.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/States.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +24,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f5b293c74049457cabc28437c5a763925a00/04/32199cd9/InjectAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Abilities/Ability.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviours/EntityFollowingPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviours/RotateAround.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullets/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
@@ -199,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685206619403</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added ability icon and shield enemy">
+      <created>1685387425006</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685387425006</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +177,7 @@
     <MESSAGE value="To show" />
     <MESSAGE value="123" />
     <MESSAGE value="Added ZEnject" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ZEnject" />
+    <MESSAGE value="Added ability icon and shield enemy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ability icon and shield enemy" />
   </component>
 </project>

@@ -1,0 +1,17 @@
+{
+    "name": "Scripts.Shield",
+    "rootNamespace": "",
+    "references": [
+        "GUID:eee5e9e79dfcfbe42adb96ff7161bef8",
+        "GUID:72c8350722f111342a0769d58c7fbd2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

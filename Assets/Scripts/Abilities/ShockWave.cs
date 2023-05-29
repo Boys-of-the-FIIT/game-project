@@ -23,9 +23,9 @@ namespace DefaultNamespace.Abilities
             {
                 if (!collider.gameObject.CompareTag(Tags.Enemy)) return;
                 if (!collider.gameObject.TryGetComponent<Enemy>(out var enemy)) return;
-                if (!collider.gameObject.TryGetComponent<Rigidbody2D>(out var enemyRb)) return;
+                // if (!collider.gameObject.TryGetComponent<Rigidbody2D>(out var enemyRb)) return;
                 enemy.ApplyDamage(damage);
-                
+                // enemyRb.AddForce(enemy.transform.position - transform.position);
             }
         }
     }
