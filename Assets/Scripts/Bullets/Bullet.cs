@@ -6,17 +6,32 @@ namespace Bullets
 {
     public class Bullet : MonoBehaviour
     {
-        [SerializeField] private float speed;
-        [SerializeField] private float maxDistance;
-        [SerializeField] public int damage;
-        [SerializeField] private BulletType type;
-        
+        private float speed;
+        private float maxDistance;
+        private int damage;
+        private BulletType type;
+
+        public Bullet Construct(BulletType type, int damage, float maxDistance, float speed)
+        {
+            this.type = type;
+            this.damage = damage;
+            this.maxDistance = maxDistance;
+            this.speed = speed;
+            return this;
+        }
+
         public BulletType Type
         {
             get => type;
-            set => type = value;
+            private set => type = value;
         }
-
+        
+        public int Damage
+        {
+            get => damage;
+            set => damage = value;
+        }
+        
         private Rigidbody2D rb;
         private Vector3 startPosition;
 

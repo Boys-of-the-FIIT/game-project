@@ -118,7 +118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4757744400145137311}
-  offset: {x: 0, y: 1.25, z: 0}
 --- !u!1 &3633377890557036675
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,11 +214,11 @@ GameObject:
   - component: {fileID: 4757744400145137311}
   - component: {fileID: 4757744400145137310}
   - component: {fileID: 4757744400145137309}
-  - component: {fileID: 4757744400145137314}
   - component: {fileID: 4757744400145137315}
   - component: {fileID: 4757744400145137312}
   - component: {fileID: 2400450329753671088}
   - component: {fileID: 5366387733754049889}
+  - component: {fileID: 4398219056132679762}
   m_Layer: 0
   m_Name: Default Player
   m_TagString: Player
@@ -320,22 +319,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &4757744400145137314
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4757744400145137305}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &4757744400145137315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,10 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0899325f6434fd09b667c79454966a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 25
-  healthBarChanged:
-    m_PersistentCalls:
-      m_Calls: []
+  Stats: {fileID: 4398219056132679762}
 --- !u!114 &4757744400145137312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf78a7a397f44fe99bd0fbe36046d995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
 --- !u!58 &5366387733754049889
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -393,6 +372,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &4398219056132679762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757744400145137305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690dedfff24c4e909203988b766338e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  speed: 0
+  damage: 0
+  recoilAngle: 0
+  bulletSpeed: 0
+  reloadTime: 0
+  attackDistance: 0
 --- !u!1 &4757744402176563185
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,8 +490,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2405465332396616619, guid: 969078bda2cc1524e90cd1ba3782ad04, type: 3}
-  reloadTime: 0.25
-  spreadAngle: 7
 --- !u!82 &1828593195151079400
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1109,5 +1105,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2405465332396616619, guid: 969078bda2cc1524e90cd1ba3782ad04, type: 3}
-  reloadTime: 0.25
-  spreadAngle: 7

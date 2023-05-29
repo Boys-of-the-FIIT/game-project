@@ -6,7 +6,13 @@ using Zenject;
 
 public class MainMenu : MonoBehaviour
 {
-    [Inject] private GameStateManager manager;
+    private GameStateManager manager;
+    
+    [Inject] 
+    private void Construct(GameStateManager manager)
+    {
+        this.manager = manager;
+    }
     
     public void PlayGame()
     {

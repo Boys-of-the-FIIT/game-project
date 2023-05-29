@@ -1,20 +1,24 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Zenject;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float walkSpeed = 5f;
-
-    private float currentSpeed;
     private PlayerInput playerInput;
     private InputAction movement;
     private Vector2 moveVector = Vector2.zero;
-
-    public float CurrentSpeed => currentSpeed;
+    private PlayerEntity player;
     
+    [Inject]
+    private void Construct(PlayerEntity player)
+    {
+        this.player = player;
+    }
+
     private void Awake()
     {
         playerInput = new PlayerInput();
@@ -22,13 +26,8 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        var newPos = Time.deltaTime * currentSpeed * moveVector;
+        var newPos = Time.deltaTime * player.Stats.Speed * moveVector;
         transform.position = transform.position + new Vector3(newPos.x, newPos.y, 0);
-    }  
-
-    private void Start()
-    {
-        currentSpeed = walkSpeed;
     }
 
     private void OnMoveCancel(InputAction.CallbackContext obj)

@@ -41,9 +41,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Utils\Tags.cs" />
-     <Compile Include="Assets\Utils\RandomExtensions.cs" />
      <Compile Include="Assets\Utils\VectorExtensions.cs" />
+     <Compile Include="Assets\Utils\RandomExtensions.cs" />
+     <Compile Include="Assets\Utils\Tags.cs" />
      <None Include="Assets\Utils\Utils.asmdef" />
      <Folder Include="Assets\Utils" />
      <Reference Include="UnityEngine">

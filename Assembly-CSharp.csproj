@@ -53,8 +53,8 @@
      <Compile Include="Assets\DI\Project Context\GameStateManagerInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\SceneStateManagerInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\MainCameraInstaller.cs" />
-     <Compile Include="Assets\DI\Scene Context\PlayerInstaller.cs" />
      <Compile Include="Assets\UI\Scripts\MenuButton.cs" />
+     <Compile Include="Assets\DI\Scene Context\PlayerInstaller.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Prefabs\Neutral Unit" />
@@ -907,17 +907,9 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Scripts.Camera.csproj">
-      <Project>{b0203ce6-a9d4-cc66-259d-6ff9a919352c}</Project>
-      <Name>Scripts.Camera</Name>
-    </ProjectReference>
     <ProjectReference Include="Zenject-Editor.csproj">
       <Project>{3bbebf3f-201b-1f01-aa26-d7f4757b8b94}</Project>
       <Name>Zenject-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Scripts.Entities.csproj">
-      <Project>{83de6206-e167-218e-8403-d1c97b71c3eb}</Project>
-      <Name>Scripts.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
       <Project>{b5b91a6f-85e3-d511-31b9-2297ac5b9183}</Project>
@@ -958,6 +950,10 @@
     <ProjectReference Include="Scripts.Behaviours.csproj">
       <Project>{67e2abf1-a309-da72-f60d-f1eb25a08a49}</Project>
       <Name>Scripts.Behaviours</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scripts.csproj">
+      <Project>{ea3b93c8-a152-1e76-f572-1cc9e9caaca2}</Project>
+      <Name>Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="Scripts.Bullets.csproj">
       <Project>{74163807-e427-be95-b279-48f78a4195b7}</Project>

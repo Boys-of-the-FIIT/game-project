@@ -11,10 +11,15 @@ namespace DefaultNamespace.Abilities
         [SerializeField] private protected KeyCode activationButton;
         [SerializeField] private protected float coolDown;
         
-        [Inject] private protected PlayerEntity player;
-        
+        private protected PlayerEntity player;
         private protected bool canInvoke = true;
 
+        [Inject]
+        private void Construct(PlayerEntity player)
+        {
+            this.player = player;
+        }
+        
         private void Update()
         {
             if (Input.GetKeyDown(activationButton) && canInvoke)

@@ -13,36 +13,46 @@ namespace DefaultNamespace
 {
     public class EnemyAttack : MonoBehaviour
     {
-        [SerializeField] private float attackRange;
         [SerializeField] private GameObject bulletPrefab;
-        [SerializeField] private float reloadTime;
-        
-        [Inject] private PlayerEntity player;
+        [SerializeField] private Enemy enemy;
         
         private bool canShoot = true;
-        private Enemy enemy;
+        private PlayerEntity player;
+        
+        [Inject]
+        private void Construct(PlayerEntity player)
+        {
+            this.player = player;
+        }
 
         private void Start()
         {
             enemy = GetComponentInParent<Enemy>();
-            bulletPrefab.GetComponent<Bullet>().Type = BulletType.EnemyBullet;
         }
 
         private void Update()
         {
             if (!player) return;
-            if (Vector3.Distance(enemy.transform.position, player.transform.position) < attackRange)
+            var distanceToPlayer = Vector3.Distance(enemy.transform.position, player.transform.position);
+            if (distanceToPlayer < enemy.Stats.AttackDistance)
             {
                 if (canShoot) StartCoroutine(Shoot());
             }
         }
-        
+
         private IEnumerator Shoot()
         {
             var resultRotation = transform.rotation * Quaternion.Euler(0, 0, 90);
-            Instantiate(bulletPrefab, transform.position, resultRotation);
+            var bullet = Instantiate(bulletPrefab, transform.position, resultRotation).GetComponent<Bullet>()
+                .Construct(
+                    BulletType.EnemyBullet,
+                    enemy.Stats.Damage, 
+                    enemy.Stats.AttackDistance,
+                    enemy.Stats.BulletSpeed
+                    );
+
             canShoot = false;
-            yield return new WaitForSeconds(reloadTime);
+            yield return new WaitForSeconds(enemy.Stats.ReloadTime);
             canShoot = true;
         }
     }

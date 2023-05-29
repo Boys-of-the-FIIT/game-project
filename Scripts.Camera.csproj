@@ -41,7 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Camera\CameraFollowPlayer.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraFollowTarget.cs" />
      <Folder Include="Assets\Scripts\Camera" />
      <None Include="Assets\Scripts\Camera\Scripts.Camera.asmdef" />
      <Reference Include="UnityEngine">

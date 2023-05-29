@@ -18,8 +18,13 @@ namespace DefaultNamespace
         private bool canSpawn = true;
         private Transform parentTransform;
         private System.Random random;
+        private DiContainer diContainer;
 
-        [Inject] private DiContainer diContainer;
+        [Inject]
+        private void Construct(DiContainer diContainer)
+        {
+            this.diContainer = diContainer;
+        }
 
         private void Start()
         {

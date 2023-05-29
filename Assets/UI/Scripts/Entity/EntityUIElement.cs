@@ -8,13 +8,20 @@ namespace Behaviours
     public class EntityUIElement : MonoBehaviour
     {
         [SerializeField] private Transform target;
-        [SerializeField] private Vector3 offset;
-        [Inject] private Camera mainCamera;
-
+        // [SerializeField] private Vector3 offset;
+        
+        private Camera mainCamera;
+        
+        [Inject] 
+        private void Construct(Camera mainCamera)
+        {
+            this.mainCamera = mainCamera;
+        }
+        
         private void Update()
         {
             transform.rotation = mainCamera.transform.rotation;
-            transform.position = target.position + offset;
+            transform.position = target.position;
         }   
     }
 }

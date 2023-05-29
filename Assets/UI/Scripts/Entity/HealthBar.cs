@@ -20,7 +20,7 @@ namespace UI
 
         private void Update()
         {
-            healthBar.value = entity.CurrentHealth / entity.MaxHealth;
+            healthBar.value = (float) entity.Stats.CurrentHealth / (float) entity.Stats.MaxHealth;
         }
     }
 }

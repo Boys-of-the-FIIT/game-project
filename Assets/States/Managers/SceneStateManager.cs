@@ -22,20 +22,20 @@ namespace DefaultNamespace
 
         private void Update()
         {
-            currentState.UpdateState(this);
+            currentState?.UpdateState(this);
         }
         
         public override void SwitchState(State state)
         {
-            currentState.ExitState(this);
+            currentState?.ExitState(this);
             currentState = state;
-            currentState.EnterState(this);
+            currentState?.EnterState(this);
             onStateChanged?.Invoke();
         }
 
         public override void ShutDown()
         {
-            currentState.ExitState(this);
+            currentState?.ExitState(this);
             currentState = null;
         }
     }

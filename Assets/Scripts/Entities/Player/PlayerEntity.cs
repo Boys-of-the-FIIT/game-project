@@ -12,13 +12,19 @@ namespace Player
 {
     public class PlayerEntity : Entity
     {
-        public UnityEvent healthBarChanged;
-        [Inject] private SceneStateManager manager;
-        [Inject] private GameOverState gameOverState;
+        private SceneStateManager manager;
+        private GameOverState gameOverState;
+
+        [Inject]
+        private void Construct(SceneStateManager manager, GameOverState gameOverState)
+        {
+            this.manager = manager;
+            this.gameOverState = gameOverState;
+        }
         
         private void Start()
         {
-            CurrentHealth = MaxHealth;
+            Stats.CurrentHealth = Stats.MaxHealth;
         }
 
         public override void Die()
@@ -27,18 +33,16 @@ namespace Player
             Destroy(gameObject);
         }
 
-        public override void ApplyDamage(float damage)
+        public override void ApplyDamage(int damage)
         {
-            healthBarChanged?.Invoke();
-            CurrentHealth -= damage;
-            if (CurrentHealth <= 0)
+            Stats.CurrentHealth -= damage;
+            if (Stats.CurrentHealth <= 0)
                 Die();
         }
 
-        public override void Heal(float points)
+        public override void Heal(int points)
         {
-            healthBarChanged?.Invoke();
-            CurrentHealth += points;
+            Stats.CurrentHealth += points;
         }
 
         private void OnTriggerEnter2D(Collider2D col)
@@ -47,7 +51,7 @@ namespace Player
             {
                 var bullet = col.gameObject.GetComponent<Bullet>();
                 if (bullet.Type is BulletType.EnemyBullet) 
-                    ApplyDamage(bullet.damage);
+                    ApplyDamage(bullet.Damage);
                 Destroy(col.gameObject);
             }
         }

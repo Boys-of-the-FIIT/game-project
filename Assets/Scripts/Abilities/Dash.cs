@@ -8,9 +8,14 @@ namespace DefaultNamespace.Abilities
 {
     public class Dash : Ability
     {
-        [Inject] private PlayerEntity player;
-        
         private Rigidbody2D playerRb;
+        private PlayerEntity player;
+
+        [Inject]
+        private void Construct(PlayerEntity player)
+        {
+            this.player = player;
+        }
         
         private void Start()
         {

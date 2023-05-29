@@ -10,11 +10,16 @@ namespace Player
     public class PlayerAttack : MonoBehaviour
     {
         [SerializeField] private Bullet bulletPrefab;
-        [SerializeField] private float reloadTime;
-        [Range(0, 180)] [SerializeField] private float spreadAngle;
-        
+
         private bool canShoot;
         private System.Random random;
+        private PlayerEntity player;
+
+        [Inject]
+        private void Construct(PlayerEntity player)
+        {
+            this.player = player;
+        }
 
         private void Awake()
         {
@@ -23,7 +28,6 @@ namespace Player
 
         private void Start()
         {
-            bulletPrefab.Type = BulletType.PlayerBullet;
             random = new System.Random();
         }
 
@@ -35,16 +39,23 @@ namespace Player
 
         private IEnumerator Shoot()
         {
-            var randomAngle = spreadAngle * ((float)random.NextDouble() - 0.5f);
+            var randomAngle = player.Stats.RecoilAngle * ((float)random.NextDouble() - 0.5f);
             var resultRotation = transform.rotation * Quaternion.Euler(0, 0, 90 + randomAngle);
+
             var bullet = Instantiate(
                 bulletPrefab,
                 transform.position,
                 resultRotation
+            ).Construct(
+                BulletType.PlayerBullet,
+                player.Stats.Damage,
+                player.Stats.AttackDistance,
+                player.Stats.BulletSpeed
             );
+            
             var recoilVector = -0.1f * bullet.transform.right;
             canShoot = false;
-            yield return new WaitForSeconds(reloadTime);
+            yield return new WaitForSeconds(player.Stats.ReloadTime);
             canShoot = true;
         }
     }

@@ -13,12 +13,13 @@ namespace DefaultNamespace
         private SpriteRenderer spriteRenderer;
         private Color originalColor;
         private Color damageColor;
+        
         private void Start()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             originalColor = spriteRenderer.color;
             damageColor = Color.red;
-            CurrentHealth = MaxHealth;
+            Stats.CurrentHealth = Stats.MaxHealth;  
         }
 
         public override void Die()
@@ -27,28 +28,32 @@ namespace DefaultNamespace
             Destroy(gameObject);
         }
 
-        public override void ApplyDamage(float damage)
+        public override void ApplyDamage(int damage)
         {
             StartCoroutine(DamageAnimation());
-            CurrentHealth -= damage;
-            if (CurrentHealth <= 0)
+            Stats.CurrentHealth -= damage;
+            if (Stats.CurrentHealth <= 0)
                 Die();
         }
 
-        public override void Heal(float points)
+        public override void Heal(int points)
         {
-            CurrentHealth += points;
+            Stats.CurrentHealth += points;
         }
 
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (col.gameObject.CompareTag(Tags.Bullet))
             {
-                var bullet = col.gameObject.GetComponent<Bullet>();
-                if (bullet.Type is BulletType.PlayerBullet) 
-                    ApplyDamage(bullet.damage);
+                if (col.gameObject.TryGetComponent<Bullet>(out var bullet))
+                {
+                    if (bullet.Type is BulletType.PlayerBullet)
+                    {
+                        ApplyDamage(bullet.Damage);
+                        Destroy(col.gameObject);
+                    }
+                }
             }
-            Destroy(col.gameObject);
         }
 
         private IEnumerator DamageAnimation()

@@ -8,21 +8,8 @@ namespace DefaultNamespace
 {
     public abstract class Entity : MonoBehaviour
     {
-        [SerializeField] private float maxHealth;
-        private float currentCurrentHealth;
+        [SerializeField] public Stats Stats;
         private EntitySpawner spawner;
-        
-        public float CurrentHealth
-        {
-            get => currentCurrentHealth;
-            protected set => currentCurrentHealth = value;
-        } 
-        
-        public float MaxHealth
-        {
-            get => maxHealth;
-            protected set => maxHealth = value;
-        }
 
         public EntitySpawner Spawner
         {
@@ -31,7 +18,7 @@ namespace DefaultNamespace
         }
         
         public abstract void Die();
-        public abstract void ApplyDamage(float damage);
-        public abstract void Heal(float points);
+        public abstract void ApplyDamage(int damage);
+        public abstract void Heal(int points);
     }
 }

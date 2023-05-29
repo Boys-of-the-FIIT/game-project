@@ -11,11 +11,17 @@ namespace Entities.Enemy
         [SerializeField] private float explosionDelay;
         [SerializeField] private float explosionRange;
         
-        [Inject] private PlayerEntity player;
-
+        private Transform player;
+         
+        [Inject]
+        private void Construct(PlayerEntity player)
+        {
+            this.player = player.transform;
+        }
+        
         private void Update()
         {
-            if (Vector2.Distance(player.transform.position, transform.position) < 5)
+            if (Vector2.Distance(player.position, transform.position) < 5)
             {
                 StartCoroutine(Explosion());
                 return;

@@ -8,13 +8,23 @@ namespace UI.Scripts
 {
     public class PauseMenu : MonoBehaviour
     {
-        [Inject] private SceneStateManager sceneStateManager;
-        [Inject] private GameStateManager gameStateManager;
-        [Inject] private PlayingState playingState;
-        [Inject] private MainMenuState mainMenuState;
+        private SceneStateManager sceneStateManager;
+        private GameStateManager gameStateManager;
+        private PlayingState playingState;
+        private MainMenuState mainMenuState;
 
         [SerializeField] private Canvas canvas;
-        
+
+        [Inject]
+        private void Construct(SceneStateManager sceneStateManager, GameStateManager gameStateManager,
+            PlayingState playingState, MainMenuState mainMenuState)
+        {
+            this.sceneStateManager = sceneStateManager;
+            this.gameStateManager = gameStateManager;
+            this.playingState = playingState;
+            this.mainMenuState = mainMenuState;
+        }
+
         public void Resume()
         {
             sceneStateManager.SwitchState(playingState);
@@ -25,7 +35,7 @@ namespace UI.Scripts
             sceneStateManager.ShutDown();
             gameStateManager.SwitchState(mainMenuState);
         }
-        
+
         private void Start()
         {
             canvas.gameObject.SetActive(false);
