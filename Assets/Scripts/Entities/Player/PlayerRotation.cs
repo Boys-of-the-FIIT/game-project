@@ -6,18 +6,18 @@ using Zenject;
 
 public class PlayerRotation : MonoBehaviour
 {
-    private Camera mainCam;
+    private Camera mainCamera;
     private Vector3 mousePos;
 
     [Inject]
     public void Construct(Camera camera)
     {
-        mainCam = camera;
+        mainCamera = camera;
     }
 
     private void Update()
     {
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
     }
 
     private void FixedUpdate()

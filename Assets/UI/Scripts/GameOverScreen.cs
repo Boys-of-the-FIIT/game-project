@@ -8,19 +8,29 @@ namespace UI.Scripts
 {
     public class GameOverScreen : MonoBehaviour
     {
-        [Inject] private GameStateManager gameStateManager;
-        [Inject] private SceneStateManager sceneStateManager;
-        [Inject] private MainMenuState mainMenuState;
-        [Inject] private MainLevelState mainLevelState;
-
         [SerializeField] private Canvas canvas;
         
+        private GameStateManager gameStateManager;
+        private SceneStateManager sceneStateManager;
+        private MainMenuState mainMenuState;
+        private MainLevelState mainLevelState;
+
+        [Inject]
+        private void Construct(GameStateManager gameStateManager, SceneStateManager sceneStateManager,
+            MainMenuState mainMenuState, MainLevelState mainLevelState)
+        {
+            this.gameStateManager = gameStateManager;
+            this.sceneStateManager = sceneStateManager;
+            this.mainMenuState = mainMenuState;
+            this.mainLevelState = mainLevelState;
+        }
+
         private void Start()
         {
             canvas.gameObject.SetActive(true);
             sceneStateManager?.onStateChanged.AddListener(HandleStateChange);
         }
-        
+
         public void Retry()
         {
             sceneStateManager.ShutDown();

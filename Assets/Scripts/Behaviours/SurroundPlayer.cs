@@ -14,10 +14,15 @@ public class SurroundPlayer : MonoBehaviour
     [SerializeField] private float noSurroundDistance;
     [SerializeField] private float angularSpeed;
     
-    [Inject] private PlayerEntity player;
-
+    private Transform player;
     private float angularDirection;
 
+    [Inject]
+    private void Construct(PlayerEntity player)
+    {
+        this.player = player.transform;
+    }
+    
     private void Start()
     {
         angularSpeed = Random.Range(0, speed);
@@ -26,7 +31,7 @@ public class SurroundPlayer : MonoBehaviour
 
     private void Update()
     {
-        var directionTowardsPlayer = player.transform.position - transform.position;
+        var directionTowardsPlayer = player.position - transform.position;
         ChasePlayer(directionTowardsPlayer);
         GoAroundPlayer();
     }
@@ -38,7 +43,7 @@ public class SurroundPlayer : MonoBehaviour
 
     private void GoAroundPlayer()
     {
-        var playerToEnemy = transform.position - player.transform.position;
+        var playerToEnemy = transform.position - player.position;
         var orthogonal = Vector3.Cross(playerToEnemy, Vector3.forward);
         var playerToEnemyDistance = playerToEnemy.magnitude;
 

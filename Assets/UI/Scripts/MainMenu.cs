@@ -6,15 +6,21 @@ using Zenject;
 
 public class MainMenu : MonoBehaviour
 {
-    [Inject] private GameStateManager manager;
+    private GameStateManager gameStateManager;
+
+    [Inject]
+    private void Construct(GameStateManager manager)
+    {
+        gameStateManager = manager;
+    }
     
     public void PlayGame()
     {
-        manager.SwitchState(new MainLevelState());
+        gameStateManager.SwitchState(new MainLevelState());
     }
 
     public void QuitGame()
     {
-        manager.SwitchState(new QuitGameState());
+        gameStateManager.SwitchState(new QuitGameState());
     }
 }

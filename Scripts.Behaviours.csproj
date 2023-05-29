@@ -41,11 +41,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Behaviours\SurroundPlayer.cs" />
      <Compile Include="Assets\Scripts\Behaviours\IdleIfClose.cs" />
      <Compile Include="Assets\Scripts\Behaviours\KeepingDistanceFromPlayer.cs" />
      <Compile Include="Assets\Scripts\Behaviours\RotateAround.cs" />
      <Compile Include="Assets\Scripts\Behaviours\FollowPlayer.cs" />
-     <Compile Include="Assets\Scripts\Behaviours\SurroundPlayer.cs" />
      <None Include="Assets\Scripts\Behaviours\Scripts.Behaviours.asmdef" />
      <Folder Include="Assets\Scripts\Behaviours" />
      <Reference Include="UnityEngine">

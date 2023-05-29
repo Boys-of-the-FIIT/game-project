@@ -13,12 +13,18 @@ namespace Behaviours
         [SerializeField] private float maxDistanceToPlayer = 10;
         [SerializeField] private float speed;
         
-        [Inject] private PlayerEntity player;
+        private Transform player;
 
         private float angleToKeep;
         private float distanceToKeep;
         private float distanceToPlayer;
 
+        [Inject]
+        public void Construct(PlayerEntity player)
+        {
+            this.player = player.transform;
+        }
+        
         private void Start()
         {
             angleToKeep = Random.Range(-180f, 180f);
@@ -29,9 +35,9 @@ namespace Behaviours
         private void Update()
         {
             if (!player) return;
-            distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+            distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-            var directionTowardsPlayer = player.transform.position - transform.position;
+            var directionTowardsPlayer = player.position - transform.position;
 
             if (distanceToPlayer < minDistanceToPlayer)
             {
@@ -53,7 +59,7 @@ namespace Behaviours
         private void ChasePlayer(Vector3 directionTowardsPlayer)
         {
             var newPosition = transform.position + directionTowardsPlayer.GetDirectionWithSpeed(speed);
-            var newDistance = Vector3.Distance(player.transform.position, newPosition);
+            var newDistance = Vector3.Distance(player.position, newPosition);
 
             if (newDistance > minDistanceToPlayer)
             {
@@ -65,7 +71,7 @@ namespace Behaviours
         {
             var currentAngle = Vector3.SignedAngle(
                 Vector3.right,
-                transform.position - player.transform.position,
+                transform.position - player.position,
                 Vector3.forward
             );
 
@@ -88,7 +94,7 @@ namespace Behaviours
         {
             var sign = Math.Sign(distancesDifference);
             var playerDirection = sign * directionTowardsPlayer.GetDirectionWithSpeed(speed);
-            var newPositionToPlayerDistance = Vector3.Distance(transform.position + playerDirection, player.transform.position);
+            var newPositionToPlayerDistance = Vector3.Distance(transform.position + playerDirection, player.position);
 
             if (newPositionToPlayerDistance < minDistanceToPlayer
                 || Math.Abs(newPositionToPlayerDistance - distanceToKeep) <= 1.0
@@ -102,7 +108,7 @@ namespace Behaviours
 
         private void GoAroundPlayer()
         {
-            var playerToEnemy = transform.position - player.transform.position;
+            var playerToEnemy = transform.position - player.position;
             var orthogonal = Vector3.Cross(playerToEnemy, Vector3.forward);
 
             transform.position += orthogonal.GetDirectionWithSpeed(speed);

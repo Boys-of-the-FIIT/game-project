@@ -13,8 +13,16 @@ namespace Player
     public class PlayerEntity : Entity
     {
         public UnityEvent healthBarChanged;
-        [Inject] private SceneStateManager manager;
-        [Inject] private GameOverState gameOverState;
+        
+        private SceneStateManager sceneStateManager;
+        private GameOverState gameOverState;
+
+        [Inject]
+        private void Construct(SceneStateManager manager, GameOverState gameOverState)
+        {
+            sceneStateManager = manager;
+            this.gameOverState = gameOverState;
+        }
         
         private void Start()
         {
@@ -23,7 +31,7 @@ namespace Player
 
         public override void Die()
         {
-            manager.SwitchState(new GameOverState());
+            sceneStateManager.SwitchState(new GameOverState());
             Destroy(gameObject);
         }
 

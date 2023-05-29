@@ -49,6 +49,7 @@
      <Compile Include="Assets\States\Game States\QuitGameState.cs" />
      <Compile Include="Assets\States\Game States\MainMenuState.cs" />
      <Compile Include="Assets\States\State.cs" />
+     <Compile Include="Assets\States\Game States\LoadingState.cs" />
      <Compile Include="Assets\States\Managers\GameStateManager.cs" />
      <Compile Include="Assets\States\Game States\MainLevelState.cs" />
      <Folder Include="Assets\States\Game States" />

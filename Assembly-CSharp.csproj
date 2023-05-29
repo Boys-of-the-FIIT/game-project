@@ -53,8 +53,8 @@
      <Compile Include="Assets\DI\Project Context\GameStateManagerInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\SceneStateManagerInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\MainCameraInstaller.cs" />
-     <Compile Include="Assets\DI\Scene Context\PlayerInstaller.cs" />
      <Compile Include="Assets\UI\Scripts\MenuButton.cs" />
+     <Compile Include="Assets\DI\Scene Context\PlayerInstaller.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Prefabs\Neutral Unit" />

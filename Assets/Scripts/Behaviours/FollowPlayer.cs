@@ -10,11 +10,18 @@ namespace DefaultNamespace
     public class FollowPlayer : MonoBehaviour
     {
         [SerializeField] private float speed;
-        [Inject] private PlayerEntity player;
+        
+        private Transform player;
 
+        [Inject]
+        public void Construct(PlayerEntity player)
+        {
+            this.player = player.transform;
+        }
+        
         private void FixedUpdate()
         {
-            var playerPosition = player.transform.position;
+            var playerPosition = player.position;
             var transformPosition = transform.position;
             var target = new Vector3(playerPosition.x, playerPosition.y, transformPosition.z);
             transform.position = Vector3.MoveTowards(transformPosition, target, Time.deltaTime * speed);

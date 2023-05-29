@@ -17,11 +17,17 @@ namespace DefaultNamespace
         [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private float reloadTime;
         
-        [Inject] private PlayerEntity player;
-        
+
         private bool canShoot = true;
         private Enemy enemy;
-
+        private Transform player;
+        
+        [Inject]
+        private void Construct(PlayerEntity player)
+        {
+            this.player = player.transform;
+        }
+        
         private void Start()
         {
             enemy = GetComponentInParent<Enemy>();
@@ -31,7 +37,7 @@ namespace DefaultNamespace
         private void Update()
         {
             if (!player) return;
-            if (Vector3.Distance(enemy.transform.position, player.transform.position) < attackRange)
+            if (Vector3.Distance(enemy.transform.position, player.position) < attackRange)
             {
                 if (canShoot) StartCoroutine(Shoot());
             }

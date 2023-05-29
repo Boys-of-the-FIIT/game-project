@@ -2,41 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/States/Game States/LoadingState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/States/Game States/LoadingState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DI/Project Context/GameStatesInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DI/Project Context/GameStatesInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DI/Scene Context/SceneStatesInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DI/Scene Context/SceneStatesInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Default Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Default Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spawners/Spawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spawners/Spawner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/External/InputSystem/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/External/InputSystem/PlayerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/GameStateManagerInstaller.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/GameStateManagerInstaller.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/GameStatesInstaller.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/GameStatesInstaller.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviours/FollowPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviours/FollowPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviours/IdleIfClose.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviours/IdleIfClose.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviours/KeepingDistanceFromPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviours/KeepingDistanceFromPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviours/Scripts.Behaviours.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviours/Scripts.Behaviours.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviours/SurroundPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviours/SurroundPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletTrail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletTrail.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/EnemyAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity/Scripts.Entities.Entity.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity/Scripts.Entities.Entity.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/EnemyRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/EnemyRotation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/KamikazeEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/KamikazeEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity/EntitySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity/EntitySpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerRotation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/States/Game States/MainLevelState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/Game States/MainLevelState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/States/Game States/MainMenuState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/Game States/MainMenuState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/States/Managers/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/Managers/GameStateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/States/Managers/SceneStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/Managers/SceneStateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/States/Managers/StateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/Managers/StateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/States/Scene States/PlayingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/Scene States/PlayingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/States/States.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/States/States.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/Game Over Screen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Prefabs/Game Over Screen.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/Entity/EntityUIElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/Entity/EntityUIElement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/GameOverScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/GameOverScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/MainMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/PauseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Utils/Utils.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Utils/Utils.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Game.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts.Behaviours.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Behaviours.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts.Entities.Entity.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Entities.Entity.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/States.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/States.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utils.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Utils.csproj" afterDir="false" />
     </list>
@@ -58,16 +45,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f5b293c74049457cabc28437c5a763925a00/04/32199cd9/InjectAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviours/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Behaviours/KeepingDistanceFromPlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Behaviours/KeepingDistanceFromPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullets/BulletTrailScriptableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Entities/Entity/EntitySpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Entities/Entity/EntitySpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Entities/Entity/EntitySpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Entities/Entity/EntitySpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/Scripts/Entity/EntityUIElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/Scripts/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
@@ -152,7 +131,8 @@
       <workItem from="1685147330849" duration="11173000" />
       <workItem from="1685205115913" duration="12774000" />
       <workItem from="1685268560222" duration="31859000" />
-      <workItem from="1685302670903" duration="15614000" />
+      <workItem from="1685302670903" duration="15691000" />
+      <workItem from="1685319108579" duration="2029000" />
     </task>
     <task id="LOCAL-00001" summary="To show">
       <created>1685104573558</created>
