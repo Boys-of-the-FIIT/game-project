@@ -7,9 +7,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 170771547437055600, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 231919414153771117, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348814080169721003, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436052938229664275, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2167969003204828203, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: m_Name
       value: Assasin Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865480074849737728, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3059449444764542789, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3355787179080508409, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: m_RootOrder
@@ -63,5 +87,90 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6323107998952985739, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: reloadTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: bulletSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: recoilAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: attackDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8899751463848133125, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913394003463987800, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+--- !u!1 &2465903281255555080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2167969003204828203, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+  m_PrefabInstance: {fileID: 4336554855945600035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5053664213921628247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465903281255555080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47be2398e2b96634488a4d9dc0cd469a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hidingCoefficient: 2.5
+  startIdlingDistance: 10
+  startHidingDistance: 20
+--- !u!114 &7043405120174437720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465903281255555080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55085dc40e542e3897a75b018aa353d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  enemy: {fileID: 2923018191857249163}
+--- !u!114 &2923018191857249163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1494680665302898600, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+  m_PrefabInstance: {fileID: 4336554855945600035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465903281255555080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa14b3df78774144813fd4c060da90d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
