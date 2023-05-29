@@ -6,12 +6,11 @@ namespace Bullets
     public class BulletTrail : MonoBehaviour
     {
         [SerializeField] private BulletTrailScriptableObject trailConfig;
-        private TrailRenderer trail;
-
         [SerializeField] private Renderer renderer;
+        
+        private TrailRenderer trail;
         private bool isDisabling;
         private Vector3 _startPosition;
-
         private const string DISABLE_METHOD_NAME = "Disable";
         private const string DO_DISABLE_METHOD_NAME = "DoDisable";
         private Rigidbody2D rb;

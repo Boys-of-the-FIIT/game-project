@@ -12,7 +12,7 @@ namespace States.Game_States
     {
         public override void EnterState(StateManager manager)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadSceneAsync(1);
         }
 
         public override void UpdateState(StateManager manager)
