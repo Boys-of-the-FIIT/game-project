@@ -41,14 +41,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Entities\Enemy\Enemy.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemy\EnemyRotation.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemy\EnemyAttack.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemy\KamikazeEnemy.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemy\AssassinEnemy.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemy\HealerEnemy.cs" />
-     <Folder Include="Assets\Scripts\Entities\Enemy" />
+     <Compile Include="Assets\Scripts\Entities\Enemy\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemy\EnemyRotation.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemy\KamikazeEnemy.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemy\Enemy.cs" />
      <None Include="Assets\Scripts\Entities\Enemy\Scripts.Entities.Enemy.asmdef" />
+     <Folder Include="Assets\Scripts\Entities\Enemy" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

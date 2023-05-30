@@ -56,6 +56,7 @@
      <Compile Include="Assets\UI\Scripts\Button\MenuButton.cs" />
      <Compile Include="Assets\DI\Scene Context\PlayerInstaller.cs" />
      <Compile Include="Assets\UI\Scripts\Abilities\AbilityIcon.cs" />
+     <Compile Include="Assets\Hide.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Prefabs\Neutral Unit" />
@@ -953,10 +954,6 @@
       <Project>{0164910c-1f70-9a07-b552-a9533a65c455}</Project>
       <Name>States</Name>
     </ProjectReference>
-    <ProjectReference Include="Scripts.Entities.Enemy.csproj">
-      <Project>{6d5c04cb-9979-33c8-8e60-8b4aada059ce}</Project>
-      <Name>Scripts.Entities.Enemy</Name>
-    </ProjectReference>
     <ProjectReference Include="Scripts.Behaviours.csproj">
       <Project>{67e2abf1-a309-da72-f60d-f1eb25a08a49}</Project>
       <Name>Scripts.Behaviours</Name>
@@ -980,6 +977,14 @@
     <ProjectReference Include="States.Common.csproj">
       <Project>{d1395ddb-098c-88cb-7df6-8daace3fba47}</Project>
       <Name>States.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scripts.Entities.Enemies.csproj">
+      <Project>{b97091f3-0d4f-de90-da8b-1e26623c1087}</Project>
+      <Name>Scripts.Entities.Enemies</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scripts.Entities.Enemy.csproj">
+      <Project>{6d5c04cb-9979-33c8-8e60-8b4aada059ce}</Project>
+      <Name>Scripts.Entities.Enemy</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
