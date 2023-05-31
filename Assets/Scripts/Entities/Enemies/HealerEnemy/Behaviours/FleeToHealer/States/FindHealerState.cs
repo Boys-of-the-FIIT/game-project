@@ -18,8 +18,8 @@ namespace Behaviours.FleeToHealer.States
             var colliders = Physics2D.OverlapCircleAll(behaviour.transform.position, 20);
             foreach (var col in colliders)
             {
-                if (!col.gameObject.CompareTag(Tags.Enemy)) return;
-                if (!col.gameObject.TryGetComponent<HealerEnemy>(out var healer)) return;
+                if (!col.gameObject.CompareTag(Tags.Enemy)) continue;
+                if (!col.gameObject.TryGetComponent<HealerEnemy>(out var healer)) continue;
             }
         }
 

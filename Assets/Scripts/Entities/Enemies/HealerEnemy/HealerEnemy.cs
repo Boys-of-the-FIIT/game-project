@@ -22,22 +22,22 @@ namespace Enemies.HealerEnemy
         private void Awake()
         {
             CanHeal = true;
-            var findTarget = new FindInjuredEnemyState(this);
+            var searchForInjured = new SearchForInjuredEnemyState(this);
             var followTarget = new FollowTargetState(this);
             var healTarget = new HealTargetState(this);
             var restoreHealAbility = new RestoreHealAbilityState(this);
             
             stateMachine = new StateMachine();
             
-            stateMachine.AddTransition(findTarget, followTarget, HasTarget());
+            stateMachine.AddTransition(searchForInjured, followTarget, HasTarget());
             stateMachine.AddTransition(followTarget, healTarget, ReachedTarget());
             stateMachine.AddTransition(healTarget, restoreHealAbility, () => true);
-            stateMachine.AddTransition(restoreHealAbility, findTarget, HasHealAbility());
+            stateMachine.AddTransition(restoreHealAbility, searchForInjured, HasHealAbility());
             
-            stateMachine.AddTransition(followTarget, findTarget, NoTarget());
-            stateMachine.AddTransition(healTarget, findTarget, NoTarget());
+            stateMachine.AddTransition(followTarget, searchForInjured, NoTarget());
+            stateMachine.AddTransition(healTarget, searchForInjured, NoTarget());
             
-            stateMachine.SetState(findTarget);
+            stateMachine.SetState(searchForInjured);
 
             Func<bool> HasHealAbility() => () => CanHeal;
             Func<bool> HasTarget() => () => HealTarget != null;
@@ -46,10 +46,6 @@ namespace Enemies.HealerEnemy
                 Vector2.Distance(HealTarget.transform.position, transform.position) <= healDistance;
         }
 
-        private void Update()
-        {
-            Debug.Log(stateMachine.CurrentState);
-            stateMachine.Tick();
-        }
+        private void Update() => stateMachine.Tick();
     }
 }

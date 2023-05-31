@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 2045274681444086324}
-  healDelaySeconds: 10
+  healDelaySeconds: 2
   healPoints: 10
   healDistance: 5
-  searchForTargetDistance: 100
+  searchForTargetDistance: 50

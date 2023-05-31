@@ -3,11 +3,11 @@ using Utils;
 
 namespace Enemies.HealerEnemy
 {
-    public class FindInjuredEnemyState : IState
+    public class SearchForInjuredEnemyState : IState
     {
         private HealerEnemy healer;
 
-        public FindInjuredEnemyState(HealerEnemy healer)
+        public SearchForInjuredEnemyState(HealerEnemy healer)
         {
             this.healer = healer;
         }
@@ -18,13 +18,11 @@ namespace Enemies.HealerEnemy
                 healer.transform.position, 
                 healer.searchForTargetDistance
                 );
-            
             foreach (var col in collisions)
             {
-                if (!col.gameObject.CompareTag(Tags.Enemy)) return;
-                if (!col.gameObject.TryGetComponent<Enemy>(out var enemy)) return;
-                if (!enemy.IsInjured) return;
-                Debug.Log("Entity found");
+                if (!col.gameObject.CompareTag(Tags.Enemy)) continue;
+                if (!col.gameObject.TryGetComponent<Enemy>(out var enemy)) continue;
+                if (!enemy.IsInjured) continue;
                 healer.HealTarget = enemy;
             }
         }

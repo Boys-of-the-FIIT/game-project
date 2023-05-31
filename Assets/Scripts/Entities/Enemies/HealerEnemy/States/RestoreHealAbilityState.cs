@@ -21,9 +21,7 @@ namespace Enemies.HealerEnemy
         {
             remainingSeconds -= Time.deltaTime;
             if (remainingSeconds < 0)
-            {
                 healer.CanHeal = true;
-            }
         }
 
         public void OnExit()
