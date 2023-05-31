@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using Enemies;
+using Enemies.HunterEnemy;
 using Player;
 using UnityEngine;
 using Utils;
@@ -26,6 +28,7 @@ namespace DefaultNamespace.Abilities
                 // if (!collider.gameObject.TryGetComponent<Rigidbody2D>(out var enemyRb)) return;
                 enemy.ApplyDamage(damage);
                 // enemyRb.AddForce(enemy.transform.position - transform.position);
+                var hunterEnemy = new HunterEnemy();
             }
         }
     }

@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Collections;
 using Bullets;
+using DefaultNamespace;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 using Utils;
 
-namespace DefaultNamespace
+namespace Enemies
 {
     public class Enemy : Entity
     {
         private SpriteRenderer spriteRenderer;
         private Color originalColor;
         private Color damageColor;
-        
+
         private void Start()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             originalColor = spriteRenderer.color;
             damageColor = Color.red;
-            Stats.CurrentHealth = Stats.MaxHealth;  
+            Stats.CurrentHealth = Stats.MaxHealth;
         }
 
         public override void Die()
@@ -28,7 +29,7 @@ namespace DefaultNamespace
             Destroy(gameObject);
         }
 
-        public override void ApplyDamage(int damage)
+        public override void ApplyDamage(float damage)
         {
             StartCoroutine(DamageAnimation());
             Stats.CurrentHealth -= damage;
@@ -36,13 +37,12 @@ namespace DefaultNamespace
                 Die();
         }
 
-        public override void Heal(int points)
+        public override void Heal(float points)
         {
-            Stats.CurrentHealth += points;
+            var newHealth = Stats.CurrentHealth + points;
+            Stats.CurrentHealth = newHealth <= Stats.MaxHealth ? newHealth : Stats.MaxHealth;
         }
 
-        public bool IsInjured => Stats.CurrentHealth < Stats.MaxHealth;
-        
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (!col.gameObject.CompareTag(Tags.Bullet)) return;

@@ -105,17 +105,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: speed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 9184944183526779258, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1494680665302898600, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
 --- !u!114 &2045274681444086324 stripped
 MonoBehaviour:
@@ -140,30 +141,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8241853641949564652}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2347fb2e9d8d418bb5cd53d25dbe6693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 2045274681444086324}
-  healDelaySeconds: 0
-  healPoints: 0
-  healDistance: 0
-  healSound: {fileID: 0}
---- !u!114 &3750151246684949470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8241853641949564652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1cd9e157fb74360912c1071c90893cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healDistance: 10
+  healDelaySeconds: 10
   healPoints: 10
-  onStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
+  healDistance: 5
+  searchForTargetDistance: 100

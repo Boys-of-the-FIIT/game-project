@@ -735,9 +735,9 @@
       <Project>{2a875482-6628-3e0a-abf0-cdfec33b706f}</Project>
       <Name>Utils</Name>
     </ProjectReference>
-    <ProjectReference Include="Scripts.Entities.Entity.csproj">
-      <Project>{f4aab106-5235-d264-a5e3-c3364cbac5af}</Project>
-      <Name>Scripts.Entities.Entity</Name>
+    <ProjectReference Include="Scripts.Entities.Common.csproj">
+      <Project>{32f35752-cb71-53ba-100a-3dd9199d5d2d}</Project>
+      <Name>Scripts.Entities.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

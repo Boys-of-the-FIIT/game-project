@@ -391,6 +391,7 @@ MonoBehaviour:
   bulletSpeed: 0
   reloadTime: 0
   attackDistance: 0
+  upgradePoints: 0
 --- !u!1 &4757744402176563185
 GameObject:
   m_ObjectHideFlags: 0

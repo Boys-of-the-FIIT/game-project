@@ -45,7 +45,9 @@
      <Compile Include="Assets\Scripts\Entities\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Entities\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Entities\Player\PlayerEntity.cs" />
+     <Compile Include="Assets\Scripts\Entities\Player\Collectables\Heals.cs" />
      <None Include="Assets\Scripts\Entities\Player\Scripts.Entities.Player.asmdef" />
+     <Folder Include="Assets\Scripts\Entities\Player\Collectables" />
      <Folder Include="Assets\Scripts\Entities\Player" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -735,9 +737,9 @@
       <Project>{0164910c-1f70-9a07-b552-a9533a65c455}</Project>
       <Name>States</Name>
     </ProjectReference>
-    <ProjectReference Include="Scripts.Entities.Entity.csproj">
-      <Project>{f4aab106-5235-d264-a5e3-c3364cbac5af}</Project>
-      <Name>Scripts.Entities.Entity</Name>
+    <ProjectReference Include="Scripts.Entities.Common.csproj">
+      <Project>{32f35752-cb71-53ba-100a-3dd9199d5d2d}</Project>
+      <Name>Scripts.Entities.Common</Name>
     </ProjectReference>
     <ProjectReference Include="Scripts.Bullets.csproj">
       <Project>{74163807-e427-be95-b279-48f78a4195b7}</Project>

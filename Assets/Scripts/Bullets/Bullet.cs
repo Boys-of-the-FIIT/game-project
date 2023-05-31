@@ -8,10 +8,10 @@ namespace Bullets
     {
         private float speed;
         private float maxDistance;
-        private int damage;
+        private float damage;
         private BulletType type;
 
-        public Bullet Construct(BulletType type, int damage, float maxDistance, float speed)
+        public Bullet Construct(BulletType type, float damage, float maxDistance, float speed)
         {
             this.type = type;
             this.damage = damage;
@@ -26,7 +26,7 @@ namespace Bullets
             set => type = value;
         }
         
-        public int Damage
+        public float Damage
         {
             get => damage;
             set => damage = value;

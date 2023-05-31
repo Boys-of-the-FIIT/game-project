@@ -41,12 +41,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Behaviours\SurroundPlayer.cs" />
-     <Compile Include="Assets\Scripts\Behaviours\KeepingDistanceFromPlayer.cs" />
-     <Compile Include="Assets\Scripts\Behaviours\RotateAround.cs" />
-     <Compile Include="Assets\Scripts\Behaviours\EntityFollowingPlayer.cs" />
-     <None Include="Assets\Scripts\Behaviours\Scripts.Behaviours.asmdef" />
-     <Folder Include="Assets\Scripts\Behaviours" />
+     <Compile Include="Assets\Scripts\Entities\Behaviours\SurroundPlayer.cs" />
+     <Compile Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer\States\ChasePlayerState.cs" />
+     <Compile Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer\States\KeepDistanceState.cs" />
+     <Compile Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer\KeepingDistanceFromPlayer.cs" />
+     <Compile Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer\States\RunFromPlayerState.cs" />
+     <Compile Include="Assets\Scripts\Entities\Behaviours\RotateAround.cs" />
+     <Compile Include="Assets\Scripts\Entities\Behaviours\EntityFollowingPlayer.cs" />
+     <Folder Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer" />
+     <Folder Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer\States" />
+     <None Include="Assets\Scripts\Entities\Behaviours\Scripts.Behaviours.asmdef" />
+     <Folder Include="Assets\Scripts\Entities\Behaviours" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -728,13 +733,17 @@
       <Project>{44833ff8-f6b2-3200-0867-89985516293f}</Project>
       <Name>Scripts.Entities.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Scripts.Entities.Entity.csproj">
-      <Project>{f4aab106-5235-d264-a5e3-c3364cbac5af}</Project>
-      <Name>Scripts.Entities.Entity</Name>
+    <ProjectReference Include="Scripts.Entities.Common.csproj">
+      <Project>{32f35752-cb71-53ba-100a-3dd9199d5d2d}</Project>
+      <Name>Scripts.Entities.Common</Name>
     </ProjectReference>
     <ProjectReference Include="Utils.csproj">
       <Project>{2a875482-6628-3e0a-abf0-cdfec33b706f}</Project>
       <Name>Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="States.Common.csproj">
+      <Project>{d1395ddb-098c-88cb-7df6-8daace3fba47}</Project>
+      <Name>States.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
