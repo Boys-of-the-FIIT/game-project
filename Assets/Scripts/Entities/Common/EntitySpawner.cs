@@ -22,6 +22,8 @@ namespace DefaultNamespace
         private DiContainer diContainer;
         private Camera mainCamera;
 
+        private Vector3 CameraPos => mainCamera.transform.position;
+
         [Inject]
         private void Construct(DiContainer diContainer, Camera camera)
         {
@@ -33,13 +35,10 @@ namespace DefaultNamespace
         {
             parentTransform = GetComponentInParent<Transform>();
             random = new Random();
-            Debug.Log($"Screen Height: {Screen.height}");
-            Debug.Log($"Screen Width: {Screen.width}");
         }
 
         private void Update()
         {
-            // Debug.Log($"Camera Pos: {mainCamera}");
             if (canSpawn && currentObjectCount < maxObjectCount && prefabs.Length > 0)
                 StartCoroutine(SpawnEntity(prefabs[random.Next(0, prefabs.Length)]));
         }
@@ -57,18 +56,22 @@ namespace DefaultNamespace
             currentObjectCount--;
         }
 
-        public IEnumerator SpawnEntity(Entity enemyPrefab)
+        public IEnumerator SpawnEntity(Entity entityPrefab)
         {
-            var offset = GetSpawnCenterOffset(enemyPrefab.transform, parentTransform.transform);
-            var positionToSpawn = RandomExtensions.GetRandomPositionInCircle(transform.position, offset, radius);
+            var offset = GetSpawnCenterOffset(entityPrefab.transform, parentTransform.transform);
+            var cameraOffsetRadius = 2 * mainCamera.orthographicSize * mainCamera.aspect;
+            var positionToSpawn =
+                RandomExtensions.GetRandomPositionInCircle(transform.position, offset, radius + cameraOffsetRadius);
+            if (Vector2.Distance(positionToSpawn, CameraPos) < cameraOffsetRadius)
+                yield break;
 
             var obj = diContainer.InstantiatePrefabForComponent<Entity>(
-                enemyPrefab,
+                entityPrefab,
                 positionToSpawn,
                 transform.rotation,
                 null
             );
-            
+
             currentObjectCount++;
             obj.Spawner = this;
 
