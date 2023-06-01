@@ -81,7 +81,7 @@ namespace Waves
             obj.Stats = Instantiate<Stats>(enemyInfo.Stats);
             obj.OnEntityDeath.AddListener(OnEntityDeath());
             enemyInfo.Amount--;
-            Debug.Log(GetInstanceID());
+ 
             yield return new WaitForSeconds(spawnDelay);
             
             UnityAction<Entity> OnEntityDeath() => (obj) => OnSpawnerEnemyDead.Invoke(obj);
