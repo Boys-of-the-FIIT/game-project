@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  enemy: {fileID: 7500056666449665870}
 --- !u!114 &7500056666449665870 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1494680665302898600, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}

@@ -41,8 +41,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Shield\Shield.cs" />
      <Compile Include="Assets\Scripts\Shield\ReverseBulletShield.cs" />
+     <Compile Include="Assets\Scripts\Shield\Shield.cs" />
      <None Include="Assets\Scripts\Shield\Scripts.Shield.asmdef" />
      <Folder Include="Assets\Scripts\Shield" />
      <Folder Include="Assets\Scripts\Shield\States" />

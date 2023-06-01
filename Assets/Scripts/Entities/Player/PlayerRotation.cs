@@ -18,6 +18,7 @@ public class PlayerRotation : MonoBehaviour
     private void Update()
     {
         mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        // Debug.Log($"Mouse Pos: {mousePos}");
     }
 
     private void FixedUpdate()

@@ -41,12 +41,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Entities\Entity\Entity.cs" />
-     <Compile Include="Assets\Scripts\Entities\Entity\EntitySpawner.cs" />
-     <Compile Include="Assets\Scripts\Entities\Entity\Stats.cs" />
-     <Compile Include="Assets\Scripts\Entities\Entity\Upgrade.cs" />
-     <None Include="Assets\Scripts\Entities\Entity\Scripts.Entities.Entity.asmdef" />
-     <Folder Include="Assets\Scripts\Entities\Entity" />
+     <Compile Include="Assets\Scripts\Entities\Common\Upgrade.cs" />
+     <Compile Include="Assets\Scripts\Entities\Common\Entity.cs" />
+     <Compile Include="Assets\Scripts\Entities\Common\Stats.cs" />
+     <Compile Include="Assets\Scripts\Entities\Common\EntitySpawner.cs" />
+     <None Include="Assets\Scripts\Entities\Common\Scripts.Entities.Common.asmdef" />
+     <Folder Include="Assets\Scripts\Entities\Common" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

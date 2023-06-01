@@ -42,7 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\States\Common\StateManager.cs" />
+     <Compile Include="Assets\States\Common\IState.cs" />
      <Compile Include="Assets\States\Common\State.cs" />
+     <Compile Include="Assets\States\Common\StateMachine.cs" />
      <None Include="Assets\States\Common\States.Common.asmdef" />
      <Folder Include="Assets\States\Common" />
      <Reference Include="UnityEngine">

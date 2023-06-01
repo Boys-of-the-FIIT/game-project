@@ -33,14 +33,14 @@ namespace Player
             Destroy(gameObject);
         }
 
-        public override void ApplyDamage(int damage)
+        public override void ApplyDamage(float damage)
         {
             Stats.CurrentHealth -= damage;
             if (Stats.CurrentHealth <= 0)
                 Die();
         }
 
-        public override void Heal(int points)
+        public override void Heal(float points)
         {
             Stats.CurrentHealth += points;
         }

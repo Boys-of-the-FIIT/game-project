@@ -46,6 +46,7 @@
      <Compile Include="Assets\UI\Scripts\Menus\GameOverMenu.cs" />
      <Compile Include="Assets\DI\Project Context\GameStatesInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\UI\PauseMenuInstaller.cs" />
+     <Compile Include="Assets\UI\Scripts\Abilities\AbilityIcon.cs" />
      <Compile Include="Assets\UI\Scripts\Menus\PauseMenu.cs" />
      <Compile Include="Assets\UI\Scripts\Menus\MainMenu.cs" />
      <Compile Include="Assets\DI\Scene Context\SceneStatesInstaller.cs" />
@@ -55,7 +56,6 @@
      <Compile Include="Assets\DI\Scene Context\MainCameraInstaller.cs" />
      <Compile Include="Assets\UI\Scripts\Button\MenuButton.cs" />
      <Compile Include="Assets\DI\Scene Context\PlayerInstaller.cs" />
-     <Compile Include="Assets\UI\Scripts\Abilities\AbilityIcon.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Prefabs\Neutral Unit" />
@@ -98,6 +98,7 @@
      <Folder Include="Assets\UI" />
      <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion\spritesheet" />
+     <Folder Include="Assets\UI\Prefabs\Progress Bars" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion" />
      <Folder Include="Assets\UI\Scripts\Button" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\round_explosion\spritesheet" />
@@ -937,9 +938,13 @@
       <Project>{6fe84097-5d36-3d3b-13eb-4ce99445bbae}</Project>
       <Name>Project.External</Name>
     </ProjectReference>
-    <ProjectReference Include="Scripts.Entities.Entity.csproj">
-      <Project>{f4aab106-5235-d264-a5e3-c3364cbac5af}</Project>
-      <Name>Scripts.Entities.Entity</Name>
+    <ProjectReference Include="States.Common.csproj">
+      <Project>{d1395ddb-098c-88cb-7df6-8daace3fba47}</Project>
+      <Name>States.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scripts.Entities.Common.csproj">
+      <Project>{32f35752-cb71-53ba-100a-3dd9199d5d2d}</Project>
+      <Name>Scripts.Entities.Common</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
       <Project>{f23da344-79bd-582c-ac5d-ef4a9955c6c2}</Project>
@@ -953,13 +958,17 @@
       <Project>{0164910c-1f70-9a07-b552-a9533a65c455}</Project>
       <Name>States</Name>
     </ProjectReference>
-    <ProjectReference Include="Scripts.Entities.Enemy.csproj">
-      <Project>{6d5c04cb-9979-33c8-8e60-8b4aada059ce}</Project>
-      <Name>Scripts.Entities.Enemy</Name>
+    <ProjectReference Include="Scripts.Entities.Enemies.csproj">
+      <Project>{b97091f3-0d4f-de90-da8b-1e26623c1087}</Project>
+      <Name>Scripts.Entities.Enemies</Name>
     </ProjectReference>
     <ProjectReference Include="Scripts.Behaviours.csproj">
       <Project>{67e2abf1-a309-da72-f60d-f1eb25a08a49}</Project>
       <Name>Scripts.Behaviours</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scripts.Shield.csproj">
+      <Project>{38e08a1b-c403-69d5-d401-c5b0cc1141c2}</Project>
+      <Name>Scripts.Shield</Name>
     </ProjectReference>
     <ProjectReference Include="Scripts.csproj">
       <Project>{ea3b93c8-a152-1e76-f572-1cc9e9caaca2}</Project>
@@ -972,14 +981,6 @@
     <ProjectReference Include="Scripts.Entities.Player.csproj">
       <Project>{44833ff8-f6b2-3200-0867-89985516293f}</Project>
       <Name>Scripts.Entities.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Scripts.Shield.csproj">
-      <Project>{38e08a1b-c403-69d5-d401-c5b0cc1141c2}</Project>
-      <Name>Scripts.Shield</Name>
-    </ProjectReference>
-    <ProjectReference Include="States.Common.csproj">
-      <Project>{d1395ddb-098c-88cb-7df6-8daace3fba47}</Project>
-      <Name>States.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
