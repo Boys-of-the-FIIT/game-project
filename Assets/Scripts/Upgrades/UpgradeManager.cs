@@ -26,6 +26,5 @@ namespace Upgrades
         {
             playerStats.UpgradePoints += enemy.Stats.UpgradePoints;
         }
-        
     }
 }
