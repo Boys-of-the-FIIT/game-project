@@ -1,0 +1,18 @@
+{
+    "name": "Scripts.Upgrades",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9230e10b40ae40a46bc1480b4dfea956",
+        "GUID:72482c6addd577149b335fb158199ef9",
+        "GUID:7a0ceda6830fe474fba2b971a9a694ab"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
