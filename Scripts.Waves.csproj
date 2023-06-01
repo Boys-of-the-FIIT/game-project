@@ -41,10 +41,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Waves\WaveManager.cs" />
+     <Compile Include="Assets\Scripts\Waves\EntityWaveSpawner.cs" />
      <Compile Include="Assets\Scripts\Waves\Wave.cs" />
      <Compile Include="Assets\Scripts\Waves\EnemyWaveInfo.cs" />
-     <Compile Include="Assets\Scripts\Waves\EntityWaveSpawner.cs" />
+     <Compile Include="Assets\Scripts\Waves\WaveManager.cs" />
      <Folder Include="Assets\Scripts\Waves" />
      <None Include="Assets\Scripts\Waves\Scripts.Waves.asmdef" />
      <Reference Include="UnityEngine">

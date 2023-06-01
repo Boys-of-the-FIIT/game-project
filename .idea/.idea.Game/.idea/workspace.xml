@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="Level scene pushed">
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeSection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeSection.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/EnemiesRemainedHint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/EnemiesRemainedHint.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/StatsUpgrader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/StatsUpgrader.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/Points.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/Points.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Common/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Common/Stats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waves/EntityWaveSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Waves/EntityWaveSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/Progress Bars.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Prefabs/Progress Bars.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/ScreenUI/Upgrade Bar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Prefabs/ScreenUI/Upgrade Bar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/ScreenUI/Upgrade Bar.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Prefabs/ScreenUI/Upgrade Bar.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeSection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Game.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts.Behaviours.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Behaviours.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts.Waves.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Waves.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Utils.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +33,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58b3825308ef4432906c14dc69daab2515000/ce/07659466/Stats.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/964670f15c6b47f9b8f934073272047381e800/cd/f4eee92e/PauseState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/0a/f428fdfd/Camera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/17/8e2432bd/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/23/6c1e5fc6/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/4d/385e6247/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/5b/193f538c/Random.cs" root0="SKIP_HIGHLIGHTING" />

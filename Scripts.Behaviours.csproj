@@ -42,9 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Entities\Behaviours\SurroundPlayer.cs" />
+     <Compile Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer.cs" />
      <Compile Include="Assets\Scripts\Entities\Behaviours\RotateAround.cs" />
      <Compile Include="Assets\Scripts\Entities\Behaviours\EntityFollowingPlayer.cs" />
-     <Compile Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer.cs" />
      <None Include="Assets\Scripts\Entities\Behaviours\Scripts.Behaviours.asmdef" />
      <Folder Include="Assets\Scripts\Entities\Behaviours" />
      <Reference Include="UnityEngine">

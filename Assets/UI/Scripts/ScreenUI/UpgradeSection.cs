@@ -1,7 +1,11 @@
-﻿namespace UI.Scripts
+﻿using UnityEngine;
+using UnityEngine.UI;
+
+namespace UI.Scripts
 {
-    public class UpgradeSection
+    public class UpgradeSection : MonoBehaviour
     {
-        
+        [SerializeField] public float RequiredPoints;
+        [SerializeField] public float GivenBonus;
     }
 }

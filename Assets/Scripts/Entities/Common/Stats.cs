@@ -11,13 +11,13 @@ namespace DefaultNamespace
         {
             CurrentHealth = MaxHealth;
         }
-
+        
         public float CurrentHealth
         {
             get => currentHealth;
             set => currentHealth = value;
         }
-        
+
         [SerializeField] private float maxHealth;
 
         public float MaxHealth
@@ -35,15 +35,16 @@ namespace DefaultNamespace
         }
         
         [SerializeField] private float damage;
-
+ 
         public float Damage
         {
             get => damage;
             set => damage = value;
         }
+
         
         [Range(0, 180)] [SerializeField] private float recoilAngle;
-        
+
         public float RecoilAngle
         {
             get => recoilAngle;
@@ -52,7 +53,7 @@ namespace DefaultNamespace
         
 
         [SerializeField] private float bulletSpeed;
-        
+
         public float BulletSpeed
         {
             get => bulletSpeed;
@@ -60,7 +61,7 @@ namespace DefaultNamespace
         }
         
         [SerializeField] private float reloadTime;
-        
+
         public float ReloadTime
         {
             get => reloadTime;
@@ -68,16 +69,16 @@ namespace DefaultNamespace
         }
         
         [SerializeField] private float attackDistance;
-        
+
         public float AttackDistance
         {
             get => attackDistance;
             set => attackDistance = value;
         }
         
-        [SerializeField] private int upgradePoints;
-        
-        public int UpgradePoints
+        [SerializeField] private float upgradePoints;
+
+        public float UpgradePoints
         {
             get => upgradePoints;
             set => upgradePoints = value;
