@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - Spawner
   - Collectable
+  - Timer
+  - Wave Manager
   layers:
   - Default
   - TransparentFX

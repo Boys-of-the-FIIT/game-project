@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2167969003204828203, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: m_Name
-      value: Healer Enemy
+      value: HealerEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 2170459265466427309, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: m_Color.b
@@ -109,7 +109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: maxHealth
-      value: 200
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: upgradePoints
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9184944183526779258, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: enemy
@@ -147,6 +151,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 2045274681444086324}
+  OnEntityDeath:
+    m_PersistentCalls:
+      m_Calls: []
   healDelaySeconds: 2
   healPoints: 10
   healDistance: 5

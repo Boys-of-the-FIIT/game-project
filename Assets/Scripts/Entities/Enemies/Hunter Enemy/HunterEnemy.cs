@@ -31,14 +31,14 @@ namespace Enemies.HunterEnemy
 
         private void Awake()
         {
-            // var idleState = new IdleState(this);
+            var idleState = new IdleState(this);
             var hideState = new HideState(this);
             var unhideState = new UnhideState(this);
             
             stateMachine = new StateMachine();
             
-            // stateMachine.AddAnyTransition(idleState, InIdleDistance());
-
+            stateMachine.AddAnyTransition(idleState, InIdleDistance());
+            
             stateMachine.AddTransition(hideState, unhideState, OutOfHidingDistance());
             stateMachine.AddTransition(unhideState, hideState, InHidingDistance());
             
@@ -46,8 +46,8 @@ namespace Enemies.HunterEnemy
             
             Func<bool> InHidingDistance() => () => DistanceToPlayer <= startIdlingDistance;
             Func<bool> OutOfHidingDistance() => () => DistanceToPlayer > startIdlingDistance;
-            // Func<bool> InIdleDistance() => () => (player.transform.position - transform.position).magnitude
-            //                                      < startIdlingDistance;
+            Func<bool> InIdleDistance() => () => (player.transform.position - transform.position).magnitude
+                                                 < startIdlingDistance;
         }
         
         private void Update() => stateMachine.Tick();

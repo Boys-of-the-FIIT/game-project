@@ -1,26 +1,42 @@
 ﻿using System;
 using DefaultNamespace;
 using States.Game_States;
+using TMPro;
 using UnityEngine;
+using Utils;
+using Waves;
 using Zenject;
 
 namespace UI.Scripts
 {
     public class GameOverMenu : MonoBehaviour
     {
+        [SerializeField] private Canvas canvas;
+        [SerializeField] private TextMeshProUGUI survivedTimeText;
+        
+        private Timer timer;
         private GameStateManager gameStateManager;
         private SceneStateManager sceneStateManager;
         private MainMenuState mainMenuState;
         private MainLevelState mainLevelState;
-
-        [SerializeField] private Canvas canvas;
+        private WaveManager waveManager;
+        
+        private void Awake()
+        {
+            GameObject.FindWithTag(Tags.Timer).TryGetComponent<Timer>(out timer);
+        }
 
         [Inject]
-        private void Construct(GameStateManager gameStateManager, SceneStateManager sceneStateManager,
-            MainMenuState mainMenuState, MainLevelState mainLevelState)
+        private void Construct(
+            GameStateManager gameStateManager,
+            SceneStateManager sceneStateManager,
+            MainMenuState mainMenuState, 
+            MainLevelState mainLevelState,
+            WaveManager waveManager)
         {
-            this.gameStateManager= gameStateManager;
-            this.sceneStateManager= sceneStateManager;
+            this.waveManager = waveManager;
+            this.gameStateManager = gameStateManager;
+            this.sceneStateManager = sceneStateManager;
             this.mainMenuState= mainMenuState;
             this.mainLevelState= mainLevelState;
         }
@@ -46,9 +62,11 @@ namespace UI.Scripts
         private void HandleStateChange()
         {
             if (sceneStateManager.CurrentState is GameOverState)
+            {
                 canvas.gameObject.SetActive(true);
-            else
-                canvas.gameObject.SetActive(false);
+                survivedTimeText.text = $"You died on wave: {waveManager.CurrentWave.Name}";
+            }
+            else canvas.gameObject.SetActive(false);
         }
     }
 }

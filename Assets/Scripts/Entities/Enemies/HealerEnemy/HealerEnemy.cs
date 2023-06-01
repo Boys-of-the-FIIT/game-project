@@ -34,10 +34,7 @@ namespace Enemies.HealerEnemy
             stateMachine.AddTransition(healTarget, restoreHealAbility, () => true);
             stateMachine.AddTransition(restoreHealAbility, searchForInjured, HasHealAbility());
             
-            stateMachine.AddTransition(followTarget, searchForInjured, NoTarget());
-            stateMachine.AddTransition(healTarget, searchForInjured, NoTarget());
-            
-            stateMachine.SetState(searchForInjured);
+            stateMachine.AddAnyTransition(searchForInjured, NoTarget());
 
             Func<bool> HasHealAbility() => () => CanHeal;
             Func<bool> HasTarget() => () => HealTarget != null;

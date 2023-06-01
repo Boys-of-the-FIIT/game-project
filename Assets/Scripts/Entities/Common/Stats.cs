@@ -1,10 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace DefaultNamespace
 {
     public class Stats : MonoBehaviour
     {
         private float currentHealth;
+
+        private void Awake()
+        {
+            CurrentHealth = MaxHealth;
+        }
 
         public float CurrentHealth
         {

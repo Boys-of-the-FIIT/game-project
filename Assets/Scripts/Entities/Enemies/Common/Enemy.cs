@@ -18,7 +18,6 @@ namespace Enemies
         private void Awake()
         {
             Stats.CurrentHealth = Stats.MaxHealth;
-            OnEntityDeath = new UnityEvent<Entity>();
         }
 
         private void Start()

@@ -41,10 +41,6 @@ namespace DefaultNamespace
         private void Awake()
         {
             Stats.CurrentHealth = Stats.MaxHealth;
-        }
-        
-        private void Start()
-        {
             TryGetComponent<SpriteRenderer>(out spriteRenderer);
             originalColor = spriteRenderer.color;
             damageColor = Color.red;
@@ -59,13 +55,17 @@ namespace DefaultNamespace
 
         private float GetSpawnCenterOffset(Transform enemy, Transform enemyParent)
         {
-            // var offset = Mathf.Min(parentTransform.localScale.x, parentTransform.localScale.y);
             var offset = Mathf.Min(enemy.transform.localScale.x, enemy.transform.localScale.y);
             offset += 5f;
             return offset;
         }
 
-        public void NotifyDead(Entity entity)
+        private void NotifyDeadInChildren(Entity entity)
+        {
+            OnSpawnerEnemyDead?.Invoke(entity);
+        }
+        
+        private void NotifyDead(Entity entity)
         {
             currentObjectCount--;
             OnSpawnerEnemyDead?.Invoke(entity);
@@ -73,11 +73,10 @@ namespace DefaultNamespace
 
         public IEnumerator SpawnEntity(Entity entityPrefab)
         {
-            var offset = GetSpawnCenterOffset(entityPrefab.transform, transform);
-            var cameraOffsetRadius = 2 * mainCamera.orthographicSize * mainCamera.aspect;
+            var offset = 2 * mainCamera.orthographicSize * mainCamera.aspect;
             var positionToSpawn =
-                RandomExtensions.GetRandomPositionInCircle(transform.position, offset, radius + cameraOffsetRadius);
-            if (Vector2.Distance(positionToSpawn, CameraPos) < cameraOffsetRadius)
+                RandomExtensions.GetRandomPositionInCircle(transform.position, offset, radius);
+            if (Vector2.Distance(positionToSpawn, CameraPos) < offset)
                 yield break;
 
             var obj = diContainer.InstantiatePrefabForComponent<Entity>(
@@ -90,6 +89,10 @@ namespace DefaultNamespace
             currentObjectCount++;
 
             obj.OnEntityDeath.AddListener(OnEntityDeath());
+
+            if (obj.TryGetComponent<EntitySpawner>(out var entitySpawner))
+                entitySpawner.OnSpawnerEnemyDead.AddListener(NotifyDeadInChildren);
+
             canSpawn = false;
             yield return new WaitForSeconds(spawnDelay);
             canSpawn = true;

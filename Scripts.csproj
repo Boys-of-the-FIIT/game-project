@@ -41,7 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Camera\CameraFollowTarget.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraOnTarget.cs" />
      <Compile Include="Assets\Scripts\Common\Debug.cs" />
      <Folder Include="Assets\Scripts\Common" />
      <Folder Include="Assets\Scripts" />

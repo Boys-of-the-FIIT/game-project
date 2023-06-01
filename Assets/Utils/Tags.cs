@@ -6,5 +6,7 @@
         public const string Enemy = "Enemy";
         public const string Bullet = "Bullet";
         public const string Spawner = "Spawner";
+        public const string Timer = "Timer";
+        public const string WaveManager = "Wave Manager";
     }
 }

@@ -44,6 +44,7 @@
      <Compile Include="Assets\Utils\VectorExtensions.cs" />
      <Compile Include="Assets\Utils\RandomExtensions.cs" />
      <Compile Include="Assets\Utils\Tags.cs" />
+     <Compile Include="Assets\Utils\TimeExtensions.cs" />
      <None Include="Assets\Utils\Utils.asmdef" />
      <Folder Include="Assets\Utils" />
      <Reference Include="UnityEngine">

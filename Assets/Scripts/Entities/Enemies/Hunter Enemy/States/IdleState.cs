@@ -1,37 +1,31 @@
-﻿namespace Enemies.HunterEnemy.States
+﻿using UnityEngine;
+
+namespace Enemies.HunterEnemy.States
 {
     public class IdleState : IState
     {
         private HunterEnemy hunter;
+        private EnemyAttack attack;
         
         public IdleState(HunterEnemy hunter)
         {
             this.hunter = hunter;
         }
         
-        public void Tick()
-        {
-            
-        }
-
         public void OnEnter()
         {
-         
+            if (hunter.TryGetComponent<EnemyAttack>(out attack))
+                attack.enabled = false;
         }
 
         public void OnExit()
         {
-          
+            attack.enabled = true;
         }
         
-        private void DoIdling()
+        public void Tick()
         {
-            StopShooting();
-        }
-
-        private void StopShooting()
-        {
-            // TODO
+            
         }
     }
 }
