@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using Bullets;
 using DefaultNamespace;
 using JetBrains.Annotations;
@@ -23,7 +24,8 @@ namespace Enemies
 
         private void Start()
         {
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer = GetComponentsInChildren<SpriteRenderer>()
+                .FirstOrDefault(x => x.name == "Circle");
             originalColor = spriteRenderer.color;
             damageColor = Color.red;
         }

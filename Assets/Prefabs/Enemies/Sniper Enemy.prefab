@@ -19,21 +19,25 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.9245283
       objectReference: {fileID: 0}
+    - target: {fileID: 170771547437055600, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2167969003204828203, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: m_Name
       value: Sniper Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2170459265466427309, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: m_Color.b
-      value: 0.65141886
+      value: 0.8084698
       objectReference: {fileID: 0}
     - target: {fileID: 2170459265466427309, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: m_Color.g
-      value: 0.060590927
+      value: 0.16135636
       objectReference: {fileID: 0}
     - target: {fileID: 2170459265466427309, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: m_Color.r
-      value: 0.8679245
+      value: 0.9245283
       objectReference: {fileID: 0}
     - target: {fileID: 3000344695457643855, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: m_LocalScale.y
@@ -109,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: reloadTime
@@ -155,3 +159,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   enemy: {fileID: 8089373077285046755}
+--- !u!114 &-2234508312724103525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857236329025356384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63450e89ce5dc234ca5a90184f2fbf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDistanceToPlayer: 5
+  maxDistanceToPlayer: 10
+  speed: 6
+  dodgingRadius: 8

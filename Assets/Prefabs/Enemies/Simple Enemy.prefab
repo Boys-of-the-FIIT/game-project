@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: reloadTime
