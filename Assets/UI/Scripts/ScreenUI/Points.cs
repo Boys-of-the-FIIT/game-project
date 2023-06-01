@@ -20,7 +20,7 @@ namespace UI.Scripts
         
         private void Update()
         {
-            textMeshPro.text = $"Points: {player.Stats.UpgradePoints}";
+            textMeshPro.text = $"Money: {player.Stats.UpgradePoints}";
         }
     }
 }

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="Other changes">
+    <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="Level scene pushed">
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeSection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeSection.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrades/UpgradeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/UpgradeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/Points.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/Points.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +31,7 @@
     <setting file="file://$PROJECT_DIR$/../Downloads/StateMachine/Scripts/Entities/Gatherer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Prefabs/Enemies/Assasin Enemy.prefab.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Prefabs/Spawners/Spawner.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullets/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullets/BulletTrailScriptableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraOnTarget.cs" root0="FORCE_HIGHLIGHTING" />
@@ -47,7 +51,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Entities/Spawners/EntitySpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Entities/Spawners/EntitySpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Upgrades/UpgradeManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Waves/EnemyWaveInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scripts/Waves/EntityWaveSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/States/Common/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/States/Common/State.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/States/Common/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,9 +61,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/UI/Scripts/Entity/EntityUIElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/Scripts/Menus/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/Scripts/Menus/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/UI/Scripts/ScreenUI/Points.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/Timer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Core/Utilities/UnityObjectUtility.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -210,7 +218,49 @@
       <option name="project" value="LOCAL" />
       <updated>1685644442564</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Changes for upgrade manager and Timer prefab">
+      <created>1685644985600</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685644985600</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added prefabs for waves">
+      <created>1685645596555</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685645596555</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added upgrade manager prefab">
+      <created>1685645939071</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1685645939071</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added assembly ref for upgrades">
+      <created>1685646182151</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685646182151</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added assembly ref for spawners">
+      <created>1685646251504</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685646251504</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Level scene pushed">
+      <created>1685648061088</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685648061089</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +292,12 @@
     <MESSAGE value="Reworked spawner and timer" />
     <MESSAGE value="Refactored waves and DI installers for them" />
     <MESSAGE value="Other changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Other changes" />
+    <MESSAGE value="Changes for upgrade manager and Timer prefab" />
+    <MESSAGE value="Added prefabs for waves" />
+    <MESSAGE value="Added upgrade manager prefab" />
+    <MESSAGE value="Added assembly ref for upgrades" />
+    <MESSAGE value="Added assembly ref for spawners" />
+    <MESSAGE value="Level scene pushed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Level scene pushed" />
   </component>
 </project>
