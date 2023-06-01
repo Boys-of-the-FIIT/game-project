@@ -64,8 +64,7 @@ namespace Waves
             var enemyInfo = Wave.enemyInfo[random.Next(0, Wave.enemyInfo.Count)];
             if (enemyInfo.Amount == 0) yield break;
             
-            // var offset = 2 * mainCamera.orthographicSize * mainCamera.aspect;
-            var offset = 0;
+            var offset = mainCamera.orthographicSize * mainCamera.aspect;
             var positionToSpawn =
                 RandomExtensions.GetRandomPositionInCircle(CameraPos, offset, radius);
             if (Vector2.Distance(positionToSpawn, CameraPos) < offset)

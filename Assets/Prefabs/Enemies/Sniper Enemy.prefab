@@ -105,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: speed
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: damage
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   enemy: {fileID: 8089373077285046755}
---- !u!114 &-2234508312724103525
+--- !u!114 &8184357210169314505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,10 +168,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8857236329025356384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63450e89ce5dc234ca5a90184f2fbf16, type: 3}
+  m_Script: {fileID: 11500000, guid: a73e46a5f42d12e4cbca74e5c96ccd40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDistanceToPlayer: 5
-  maxDistanceToPlayer: 10
-  speed: 6
+  minDistanceToPlayer: 10
+  maxDistanceToPlayer: 20
+  speed: 5
   dodgingRadius: 8
