@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using Bullets;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using Utils;

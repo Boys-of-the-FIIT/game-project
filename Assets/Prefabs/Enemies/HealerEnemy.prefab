@@ -155,6 +155,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   healDelaySeconds: 2
-  healPoints: 10
+  healPoints: 100
   healDistance: 5
   searchForTargetDistance: 50
