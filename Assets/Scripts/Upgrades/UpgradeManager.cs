@@ -11,18 +11,21 @@ namespace Upgrades
     {
         private PlayerEntity player;
         private EntityWaveSpawner enemySpawner;
+        private Stats playerStats;
         
         [Inject]
         private void Construct(PlayerEntity player, EntityWaveSpawner enemySpawner)
         {
             this.player = player;
+            this.playerStats = player.Stats;
             this.enemySpawner = enemySpawner;
             enemySpawner.OnSpawnerEnemyDead.AddListener(OnEnemyDeath);
         }
 
         private void OnEnemyDeath(Entity enemy)
         {
-            player.Stats.UpgradePoints += enemy.Stats.UpgradePoints;
+            playerStats.UpgradePoints += enemy.Stats.UpgradePoints;
         }
+        
     }
 }
