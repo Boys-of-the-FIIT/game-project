@@ -6,8 +6,8 @@ namespace Waves
 {
     public class EnemyWaveInfo : MonoBehaviour
     {
-        [SerializeField] public Enemy enemy;
-        [SerializeField] public int amount;
-        [SerializeField] public Stats stats;
+        [SerializeField] public Enemy Enemy;
+        [SerializeField] public int Amount;
+        [SerializeField] public Stats Stats;
     }
 }

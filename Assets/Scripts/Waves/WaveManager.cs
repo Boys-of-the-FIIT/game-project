@@ -3,12 +3,12 @@ using System.Collections;
 using Enemies;
 using UnityEngine;
 using UnityEngine.Events;
+using Zenject;
 
 namespace Waves
 {
     public class WaveManager : MonoBehaviour
     {
-        [SerializeField] private EntityWaveSpawner spawner;
         [SerializeField] private Wave[] waves;
         [SerializeField] private float breakTime;
 
@@ -19,7 +19,14 @@ namespace Waves
         public bool IsBreak { get; set; }
 
         private IEnumerator wavesCycleCoroutine;
-
+        private EntityWaveSpawner spawner;
+        
+        [Inject]
+        private void Construct(EntityWaveSpawner spawner)
+        {
+            this.spawner = spawner;
+        }
+        
         private void Start()
         {
             StartCoroutine(WavesCycleCoroutine());

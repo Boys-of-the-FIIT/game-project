@@ -40,11 +40,6 @@ namespace Waves
             random = new Random();
         }
 
-        private void NotifyDead(Entity entity)
-        {
-            OnSpawnerEnemyDead?.Invoke(entity);
-        }
-
         public void StartSpawning()
         {
             StartCoroutine(spawnCycleCoroutine);
@@ -67,7 +62,7 @@ namespace Waves
         {
             if (Wave.enemyInfo.Count == 0) yield break;
             var enemyInfo = Wave.enemyInfo[random.Next(0, Wave.enemyInfo.Count)];
-            if (enemyInfo.amount == 0) yield break;
+            if (enemyInfo.Amount == 0) yield break;
             
             // var offset = 2 * mainCamera.orthographicSize * mainCamera.aspect;
             var offset = 0;
@@ -77,16 +72,19 @@ namespace Waves
                 yield break;
 
             var obj = diContainer.InstantiatePrefabForComponent<Entity>(
-                enemyInfo.enemy,
+                enemyInfo.Enemy,
                 positionToSpawn,
                 transform.rotation,
                 null
             );
-            obj.Stats = enemyInfo.stats;
+            
+            obj.Stats = Instantiate<Stats>(enemyInfo.Stats);
             obj.OnEntityDeath.AddListener(OnEntityDeath());
-            enemyInfo.amount--;
+            enemyInfo.Amount--;
+            Debug.Log(GetInstanceID());
             yield return new WaitForSeconds(spawnDelay);
-            UnityAction<Entity> OnEntityDeath() => (obj) => NotifyDead(obj);
+            
+            UnityAction<Entity> OnEntityDeath() => (obj) => OnSpawnerEnemyDead.Invoke(obj);
         }
     }
 }
