@@ -15,17 +15,22 @@ namespace Enemies
         private Color originalColor;
         private Color damageColor;
 
+        private void Awake()
+        {
+            Stats.CurrentHealth = Stats.MaxHealth;
+            OnEntityDeath = new UnityEvent<Entity>();
+        }
+
         private void Start()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             originalColor = spriteRenderer.color;
             damageColor = Color.red;
-            Stats.CurrentHealth = Stats.MaxHealth;
         }
 
         public override void Die()
         {
-            Spawner?.NotifyDead();
+            OnEntityDeath?.Invoke(this);
             Destroy(gameObject);
         }
 
@@ -33,8 +38,8 @@ namespace Enemies
         {
             StartCoroutine(DamageAnimation());
             Stats.CurrentHealth -= damage;
-            if (Stats.CurrentHealth <= 0)
-                Die();
+            if (Stats.CurrentHealth > 0) return;
+            Die();
         }
 
         public override void Heal(float points)

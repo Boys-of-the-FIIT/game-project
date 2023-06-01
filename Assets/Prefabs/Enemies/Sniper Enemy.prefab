@@ -109,7 +109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: reloadTime
@@ -125,27 +125,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+--- !u!114 &8089373077285046755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1494680665302898600, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+  m_PrefabInstance: {fileID: 7276996560480181835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857236329025356384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa14b3df78774144813fd4c060da90d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8857236329025356384 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2167969003204828203, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
   m_PrefabInstance: {fileID: 7276996560480181835}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &205659159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8857236329025356384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84d105bf9a2342198f998a468a70567d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minDistanceToPlayer: 5
-  maxDistanceToPlayer: 10
-  speed: 2
---- !u!114 &205659160
+--- !u!114 &-4571400035881634534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,3 +153,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55085dc40e542e3897a75b018aa353d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  enemy: {fileID: 8089373077285046755}

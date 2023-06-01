@@ -42,14 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Entities\Behaviours\SurroundPlayer.cs" />
-     <Compile Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer\States\ChasePlayerState.cs" />
-     <Compile Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer\States\KeepDistanceState.cs" />
-     <Compile Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer\KeepingDistanceFromPlayer.cs" />
-     <Compile Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer\States\RunFromPlayerState.cs" />
      <Compile Include="Assets\Scripts\Entities\Behaviours\RotateAround.cs" />
      <Compile Include="Assets\Scripts\Entities\Behaviours\EntityFollowingPlayer.cs" />
-     <Folder Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer" />
-     <Folder Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer\States" />
+     <Compile Include="Assets\Scripts\Entities\Behaviours\KeepingDistanceFromPlayer.cs" />
      <None Include="Assets\Scripts\Entities\Behaviours\Scripts.Behaviours.asmdef" />
      <Folder Include="Assets\Scripts\Entities\Behaviours" />
      <Reference Include="UnityEngine">

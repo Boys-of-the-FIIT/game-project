@@ -45,6 +45,7 @@
      <Compile Include="Assets\UI\Scripts\Entity\EntityUIElement.cs" />
      <Compile Include="Assets\UI\Scripts\Menus\GameOverMenu.cs" />
      <Compile Include="Assets\DI\Project Context\GameStatesInstaller.cs" />
+     <Compile Include="Assets\LevelUp.cs" />
      <Compile Include="Assets\DI\Scene Context\UI\PauseMenuInstaller.cs" />
      <Compile Include="Assets\UI\Scripts\Abilities\AbilityIcon.cs" />
      <Compile Include="Assets\UI\Scripts\Menus\PauseMenu.cs" />
@@ -55,9 +56,11 @@
      <Compile Include="Assets\DI\Scene Context\SceneStateManagerInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\MainCameraInstaller.cs" />
      <Compile Include="Assets\UI\Scripts\Button\MenuButton.cs" />
+     <Compile Include="Assets\UI\Scripts\Timer\Timer.cs" />
      <Compile Include="Assets\DI\Scene Context\PlayerInstaller.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\Prefabs\Collectables" />
      <Folder Include="Assets\Prefabs\Neutral Unit" />
      <None Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion_small\spritesheet\spritesheet.txt" />
      <None Include="Assets\Animations\wills_pixel_explosions_sample\round_explosion\spritesheet\spritesheet.txt" />
@@ -78,10 +81,12 @@
      <Folder Include="Assets\Prefabs\Enemies" />
      <Folder Include="Assets\Prefabs\Trunks" />
      <Folder Include="Assets\UI\Scripts\Menus" />
+     <Folder Include="Assets\UI\Prefabs\Tutorial Screen" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion_small\PNG" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Prefabs\Upgrades" />
      <Folder Include="Assets\DI\Scene Context\UI" />
+     <Folder Include="Assets\UI\Prefabs\Exp" />
      <Folder Include="Assets\Settings\Scenes" />
      <Folder Include="Assets\DI" />
      <Folder Include="Assets\Prefabs\Outline" />
@@ -102,6 +107,7 @@
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion" />
      <Folder Include="Assets\UI\Scripts\Button" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\round_explosion\spritesheet" />
+     <Folder Include="Assets\UI\Scripts\Timer" />
      <Folder Include="Assets\Prefabs\Player" />
      <None Include="Assets\Animations\wills_pixel_explosions_sample\X_plosion\spritesheet\spritesheet.txt" />
      <Folder Include="Assets\UI\Prefabs\Abilities" />
@@ -942,6 +948,10 @@
       <Project>{d1395ddb-098c-88cb-7df6-8daace3fba47}</Project>
       <Name>States.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="Scripts.Spawners.csproj">
+      <Project>{71e5ca7d-6fad-e494-a8c4-80f57da73127}</Project>
+      <Name>Scripts.Spawners</Name>
+    </ProjectReference>
     <ProjectReference Include="Scripts.Entities.Common.csproj">
       <Project>{32f35752-cb71-53ba-100a-3dd9199d5d2d}</Project>
       <Name>Scripts.Entities.Common</Name>
@@ -981,6 +991,14 @@
     <ProjectReference Include="Scripts.Entities.Player.csproj">
       <Project>{44833ff8-f6b2-3200-0867-89985516293f}</Project>
       <Name>Scripts.Entities.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scripts.Levels.csproj">
+      <Project>{86bb3be4-529b-1bc4-a715-99259ce4ffdd}</Project>
+      <Name>Scripts.Levels</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scripts.Collectables.csproj">
+      <Project>{baf52214-3119-5f01-8300-9e962e1b2027}</Project>
+      <Name>Scripts.Collectables</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

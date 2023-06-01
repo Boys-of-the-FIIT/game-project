@@ -42,6 +42,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Camera\CameraFollowTarget.cs" />
+     <Compile Include="Assets\Scripts\Common\Debug.cs" />
+     <Folder Include="Assets\Scripts\Common" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Scripts\Camera" />
      <None Include="Assets\Scripts\Scripts.asmdef" />

@@ -46,8 +46,8 @@ namespace Enemies.HunterEnemy
             
             Func<bool> InHidingDistance() => () => DistanceToPlayer <= startIdlingDistance;
             Func<bool> OutOfHidingDistance() => () => DistanceToPlayer > startIdlingDistance;
-            Func<bool> InIdleDistance() => () => (player.transform.position - transform.position).magnitude
-                                                 < startIdlingDistance;
+            // Func<bool> InIdleDistance() => () => (player.transform.position - transform.position).magnitude
+            //                                      < startIdlingDistance;
         }
         
         private void Update() => stateMachine.Tick();

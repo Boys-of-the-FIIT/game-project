@@ -1,7 +1,6 @@
 ﻿using System;
 using DefaultNamespace.Level_Stats;
 using Player;
-using Player.Collectables;
 using UnityEngine;
 
 namespace DefaultNamespace

@@ -44,7 +44,6 @@
      <Compile Include="Assets\Scripts\Entities\Common\Upgrade.cs" />
      <Compile Include="Assets\Scripts\Entities\Common\Entity.cs" />
      <Compile Include="Assets\Scripts\Entities\Common\Stats.cs" />
-     <Compile Include="Assets\Scripts\Entities\Common\EntitySpawner.cs" />
      <None Include="Assets\Scripts\Entities\Common\Scripts.Entities.Common.asmdef" />
      <Folder Include="Assets\Scripts\Entities\Common" />
      <Reference Include="UnityEngine">

@@ -41,35 +41,35 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Entities\Enemies\Healer Enemy\Behaviours\FleeToHealer\States\FindHealerState.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemies\Healer Enemy\States\FindInjuredEnemyState.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemies\Healer Enemy\Behaviours\FleeToHealer\States\WaitForHeal.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemies\Healer Enemy\States\FollowTargetState.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemies\HealerEnemy\Behaviours\FleeToHealer\States\FindHealerState.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemies\HealerEnemy\States\SearchForInjuredEnemyState.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemies\HealerEnemy\Behaviours\FleeToHealer\States\WaitForHeal.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemies\HealerEnemy\States\FollowTargetState.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemies\Common\Enemy.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemies\Healer Enemy\States\RestoreHealAbilityState.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemies\Healer Enemy\States\HealTargetState.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemies\Healer Enemy\Behaviours\FleeToHealer\States\HealthyState.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemies\Healer Enemy\Behaviours\FleeToHealer\FleeToHealer.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemies\HealerEnemy\States\RestoreHealAbilityState.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemies\HealerEnemy\States\HealTargetState.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemies\HealerEnemy\Behaviours\FleeToHealer\States\HealthyState.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemies\HealerEnemy\Behaviours\FleeToHealer\FleeToHealer.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemies\Hunter Enemy\Hide.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemies\Sniper Enemy\SniperEnemy.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemies\Hunter Enemy\States\IdleState.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemies\Hunter Enemy\HunterEnemy.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemies\Healer Enemy\HealerEnemy.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemies\HealerEnemy\HealerEnemy.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemies\Hunter Enemy\States\UnhideState.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemies\Common\EnemyRotation.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemies\Healer Enemy\Behaviours\FleeToHealer\States\MoveToHealerState.cs" />
+     <Compile Include="Assets\Scripts\Entities\Enemies\HealerEnemy\Behaviours\FleeToHealer\States\MoveToHealerState.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemies\Hunter Enemy\States\HideState.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemies\Common\EnemyAttack.cs" />
      <Folder Include="Assets\Scripts\Entities\Enemies" />
      <None Include="Assets\Scripts\Entities\Enemies\Scripts.Entities.Enemies.asmdef" />
      <Folder Include="Assets\Scripts\Entities\Enemies\Hunter Enemy\States" />
      <Folder Include="Assets\Scripts\Entities\Enemies\Sniper Enemy" />
-     <Folder Include="Assets\Scripts\Entities\Enemies\Healer Enemy\Behaviours" />
-     <Folder Include="Assets\Scripts\Entities\Enemies\Healer Enemy\Behaviours\FleeToHealer" />
-     <Folder Include="Assets\Scripts\Entities\Enemies\Healer Enemy\States" />
+     <Folder Include="Assets\Scripts\Entities\Enemies\HealerEnemy\Behaviours" />
+     <Folder Include="Assets\Scripts\Entities\Enemies\HealerEnemy\Behaviours\FleeToHealer" />
+     <Folder Include="Assets\Scripts\Entities\Enemies\HealerEnemy\States" />
      <Folder Include="Assets\Scripts\Entities\Enemies\Common" />
-     <Folder Include="Assets\Scripts\Entities\Enemies\Healer Enemy" />
-     <Folder Include="Assets\Scripts\Entities\Enemies\Healer Enemy\Behaviours\FleeToHealer\States" />
+     <Folder Include="Assets\Scripts\Entities\Enemies\HealerEnemy" />
+     <Folder Include="Assets\Scripts\Entities\Enemies\HealerEnemy\Behaviours\FleeToHealer\States" />
      <Folder Include="Assets\Scripts\Entities\Enemies\Hunter Enemy" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
