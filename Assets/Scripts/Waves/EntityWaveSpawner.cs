@@ -76,7 +76,8 @@ namespace Waves
                 transform.rotation,
                 null
             );
-            var objStats = Instantiate<Stats>(enemyInfo.Stats);
+            
+            var objStats = Instantiate(enemyInfo.Stats);
             objStats.transform.SetParent(obj.transform);
             obj.Stats = objStats;
             obj.OnEntityDeath.AddListener(OnEntityDeath());
