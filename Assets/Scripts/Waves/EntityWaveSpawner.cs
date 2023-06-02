@@ -76,11 +76,11 @@ namespace Waves
                 transform.rotation,
                 null
             );
-            
-            obj.Stats = Instantiate<Stats>(enemyInfo.Stats);
+            var objStats = Instantiate<Stats>(enemyInfo.Stats);
+            objStats.transform.SetParent(obj.transform);
+            obj.Stats = objStats;
             obj.OnEntityDeath.AddListener(OnEntityDeath());
             enemyInfo.Amount--;
- 
             yield return new WaitForSeconds(spawnDelay);
             
             UnityAction<Entity> OnEntityDeath() => (obj) => OnSpawnerEnemyDead.Invoke(obj);

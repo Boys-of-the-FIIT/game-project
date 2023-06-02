@@ -10,6 +10,8 @@ namespace DefaultNamespace
     {
         [SerializeField] public Stats Stats;
 
+        // private void OnDestroy() => Destroy(Stats.gameObject);
+
         [HideInInspector] public UnityEvent<Entity> OnEntityDeath = new UnityEvent<Entity>();
         public bool IsInjured => Stats.CurrentHealth < Stats.MaxHealth;
 

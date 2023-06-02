@@ -50,11 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8614638121305774323, guid: 7facb008808998f42ad994769c3a2e87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.53
+      value: -0.436
       objectReference: {fileID: 0}
     - target: {fileID: 8614638121305774323, guid: 7facb008808998f42ad994769c3a2e87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.46
+      value: 0.513
       objectReference: {fileID: 0}
     - target: {fileID: 8614638121305774323, guid: 7facb008808998f42ad994769c3a2e87, type: 3}
       propertyPath: m_LocalPosition.z
@@ -88,13 +88,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1016075593992186506, guid: 7facb008808998f42ad994769c3a2e87, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7facb008808998f42ad994769c3a2e87, type: 3}
 --- !u!4 &8276012113589926350 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8614638121305774323, guid: 7facb008808998f42ad994769c3a2e87, type: 3}
   m_PrefabInstance: {fileID: 384805507189399869}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8564815060810009810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8325835723842022895, guid: 7facb008808998f42ad994769c3a2e87, type: 3}
+  m_PrefabInstance: {fileID: 384805507189399869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1020266638076600160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8564815060810009810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45dace6b0624ffaaebc9ca38e5b38f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletTypesResist: 01000000
 --- !u!1001 &1139435721411355685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112,11 +131,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8614638121305774323, guid: 7facb008808998f42ad994769c3a2e87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.532
+      value: 0.425
       objectReference: {fileID: 0}
     - target: {fileID: 8614638121305774323, guid: 7facb008808998f42ad994769c3a2e87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.46
+      value: 0.516
       objectReference: {fileID: 0}
     - target: {fileID: 8614638121305774323, guid: 7facb008808998f42ad994769c3a2e87, type: 3}
       propertyPath: m_LocalPosition.z
@@ -307,7 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistanceToPlayer: 7
   maxDistanceToPlayer: 15
-  speed: 5
+  speed: 3
   dodgingRadius: 3
 --- !u!114 &6530335716751366876 stripped
 MonoBehaviour:

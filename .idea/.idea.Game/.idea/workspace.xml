@@ -1,27 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="Added upgrade bars and scripts for them">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Boss Bullet.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Boss Bullet.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/EnemiesRemainHint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/EnemiesRemainHint.cs.meta" afterDir="false" />
+    <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="New upgrade bar prefabs">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Boss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Hunter Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Hunter Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Shield Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Shield Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Sniper Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Sniper Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Waves/WaveManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Waves/WaveManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemies/Hunter Enemy/HunterEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemies/Hunter Enemy/HunterEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemies/Hunter Enemy/States/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemies/Hunter Enemy/States/IdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Ability.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Ability.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Dash.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Dash.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Scripts.Abilities.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Scripts.Abilities.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/ShockWave.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/ShockWave.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectables.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectables/Heals.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectables/Heals.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectables/Scripts.Collectables.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectables/Scripts.Collectables.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Common/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Common/Entity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waves/EntityWaveSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Waves/EntityWaveSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waves/Wave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Waves/Wave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waves/WaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Waves/WaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/Abilities.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/Abilities/AbilityIcon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/Abilities/AbilityIcon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/EnemiesRemainHint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/EnemiesRemainHint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Game.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts.Abilities.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Abilities.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts.Collectables.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Collectables.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +84,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/States/Common/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/States/Common/State.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/States/Common/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UI/Scripts/Abilities/AbilityIcon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/Scripts/Entity/EntityUIElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/Scripts/Menus/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/Scripts/Menus/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />

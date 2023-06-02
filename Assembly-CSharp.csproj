@@ -48,13 +48,13 @@
      <Compile Include="Assets\DI\Project Context\GameStatesInstaller.cs" />
      <Compile Include="Assets\LevelUp.cs" />
      <Compile Include="Assets\DI\Scene Context\UI\PauseMenuInstaller.cs" />
-     <Compile Include="Assets\UI\Scripts\Abilities\AbilityIcon.cs" />
      <Compile Include="Assets\UI\Scripts\Menus\PauseMenu.cs" />
      <Compile Include="Assets\UI\Scripts\ScreenUI\UpgradeBar.cs" />
      <Compile Include="Assets\UI\Scripts\Menus\MainMenu.cs" />
      <Compile Include="Assets\DI\Scene Context\UpgradeManagerInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\SceneStatesInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\UI\GameOverScreenInstaller.cs" />
+     <Compile Include="Assets\UI\Scripts\ScreenUI\StatsUpgrader.cs" />
      <Compile Include="Assets\DI\Scene Context\WaveManagerInstaller.cs" />
      <Compile Include="Assets\DI\Project Context\GameStateManagerInstaller.cs" />
      <Compile Include="Assets\DI\Scene Context\SceneStateManagerInstaller.cs" />
@@ -64,8 +64,6 @@
      <Compile Include="Assets\DI\Scene Context\PlayerInstaller.cs" />
      <Compile Include="Assets\UI\Scripts\ScreenUI\Points.cs" />
      <Compile Include="Assets\DI\Scene Context\EntityWaveSpawnerInstaller.cs" />
-     <Compile Include="Assets\UI\Scripts\ScreenUI\StatsUpgrader.cs" />
-     <Compile Include="Assets\UI\Scripts\ScreenUI\EnemiesRemainHint.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Prefabs\Collectables" />
@@ -73,7 +71,6 @@
      <Folder Include="Assets\UI\Scripts\ScreenUI" />
      <None Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion_small\spritesheet\spritesheet.txt" />
      <None Include="Assets\Animations\wills_pixel_explosions_sample\round_explosion\spritesheet\spritesheet.txt" />
-     <Folder Include="Assets\UI\Scripts\Abilities" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\X_plosion\spritesheet" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\vertical_explosion_small\spritesheet" />
      <Folder Include="Assets\Animations\wills_pixel_explosions_sample\X_plosion\PNG" />
@@ -970,10 +967,6 @@
       <Project>{71e5ca7d-6fad-e494-a8c4-80f57da73127}</Project>
       <Name>Scripts.Spawners</Name>
     </ProjectReference>
-    <ProjectReference Include="Scripts.Collectables.csproj">
-      <Project>{baf52214-3119-5f01-8300-9e962e1b2027}</Project>
-      <Name>Scripts.Collectables</Name>
-    </ProjectReference>
     <ProjectReference Include="Scripts.Entities.Common.csproj">
       <Project>{32f35752-cb71-53ba-100a-3dd9199d5d2d}</Project>
       <Name>Scripts.Entities.Common</Name>
@@ -981,10 +974,6 @@
     <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
       <Project>{f23da344-79bd-582c-ac5d-ef4a9955c6c2}</Project>
       <Name>Zenject-PoolMonitor-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Scripts.Abilities.csproj">
-      <Project>{227f7a1f-c02d-b7de-5920-cf3b966f6690}</Project>
-      <Name>Scripts.Abilities</Name>
     </ProjectReference>
     <ProjectReference Include="States.csproj">
       <Project>{0164910c-1f70-9a07-b552-a9533a65c455}</Project>

@@ -31,15 +31,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scripts.Shield", "Scripts.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scripts.Entities.Common", "Scripts.Entities.Common.csproj", "{32f35752-cb71-53ba-100a-3dd9199d5d2d}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scripts.Abilities", "Scripts.Abilities.csproj", "{227f7a1f-c02d-b7de-5920-cf3b966f6690}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "States.Common", "States.Common.csproj", "{d1395ddb-098c-88cb-7df6-8daace3fba47}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scripts.Entities.Player", "Scripts.Entities.Player.csproj", "{44833ff8-f6b2-3200-0867-89985516293f}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scripts.Bullets", "Scripts.Bullets.csproj", "{74163807-e427-be95-b279-48f78a4195b7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scripts.Collectables", "Scripts.Collectables.csproj", "{baf52214-3119-5f01-8300-9e962e1b2027}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-PoolMonitor-Editor", "Zenject-PoolMonitor-Editor.csproj", "{f23da344-79bd-582c-ac5d-ef4a9955c6c2}"
 EndProject
@@ -88,16 +84,12 @@ Global
 		{38e08a1b-c403-69d5-d401-c5b0cc1141c2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32f35752-cb71-53ba-100a-3dd9199d5d2d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{32f35752-cb71-53ba-100a-3dd9199d5d2d}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{227f7a1f-c02d-b7de-5920-cf3b966f6690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{227f7a1f-c02d-b7de-5920-cf3b966f6690}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{d1395ddb-098c-88cb-7df6-8daace3fba47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{d1395ddb-098c-88cb-7df6-8daace3fba47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44833ff8-f6b2-3200-0867-89985516293f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{44833ff8-f6b2-3200-0867-89985516293f}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74163807-e427-be95-b279-48f78a4195b7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74163807-e427-be95-b279-48f78a4195b7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{baf52214-3119-5f01-8300-9e962e1b2027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{baf52214-3119-5f01-8300-9e962e1b2027}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{f23da344-79bd-582c-ac5d-ef4a9955c6c2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{f23da344-79bd-582c-ac5d-ef4a9955c6c2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{c25daf57-28a3-c34a-bb69-5fb3c53228a6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
