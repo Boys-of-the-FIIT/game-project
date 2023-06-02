@@ -155,54 +155,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.71250916, y: 0}
   m_SizeDelta: {x: 1.425, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &4727987116858636321
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5574947533009778271}
-  - component: {fileID: 1267239770134523338}
-  m_Layer: 0
-  m_Name: Abilities
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5574947533009778271
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4727987116858636321}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4757744400145137311}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1267239770134523338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4727987116858636321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e25f8144ab4a3e9e66ed52a4348c58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 50
-  activationButton: 49
-  coolDown: 5
-  damage: 10
 --- !u!1 &4757744400145137305
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +191,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4757744402176563190}
-  - {fileID: 5574947533009778271}
   - {fileID: 8065310017349270586}
   - {fileID: 1141799691161516229}
   - {fileID: 1730189711385781027}
@@ -588,7 +539,7 @@ RectTransform:
   m_Children:
   - {fileID: 1145393372425080667}
   m_Father: {fileID: 4757744400145137311}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -757,7 +708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4757744400145137311, guid: 3cd35bf5851a70d4a986e5d26ac408e7, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4757744400145137311, guid: 3cd35bf5851a70d4a986e5d26ac408e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -827,7 +778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4757744400145137311, guid: 6242803aa17e9cc4eba08a9717a64db0, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4757744400145137311, guid: 6242803aa17e9cc4eba08a9717a64db0, type: 3}
       propertyPath: m_LocalScale.x

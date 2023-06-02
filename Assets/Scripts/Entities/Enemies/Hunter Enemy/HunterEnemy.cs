@@ -6,8 +6,10 @@ using Zenject;
 
 namespace Enemies.HunterEnemy
 {
+
     public class HunterEnemy : Enemy
     {
+        
         [SerializeField] internal float hidingCoefficient = 1;
         [SerializeField] internal float startIdlingDistance = 10;
         [SerializeField] internal float startHidingDistance = 20;
@@ -16,6 +18,7 @@ namespace Enemies.HunterEnemy
         internal Canvas healthBarCanvas;
 
         private PlayerEntity player;
+        private EnemyAttack attack;
 
         [Inject]
         private void Construct(PlayerEntity player)
@@ -23,38 +26,54 @@ namespace Enemies.HunterEnemy
             this.player = player;
             spriteRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
             healthBarCanvas = gameObject.GetComponentInChildren<Canvas>();
+            attack = GetComponentInChildren<EnemyAttack>();
         }
 
         private StateMachine stateMachine;
 
         private float DistanceToPlayer => (player.transform.position - transform.position).magnitude;
 
-        private void Awake()
+        private void FixedUpdate()
         {
-            var idleState = new IdleState(this);
-            var hideState = new HideState(this);
-            var unhideState = new UnhideState(this);
+            var distanceToPlayer = (player.transform.position - transform.position).magnitude;
 
-            stateMachine = new StateMachine();
+            attack.enabled = distanceToPlayer > startIdlingDistance;
 
-            stateMachine.AddTransition(hideState, idleState, InIdleDistance());
-            stateMachine.AddTransition(idleState, hideState, () => true);
-            stateMachine.AddTransition(hideState, idleState, OutOfIdleDistance());
-            stateMachine.AddTransition(hideState, unhideState, OutOfHidingDistance());
-            stateMachine.AddTransition(unhideState, hideState, InHidingDistance());
+            if (distanceToPlayer < startHidingDistance)
+                DoHiding();
+            else
+                UndoHide();
+        }
+        
+        private void DoHiding()
+        {
+            healthBarCanvas.enabled = false;
 
-            stateMachine.SetState(unhideState);
+            foreach (var spriteRenderer in spriteRenderers)
+            {
+                var currentColor = spriteRenderer.color;
+                var newColor = new Color(
+                    currentColor.r,
+                    currentColor.g,
+                    currentColor.b,
+                    currentColor.a - hidingCoefficient / 250f
+                );
 
-            Func<bool> OutOfIdleDistance() => () => DistanceToPlayer > startIdlingDistance;
-            Func<bool> OutOfHidingDistance() => () => DistanceToPlayer > startHidingDistance; 
-            Func<bool> InHidingDistance() => () => DistanceToPlayer <= startHidingDistance;
-            Func<bool> InIdleDistance() => () => DistanceToPlayer <= startIdlingDistance;
+                spriteRenderer.color = newColor;
+            }
         }
 
-        private void Update()
+        private void UndoHide()
         {
-            Debug.Log(stateMachine.CurrentState);
-            stateMachine.Tick();
+            healthBarCanvas.enabled = true;
+
+            foreach (var spriteRenderer in spriteRenderers)
+            {
+                var currentColor = spriteRenderer.color;
+                var newColor = new Color(currentColor.r, currentColor.g, currentColor.b, 1.0f);
+
+                spriteRenderer.color = newColor;
+            }
         }
     }
 }
