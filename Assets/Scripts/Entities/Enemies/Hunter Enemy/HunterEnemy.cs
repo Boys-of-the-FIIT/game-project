@@ -1,22 +1,18 @@
 ﻿using System;
-using Enemies.HunterEnemy.States;
 using Player;
 using UnityEngine;
 using Zenject;
 
 namespace Enemies.HunterEnemy
 {
-
     public class HunterEnemy : Enemy
     {
-        
-        [SerializeField] internal float hidingCoefficient = 1;
-        [SerializeField] internal float startIdlingDistance = 10;
-        [SerializeField] internal float startHidingDistance = 20;
+        [SerializeField] private float hidingCoefficient = 1;
+        [SerializeField] private float startIdlingDistance = 10;
+        [SerializeField] private float startHidingDistance = 20;
 
-        internal SpriteRenderer[] spriteRenderers;
-        internal Canvas healthBarCanvas;
-
+        private SpriteRenderer[] spriteRenderers;
+        private Canvas healthBarCanvas;
         private PlayerEntity player;
         private EnemyAttack attack;
 
@@ -35,11 +31,8 @@ namespace Enemies.HunterEnemy
 
         private void FixedUpdate()
         {
-            var distanceToPlayer = (player.transform.position - transform.position).magnitude;
-
-            attack.enabled = distanceToPlayer > startIdlingDistance;
-
-            if (distanceToPlayer < startHidingDistance)
+            attack.enabled = DistanceToPlayer > startIdlingDistance;
+            if (DistanceToPlayer < startHidingDistance)
                 DoHiding();
             else
                 UndoHide();

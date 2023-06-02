@@ -56,7 +56,6 @@
      <Compile Include="Assets\Scripts\Entities\Enemies\Common\EnemyRotation.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemies\HealerEnemy\Behaviours\FleeToHealer\States\MoveToHealerState.cs" />
      <Compile Include="Assets\Scripts\Entities\Enemies\Common\EnemyAttack.cs" />
-     <Compile Include="Assets\Scripts\Entities\Enemies\Hunter Enemy\States\ActiveState.cs" />
      <Folder Include="Assets\Scripts\Entities\Enemies" />
      <None Include="Assets\Scripts\Entities\Enemies\Scripts.Entities.Enemies.asmdef" />
      <Folder Include="Assets\Scripts\Entities\Enemies\Sniper Enemy" />

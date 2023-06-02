@@ -12,9 +12,7 @@ namespace Waves
     {
         [SerializeField] private Wave[] waves;
         [SerializeField] private float breakTime;
-        
-        [HideInInspector] public UnityEvent OnWaveFinished;
-        
+
         public float CurrentTime { get; set; }
         public Wave CurrentWave { get; set; }
         public bool IsBreak { get; set; }
@@ -22,13 +20,10 @@ namespace Waves
         private IEnumerator wavesCycleCoroutine;
         private EntityWaveSpawner spawner;
         
-        
-        
         [Inject]
         private void Construct(EntityWaveSpawner spawner)
         {
             this.spawner = spawner;
-            OnWaveFinished = new UnityEvent();
         }
         
         private void Start()
