@@ -173,5 +173,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistanceToPlayer: 10
   maxDistanceToPlayer: 20
-  speed: 5
+  speed: 3
   dodgingRadius: 8
