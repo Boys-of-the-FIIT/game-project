@@ -9,9 +9,6 @@ namespace DefaultNamespace
     public abstract class Entity : MonoBehaviour
     {
         [SerializeField] public Stats Stats;
-
-        // private void OnDestroy() => Destroy(Stats.gameObject);
-
         [HideInInspector] public UnityEvent<Entity> OnEntityDeath = new UnityEvent<Entity>();
         public bool IsInjured => Stats.CurrentHealth < Stats.MaxHealth;
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using Enemies;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,8 +12,7 @@ namespace Waves
     {
         [SerializeField] private Wave[] waves;
         [SerializeField] private float breakTime;
-
-        [HideInInspector] public UnityEvent<Wave> OnWaveStarted;
+        
         [HideInInspector] public UnityEvent OnWaveFinished;
         
         public float CurrentTime { get; set; }
@@ -28,7 +28,6 @@ namespace Waves
         private void Construct(EntityWaveSpawner spawner)
         {
             this.spawner = spawner;
-            OnWaveStarted = new UnityEvent<Wave>();
             OnWaveFinished = new UnityEvent();
         }
         
@@ -42,7 +41,6 @@ namespace Waves
             foreach (var wave in waves)
             {
                 CurrentWave = wave;
-                OnWaveStarted.Invoke(wave);
                 yield return StartCoroutine(WaveCycleCoroutine());
                 yield return StartCoroutine(BetweenWaveBreak());
             }
@@ -78,9 +76,6 @@ namespace Waves
         private void ClearEnemiesFromScene()
         {
             foreach (var enemy in GameObject.FindObjectsOfType<Enemy>())
-                Destroy(enemy.gameObject);
-            
-            foreach (var enemy in GameObject.FindObjectsOfType<EnemyWaveInfo>())
                 Destroy(enemy.gameObject);
         }
     }
