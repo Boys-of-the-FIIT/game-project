@@ -24,8 +24,8 @@ namespace UI.Scripts
         public void AddSpeed(float speed) => Stats.Speed += speed;
         public void AddDamage(float damage) => Stats.Damage += damage;
         public void DecreaseRecoilAngle(float angle) => Stats.RecoilAngle -= angle;
-        public void AddBulletSpeed(float bulletSpeed) => Stats.BulletSpeed -= bulletSpeed;
+        public void AddBulletSpeed(float bulletSpeed) => Stats.BulletSpeed += bulletSpeed;
         public void DecreaseReloadTime(float reloadTime) => Stats.ReloadTime -= reloadTime;
-        public void AddAttackDistance(float attackDistance) => Stats.AttackDistance -= attackDistance;
+        public void AddAttackDistance(float attackDistance) => Stats.AttackDistance += attackDistance;
     }
 }

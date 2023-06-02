@@ -123,6 +123,74 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &26119940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26119941}
+  - component: {fileID: 26119943}
+  - component: {fileID: 26119942}
+  m_Layer: 0
+  m_Name: Hunter Enemy Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &26119941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26119940}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 939721550}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &26119942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26119940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690dedfff24c4e909203988b766338e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
+  speed: 5
+  damage: 20
+  recoilAngle: 10
+  bulletSpeed: 10
+  reloadTime: 3
+  attackDistance: 10
+  upgradePoints: 10
+--- !u!114 &26119943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26119940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6742b28303847cb8e8f9505a472390b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 7822378942536215107, guid: cb5aadf570a6a4d46a84926a2e107ce9, type: 3}
+  Amount: 10
+  Stats: {fileID: 26119942}
 --- !u!4 &44801087 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5407198557331541483, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
@@ -480,6 +548,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddDamage
+      objectReference: {fileID: 0}
     - target: {fileID: 8895760499735059694, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: m_Name
       value: Damage Upgrade
@@ -832,6 +904,10 @@ PrefabInstance:
     - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: upgradeSectionColor.r
       value: 0.32667467
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DecreaseRecoilAngle
       objectReference: {fileID: 0}
     - target: {fileID: 8895760499735059694, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: m_Name
@@ -1479,6 +1555,10 @@ PrefabInstance:
       propertyPath: upgradeSectionColor.r
       value: 0.3773585
       objectReference: {fileID: 0}
+    - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddAttackDistance
+      objectReference: {fileID: 0}
     - target: {fileID: 8895760499735059694, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: m_Name
       value: Attack Distance
@@ -2089,6 +2169,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5407198557331541483, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
   m_PrefabInstance: {fileID: 304544331}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &939721550 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8178821204279149541, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
+  m_PrefabInstance: {fileID: 1215009197}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &957655761 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5932495959616212230, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
@@ -2237,11 +2322,11 @@ PrefabInstance:
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.data[0]
       value: 
-      objectReference: {fileID: 740973816}
+      objectReference: {fileID: 368304773}
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.data[1]
       value: 
-      objectReference: {fileID: 368304773}
+      objectReference: {fileID: 740973816}
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.data[2]
       value: 
@@ -2276,12 +2361,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5202193527076395874, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: enemyInfo.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5202193527076395874, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: enemyInfo.Array.data[0]
       value: 
-      objectReference: {fileID: 1215009201}
+      objectReference: {fileID: 1794524694}
+    - target: {fileID: 5202193527076395874, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
+      propertyPath: enemyInfo.Array.data[1]
+      value: 
+      objectReference: {fileID: 1524724551}
+    - target: {fileID: 5202193527076395874, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
+      propertyPath: enemyInfo.Array.data[2]
+      value: 
+      objectReference: {fileID: 26119943}
     - target: {fileID: 5663736958469236598, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: Enemy
       value: 
@@ -2364,46 +2457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6b23fda36b4a3abeae553d5f60d931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1215009200 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8195702050041051560, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
-  m_PrefabInstance: {fileID: 1215009197}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1215009201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215009200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6742b28303847cb8e8f9505a472390b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemy: {fileID: 7822378942536215107, guid: cb5aadf570a6a4d46a84926a2e107ce9, type: 3}
-  Amount: 1
-  Stats: {fileID: 1215009202}
---- !u!114 &1215009202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215009200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 690dedfff24c4e909203988b766338e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 20
-  speed: 2
-  damage: 3
-  recoilAngle: 0
-  bulletSpeed: 6
-  reloadTime: 1
-  attackDistance: 20
-  upgradePoints: 0
 --- !u!4 &1245285971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5407198557331541483, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
@@ -2844,6 +2897,10 @@ PrefabInstance:
       propertyPath: upgradeSectionColor.r
       value: 0.9056604
       objectReference: {fileID: 0}
+    - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddBulletSpeed
+      objectReference: {fileID: 0}
     - target: {fileID: 8895760499735059694, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: m_Name
       value: Bullet Speed Upgrade
@@ -2890,6 +2947,74 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8867378343507122307, guid: f9c35cbc6fe2c93429fc8ef83145596f, type: 3}
   m_PrefabInstance: {fileID: 8867378344171860018}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1524724548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1524724549}
+  - component: {fileID: 1524724551}
+  - component: {fileID: 1524724550}
+  m_Layer: 0
+  m_Name: Shield Enemy Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1524724549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524724548}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 939721550}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1524724550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524724548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690dedfff24c4e909203988b766338e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
+  speed: 5
+  damage: 20
+  recoilAngle: 10
+  bulletSpeed: 10
+  reloadTime: 3
+  attackDistance: 10
+  upgradePoints: 10
+--- !u!114 &1524724551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524724548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6742b28303847cb8e8f9505a472390b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 6530335716751366876, guid: 56f4f927c0e6bdf4385ae7f39461e041, type: 3}
+  Amount: 10
+  Stats: {fileID: 1524724550}
 --- !u!1 &1569759042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2985,6 +3110,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2321828833420108994, guid: 8049ea1a94177534d9f3d7ffeacd27d6, type: 3}
+--- !u!114 &1794524694 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4975120820054641973, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
+  m_PrefabInstance: {fileID: 1215009197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6742b28303847cb8e8f9505a472390b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1825375781 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8034216735321601567, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
@@ -3119,7 +3255,7 @@ Transform:
   m_GameObject: {fileID: 2066083573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.7881, y: 3.0869, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 400, y: 400, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3444,6 +3580,10 @@ PrefabInstance:
     - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: upgradeSectionColor.r
       value: 0.18533282
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DecreaseReloadTime
       objectReference: {fileID: 0}
     - target: {fileID: 8895760499735059694, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: m_Name
