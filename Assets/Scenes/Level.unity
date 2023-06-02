@@ -439,7 +439,7 @@ GameObject:
   - component: {fileID: 366150334}
   - component: {fileID: 366150333}
   m_Layer: 0
-  m_Name: Hunter Enemy Info
+  m_Name: Spike Enemy Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -472,13 +472,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690dedfff24c4e909203988b766338e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  speed: 10
-  damage: 40
+  maxHealth: 80
+  speed: 7
+  damage: 25
   recoilAngle: 0
-  bulletSpeed: 15
+  bulletSpeed: 10
   reloadTime: 1.5
-  attackDistance: 25
+  attackDistance: 10
   upgradePoints: 40
 --- !u!114 &366150334
 MonoBehaviour:
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 7822378942536215107, guid: cb5aadf570a6a4d46a84926a2e107ce9, type: 3}
-  Amount: 1
+  Amount: 15
   Stats: {fileID: 366150333}
 --- !u!114 &368304773 stripped
 MonoBehaviour:
@@ -1036,13 +1036,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 150
-  speed: 7
+  speed: 9
   damage: 30
   recoilAngle: 10
   bulletSpeed: 10
   reloadTime: 1.5
   attackDistance: 10
-  upgradePoints: 40
+  upgradePoints: 50
 --- !u!114 &585143633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,6 +1187,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 366150332}
+  - {fileID: 1668969074}
+  - {fileID: 1753261378}
   m_Father: {fileID: 1215009198}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1206,6 +1208,8 @@ MonoBehaviour:
   name: Wave 4
   enemyInfo:
   - {fileID: 366150334}
+  - {fileID: 1668969076}
+  - {fileID: 1753261380}
 --- !u!1 &682226921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,14 +1569,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690dedfff24c4e909203988b766338e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 1100
   speed: 4
   damage: 40
   recoilAngle: 10
   bulletSpeed: 15
   reloadTime: 1.5
   attackDistance: 15
-  upgradePoints: 2000
+  upgradePoints: 1500
 --- !u!114 &889635866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1915,20 +1919,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.data[0]
       value: 
-      objectReference: {fileID: 2050334120}
+      objectReference: {fileID: 368304773}
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.data[1]
       value: 
-      objectReference: {fileID: 368304773}
+      objectReference: {fileID: 1007984426}
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.data[2]
       value: 
-      objectReference: {fileID: 1007984426}
+      objectReference: {fileID: 1451722355}
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.data[3]
       value: 
@@ -1971,10 +1975,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7013311309398119035, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: recoilAngle
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7013311309398119035, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: attackDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081847372440003581, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
+      propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7081847372440003581, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
@@ -1991,7 +1999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7081847372440003581, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: recoilAngle
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7081847372440003581, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: upgradePoints
@@ -2175,6 +2183,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233373951}
   m_CullTransparentMesh: 1
+--- !u!1 &1249264571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1249264572}
+  - component: {fileID: 1249264574}
+  - component: {fileID: 1249264573}
+  m_Layer: 0
+  m_Name: Simple Enemy Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1249264572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249264571}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1451722354}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1249264573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249264571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690dedfff24c4e909203988b766338e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 40
+  speed: 6
+  damage: 40
+  recoilAngle: 0
+  bulletSpeed: 10
+  reloadTime: 1.5
+  attackDistance: 12
+  upgradePoints: 30
+--- !u!114 &1249264574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249264571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6742b28303847cb8e8f9505a472390b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 7500056666449665870, guid: b667c5458ab782e4fbe3f51b22ed17e7, type: 3}
+  Amount: 100
+  Stats: {fileID: 1249264573}
 --- !u!1 &1257140103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,7 +2420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 60
-  speed: 8
+  speed: 5
   damage: 40
   recoilAngle: 0
   bulletSpeed: 15
@@ -2556,6 +2632,7 @@ Transform:
   - {fileID: 1912760778}
   - {fileID: 1672239259}
   - {fileID: 991944783}
+  - {fileID: 1249264572}
   m_Father: {fileID: 1215009198}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2721,7 +2798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  speed: 5
+  speed: 3
   damage: 30
   recoilAngle: 0
   bulletSpeed: 15
@@ -2743,6 +2820,74 @@ MonoBehaviour:
   Enemy: {fileID: 8089373077285046755, guid: 5fef933e42adff84ea3acc3f6ef782c4, type: 3}
   Amount: 3
   Stats: {fileID: 1654806877}
+--- !u!1 &1668969073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1668969074}
+  - component: {fileID: 1668969076}
+  - component: {fileID: 1668969075}
+  m_Layer: 0
+  m_Name: Hunter Enemy Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1668969074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668969073}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 657149691}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1668969075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668969073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690dedfff24c4e909203988b766338e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 60
+  speed: 10
+  damage: 40
+  recoilAngle: 0
+  bulletSpeed: 12.5
+  reloadTime: 1.5
+  attackDistance: 25
+  upgradePoints: 50
+--- !u!114 &1668969076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668969073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6742b28303847cb8e8f9505a472390b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 7822378942536215107, guid: cb5aadf570a6a4d46a84926a2e107ce9, type: 3}
+  Amount: 3
+  Stats: {fileID: 1668969075}
 --- !u!1 &1672239258
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,6 +2988,74 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1753261377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753261378}
+  - component: {fileID: 1753261380}
+  - component: {fileID: 1753261379}
+  m_Layer: 0
+  m_Name: Simple Enemy Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1753261378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753261377}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 657149691}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1753261379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753261377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690dedfff24c4e909203988b766338e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  speed: 6
+  damage: 25
+  recoilAngle: 0
+  bulletSpeed: 10
+  reloadTime: 1.5
+  attackDistance: 12
+  upgradePoints: 25
+--- !u!114 &1753261380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753261377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6742b28303847cb8e8f9505a472390b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 7500056666449665870, guid: b667c5458ab782e4fbe3f51b22ed17e7, type: 3}
+  Amount: 7
+  Stats: {fileID: 1753261379}
 --- !u!1 &1912760777
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,10 +3102,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 60
-  speed: 10
+  speed: 12
   damage: 40
   recoilAngle: 0
-  bulletSpeed: 15
+  bulletSpeed: 17
   reloadTime: 1.5
   attackDistance: 25
   upgradePoints: 40
@@ -2909,7 +3122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 7822378942536215107, guid: cb5aadf570a6a4d46a84926a2e107ce9, type: 3}
-  Amount: 100
+  Amount: 5
   Stats: {fileID: 1912760779}
 --- !u!1 &1967401916
 GameObject:
@@ -2956,17 +3169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 511986271}
---- !u!114 &2050334120 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5202193527076395874, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
-  m_PrefabInstance: {fileID: 1215009197}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb1ea9bafd4d4e8887aff3e0c1ff99a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2066083573
 GameObject:
   m_ObjectHideFlags: 0
