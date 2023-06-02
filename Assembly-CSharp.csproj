@@ -65,6 +65,7 @@
      <Compile Include="Assets\UI\Scripts\ScreenUI\Points.cs" />
      <Compile Include="Assets\DI\Scene Context\EntityWaveSpawnerInstaller.cs" />
      <Compile Include="Assets\UI\Scripts\ScreenUI\StatsUpgrader.cs" />
+     <Compile Include="Assets\UI\Scripts\ScreenUI\EnemiesRemainHint.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Prefabs\Collectables" />

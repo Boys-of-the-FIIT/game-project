@@ -6,26 +6,31 @@ namespace Enemies.HunterEnemy.States
     {
         private HunterEnemy hunter;
         private EnemyAttack attack;
-        
+
         public IdleState(HunterEnemy hunter)
         {
             this.hunter = hunter;
         }
-        
+
         public void OnEnter()
         {
-            if (hunter.TryGetComponent<EnemyAttack>(out attack))
-                attack.enabled = false;
+            Debug.Log("OnEnter");
+            attack = hunter.GetComponentInChildren<EnemyAttack>();
+            
+            if (attack is null) return;
+            
+            Debug.Log("Disable Attack");
+            attack.enabled = false;
         }
 
         public void OnExit()
         {
+            Debug.Log("Enable Attack");
             attack.enabled = true;
         }
-        
+
         public void Tick()
         {
-            
         }
     }
 }

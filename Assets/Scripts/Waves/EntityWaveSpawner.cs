@@ -25,7 +25,17 @@ namespace Waves
         private Random random;
 
         private Vector3 CameraPos => mainCamera.transform.position;
+        
+        public void StartSpawning()
+        {
+            StartCoroutine(spawnCycleCoroutine);
+        }
 
+        public void StopSpawning()
+        {
+            StopCoroutine(spawnCycleCoroutine);
+        }
+        
         [Inject]
         private void Construct(DiContainer diContainer, Camera mainCamera)
         {
@@ -40,17 +50,7 @@ namespace Waves
             random = new Random();
         }
 
-        public void StartSpawning()
-        {
-            StartCoroutine(spawnCycleCoroutine);
-        }
-
-        public void StopSpawning()
-        {
-            StopCoroutine(spawnCycleCoroutine);
-        }
-
-        public IEnumerator SpawnCycleCoroutine()
+        private IEnumerator SpawnCycleCoroutine()
         {
             while (true)
             { 

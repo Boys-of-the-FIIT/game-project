@@ -249,11 +249,77 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: reloadTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: bulletSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: upgradePoints
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+      propertyPath: attackDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+--- !u!1 &5766975643867681119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2167969003204828203, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+  m_PrefabInstance: {fileID: 5629013109453933940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5544026214491243475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5766975643867681119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55085dc40e542e3897a75b018aa353d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  enemy: {fileID: 6530335716751366876}
+--- !u!114 &8806899403508822621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5766975643867681119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a73e46a5f42d12e4cbca74e5c96ccd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDistanceToPlayer: 7
+  maxDistanceToPlayer: 15
+  speed: 5
+  dodgingRadius: 3
+--- !u!114 &6530335716751366876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1494680665302898600, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}
+  m_PrefabInstance: {fileID: 5629013109453933940}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5766975643867681119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa14b3df78774144813fd4c060da90d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6957044589570272909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3355787179080508409, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}

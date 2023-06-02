@@ -12,6 +12,7 @@ namespace Waves
         [SerializeField] private Wave[] waves;
         [SerializeField] private float breakTime;
 
+        [HideInInspector] public UnityEvent<Wave> OnWaveStarted;
         [HideInInspector] public UnityEvent OnWaveFinished;
         
         public float CurrentTime { get; set; }
@@ -21,10 +22,14 @@ namespace Waves
         private IEnumerator wavesCycleCoroutine;
         private EntityWaveSpawner spawner;
         
+        
+        
         [Inject]
         private void Construct(EntityWaveSpawner spawner)
         {
             this.spawner = spawner;
+            OnWaveStarted = new UnityEvent<Wave>();
+            OnWaveFinished = new UnityEvent();
         }
         
         private void Start()
@@ -37,6 +42,7 @@ namespace Waves
             foreach (var wave in waves)
             {
                 CurrentWave = wave;
+                OnWaveStarted.Invoke(wave);
                 yield return StartCoroutine(WaveCycleCoroutine());
                 yield return StartCoroutine(BetweenWaveBreak());
             }
@@ -72,6 +78,9 @@ namespace Waves
         private void ClearEnemiesFromScene()
         {
             foreach (var enemy in GameObject.FindObjectsOfType<Enemy>())
+                Destroy(enemy.gameObject);
+            
+            foreach (var enemy in GameObject.FindObjectsOfType<EnemyWaveInfo>())
                 Destroy(enemy.gameObject);
         }
     }

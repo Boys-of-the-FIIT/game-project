@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="Level scene pushed">
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/EnemiesRemainedHint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/EnemiesRemainedHint.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/StatsUpgrader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/StatsUpgrader.cs.meta" afterDir="false" />
+    <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="Added upgrade bars and scripts for them">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Boss Bullet.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/Boss Bullet.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/EnemiesRemainHint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/EnemiesRemainHint.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Boss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Hunter Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Hunter Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Shield Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Shield Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Sniper Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Sniper Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Waves/WaveManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Waves/WaveManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Common/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Common/Stats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemies/Hunter Enemy/HunterEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemies/Hunter Enemy/HunterEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemies/Hunter Enemy/States/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemies/Hunter Enemy/States/IdleState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waves/EntityWaveSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Waves/EntityWaveSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/Progress Bars.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Prefabs/Progress Bars.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/ScreenUI/Upgrade Bar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Prefabs/ScreenUI/Upgrade Bar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Prefabs/ScreenUI/Upgrade Bar.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Prefabs/ScreenUI/Upgrade Bar.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waves/Wave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Waves/Wave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waves/WaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Waves/WaveManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/UpgradeSection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Game.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts.Behaviours.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Behaviours.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts.Waves.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Waves.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Utils.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +47,8 @@
     <setting file="file://$PROJECT_DIR$/../Downloads/StateMachine/Scripts/Entities/Gatherer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Prefabs/Enemies/Assasin Enemy.prefab.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Prefabs/Spawners/Spawner.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullets/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullets/BulletTrailScriptableObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -274,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685648061089</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added upgrade bars and scripts for them">
+      <created>1685662198996</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685662198997</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +323,7 @@
     <MESSAGE value="Added assembly ref for upgrades" />
     <MESSAGE value="Added assembly ref for spawners" />
     <MESSAGE value="Level scene pushed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Level scene pushed" />
+    <MESSAGE value="Added upgrade bars and scripts for them" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added upgrade bars and scripts for them" />
   </component>
 </project>

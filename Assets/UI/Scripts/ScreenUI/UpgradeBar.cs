@@ -44,7 +44,6 @@ public class UpgradeBar : MonoBehaviour
     {
         images = GetComponentsInChildren<Image>().ToList();
         textMeshes = GetComponentsInChildren<TextMeshProUGUI>().ToList();
-        Debug.Log(images.Count);
         currentUpgradeIndex = -1;
         upgradeButton.onClick.AddListener(OnUpgradeButtonClick);
         var requiredPoints = startPoints;
