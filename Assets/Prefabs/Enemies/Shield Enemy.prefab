@@ -312,6 +312,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   enemy: {fileID: 6530335716751366876}
+--- !u!114 &2479601389845700579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5766975643867681119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45dace6b0624ffaaebc9ca38e5b38f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletTypesResist: 01000000
 --- !u!114 &8806899403508822621
 MonoBehaviour:
   m_ObjectHideFlags: 0

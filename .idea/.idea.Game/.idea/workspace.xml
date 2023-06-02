@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="New upgrade bar prefabs">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Shield Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Shield Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Waves/WaveManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Waves/WaveManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Ability.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Ability.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Dash.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Dash.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Scripts.Abilities.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Scripts.Abilities.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/ShockWave.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/ShockWave.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectables.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectables/Heals.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectables/Heals.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectables/Scripts.Collectables.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectables/Scripts.Collectables.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Common/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Common/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waves/EntityWaveSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Waves/EntityWaveSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/Abilities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/Abilities/AbilityIcon.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/Abilities/AbilityIcon.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/EnemiesRemainHint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Scripts/ScreenUI/EnemiesRemainHint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Game.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts.Abilities.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Abilities.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts.Collectables.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts.Collectables.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="894dc769-de69-4a88-aa34-a5113dc925cd" name="Changes" comment="Reworked Shield Enemy" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +26,13 @@
     <setting file="file://$PROJECT_DIR$/../Downloads/StateMachine/Scripts/Entities/Gatherer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Prefabs/Enemies/Assasin Enemy.prefab.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Prefabs/Spawners/Spawner.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Xoka74/Game/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
@@ -293,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685662198997</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Reworked Shield Enemy">
+      <created>1685669735769</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1685669735769</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,6 +316,7 @@
     <MESSAGE value="Added assembly ref for spawners" />
     <MESSAGE value="Level scene pushed" />
     <MESSAGE value="Added upgrade bars and scripts for them" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added upgrade bars and scripts for them" />
+    <MESSAGE value="Reworked Shield Enemy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworked Shield Enemy" />
   </component>
 </project>
