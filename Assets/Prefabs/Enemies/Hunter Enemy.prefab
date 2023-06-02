@@ -195,7 +195,7 @@ MonoBehaviour:
       m_Calls: []
   hidingCoefficient: 4
   startIdlingDistance: 10
-  startHidingDistance: 30
+  startHidingDistance: 20
 --- !u!114 &5492722198794722512 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8076247254935937267, guid: 83ac8ea0079beda439fe50f52612b1a1, type: 3}

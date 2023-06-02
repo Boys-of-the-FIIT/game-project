@@ -37,22 +37,18 @@ namespace Enemies.HunterEnemy
 
             stateMachine = new StateMachine();
 
-            stateMachine.AddAnyTransition(idleState, InIdleDistance());
-
+            stateMachine.AddTransition(hideState, idleState, InIdleDistance());
             stateMachine.AddTransition(idleState, hideState, () => true);
-            // Debug.Log($"{player.transform.position} -> {transform.position}");
-            // Debug.Log($"{(player.transform.position - transform.position).magnitude - DistanceToPlayer}");
-
+            stateMachine.AddTransition(hideState, idleState, OutOfIdleDistance());
             stateMachine.AddTransition(hideState, unhideState, OutOfHidingDistance());
             stateMachine.AddTransition(unhideState, hideState, InHidingDistance());
 
             stateMachine.SetState(unhideState);
 
-            Func<bool> InHidingDistance() => () => DistanceToPlayer <= startIdlingDistance;
-            Func<bool> OutOfHidingDistance() => () => DistanceToPlayer > startIdlingDistance;
-
-            Func<bool> InIdleDistance() => () => (player.transform.position - transform.position).magnitude
-                                                 < startIdlingDistance;
+            Func<bool> OutOfIdleDistance() => () => DistanceToPlayer > startIdlingDistance;
+            Func<bool> OutOfHidingDistance() => () => DistanceToPlayer > startHidingDistance; 
+            Func<bool> InHidingDistance() => () => DistanceToPlayer <= startHidingDistance;
+            Func<bool> InIdleDistance() => () => DistanceToPlayer <= startIdlingDistance;
         }
 
         private void Update()
