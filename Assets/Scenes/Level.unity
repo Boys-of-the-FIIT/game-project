@@ -172,9 +172,9 @@ MonoBehaviour:
   speed: 5
   damage: 20
   recoilAngle: 10
-  bulletSpeed: 10
+  bulletSpeed: 15
   reloadTime: 3
-  attackDistance: 10
+  attackDistance: 40
   upgradePoints: 10
 --- !u!114 &26119943
 MonoBehaviour:
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 7822378942536215107, guid: cb5aadf570a6a4d46a84926a2e107ce9, type: 3}
-  Amount: 10
+  Amount: 1
   Stats: {fileID: 26119942}
 --- !u!4 &44801087 stripped
 Transform:
@@ -549,6 +549,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
+      propertyPath: upgradeBonus
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddDamage
       objectReference: {fileID: 0}
@@ -892,6 +896,10 @@ PrefabInstance:
     - target: {fileID: 7543567283392911433, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
+      propertyPath: upgradeBonus
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: upgradeSectionColor.b
@@ -1544,6 +1552,10 @@ PrefabInstance:
       value: -206.80544
       objectReference: {fileID: 0}
     - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
+      propertyPath: upgradeBonus
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: upgradeSectionColor.b
       value: 0.30695918
       objectReference: {fileID: 0}
@@ -2129,6 +2141,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -206.85544
       objectReference: {fileID: 0}
+    - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
+      propertyPath: upgradeBonus
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8895760499735059694, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: m_Name
       value: Max Health
@@ -2322,19 +2338,19 @@ PrefabInstance:
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.data[0]
       value: 
-      objectReference: {fileID: 368304773}
+      objectReference: {fileID: 740973816}
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.data[1]
       value: 
-      objectReference: {fileID: 740973816}
+      objectReference: {fileID: 1486289008}
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.data[2]
       value: 
-      objectReference: {fileID: 957655761}
+      objectReference: {fileID: 368304773}
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.data[3]
       value: 
-      objectReference: {fileID: 1486289008}
+      objectReference: {fileID: 957655761}
     - target: {fileID: 57818605363388918, guid: 0e5ef50e954579e45a07db0a065eb64f, type: 3}
       propertyPath: waves.Array.data[4]
       value: 
@@ -2884,6 +2900,10 @@ PrefabInstance:
     - target: {fileID: 7288502493950290865, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -207.93336
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
+      propertyPath: upgradeBonus
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: upgradeSectionColor.b
@@ -3570,6 +3590,10 @@ PrefabInstance:
       value: -206.67902
       objectReference: {fileID: 0}
     - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
+      propertyPath: upgradeBonus
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607513788336560638, guid: d763e754e92a2344a8a80ee4c75b2526, type: 3}
       propertyPath: upgradeSectionColor.b
       value: 0.65746343
       objectReference: {fileID: 0}
@@ -3688,7 +3712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4398219056132679762, guid: 56ef34020294d164aa30f3025a6a2c55, type: 3}
       propertyPath: maxHealth
-      value: 50000
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4398219056132679762, guid: 56ef34020294d164aa30f3025a6a2c55, type: 3}
       propertyPath: reloadTime

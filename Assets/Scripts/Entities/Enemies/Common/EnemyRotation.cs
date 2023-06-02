@@ -1,6 +1,4 @@
-﻿using System;
-using DefaultNamespace;
-using Player;
+﻿using Player;
 using UnityEngine;
 using Utils;
 using Zenject;
@@ -23,6 +21,11 @@ namespace Enemies
 
         private void FixedUpdate()
         {
+            if (!player)
+            {
+                return;
+            }
+
             var predictPosition = VectorExtensions.CalculateInterception(
                 transform.position,
                 player.position,

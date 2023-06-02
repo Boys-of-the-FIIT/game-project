@@ -53,7 +53,7 @@ namespace Behaviours
         {
             UpdateVelocity();
 
-            if (isDodging)
+            if (isDodging && dodgedBullet is not null)
             {
                 DodgeBullet();
                 return;
@@ -95,7 +95,11 @@ namespace Behaviours
         private void UpdateDodgingData(Collider2D bullet)
         {
             isDodging = true;
-            dodgedBullet = bullet.GetComponent<Rigidbody2D>();
+            if (!bullet.TryGetComponent<Rigidbody2D>(out dodgedBullet))
+            {
+                return;
+            }
+
             bulletVelocity = dodgedBullet.velocity;
             bulletVelocityOrthogonal = Vector3.Cross(bulletVelocity, Vector3.forward);
             playerShootingPosition = player.position;
@@ -127,6 +131,8 @@ namespace Behaviours
                 return;
             }
 
+            if (!dodgedBullet) return;
+            
             var enemyPosition2d = new Vector2(transform.position.x, transform.position.y);
             var enemyToBullet = dodgedBullet.position - enemyPosition2d;
 
